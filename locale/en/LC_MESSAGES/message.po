@@ -1,0 +1,148 @@
+# Innsbruck
+# Copyright (C) 2017 Lupine Software, LLC
+# This file is distributed under the same license as the Innsbruck project.
+# Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tirol 0.1\n"
+"Report-Msgid-Bugs-To: feedback@lupine-software.com\n"
+"POT-Creation-Date: 2017-06-23 07:42+0900\n"
+"PO-Revision-Date: 2017-06-23 03:27+0900\n"
+"Last-Translator: Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>\n"
+"Language-Team: en <feedback@lupine-software.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: tirol/templates/index.mako:92
+msgid "about.text"
+msgstr ""
+"Made with <svg viewBox=\"0 0 8 8\" class=\"tiny icon pink\"><use xlink:"
+"href=\"#open-iconic.min_heart\" class=\"icon-heart\"></use></svg> by "
+"<a href=\"$href\">Lupine Software, LLC</a>"
+
+#: tirol/templates/layout.mako:30
+msgid "announcement.beta"
+msgstr ""
+"BETA release of readability heatmap widget is comming soon. Stay "
+"tuned ;-)"
+
+#: tirol/templates/index.mako:26
+msgid "application.description"
+msgstr ""
+"Extend your publication readability beyond the scroll withScrolliris, "
+"perfectly designed for Text. Get a readability feedback via completely "
+"open source browser widget and that's ready to integrate."
+
+#: tirol/templates/index.mako:4 tirol/templates/roadmap.mako:4
+msgid "application.name"
+msgstr "Scrolliris"
+
+#: tirol/templates/index.mako:24
+msgid "application.title"
+msgstr "Beyond the Scroll"
+
+#: tirol/templates/index.mako:52
+msgid "feature.analysis.description"
+msgstr ""
+"Whether you're writing texts, Scrolliris provide you simplified "
+"readability analysis. Just include a script, that's done!"
+
+#: tirol/templates/index.mako:51
+msgid "feature.analysis.title"
+msgstr "Easy Text Readability Analysis"
+
+#: tirol/templates/index.mako:66
+msgid "feature.integration.description"
+msgstr ""
+"Integrate it your own publication. Scrolliris's text readability "
+"browser widget is free software. You can integrate it into your "
+"document as you like. Also you can even choose public data plan."
+
+#: tirol/templates/index.mako:65
+msgid "feature.integration.title"
+msgstr "No Data Lock"
+
+#: tirol/templates/index.mako:59
+msgid "feature.privacy.description"
+msgstr ""
+"Scrolliris don't track who reader is, and what they are interested. "
+"Otherwise, it only cares texts. Reader's privacy will be protected."
+
+#: tirol/templates/index.mako:58
+msgid "feature.privacy.title"
+msgstr "Protect Reader's Privacy"
+
+#: tirol/templates/index.mako:42
+msgid "feature.title"
+msgstr "We encourage reading and writing longer texts on the web"
+
+#: tirol/templates/footer.mako:10
+msgid "footer.copyright"
+msgstr "2017 Lupine Software, LLC"
+
+#: tirol/templates/index.mako:29
+msgid "get_started.description"
+msgstr ""
+"Improve text readability and perceived affordance with our BETA "
+"browser widget."
+
+#: tirol/templates/index.mako:28
+msgid "get_started.title"
+msgstr "Try Demo"
+
+#: tirol/templates/layout.mako:8
+msgid "meta.author"
+msgstr "Lupine Software, LLC"
+
+#: tirol/templates/layout.mako:7
+msgid "meta.description"
+msgstr ""
+"Scrolliris; A publication platform which utilizes text readability "
+"analysis and/or its browser widget."
+
+#: tirol/templates/footer.mako:5
+msgid "nav.footer.about"
+msgstr "About"
+
+#: tirol/templates/footer.mako:7
+msgid "nav.footer.source_code"
+msgstr "Source Code"
+
+#: tirol/templates/footer.mako:6
+msgid "nav.footer.twitter"
+msgstr "Twitter"
+
+#: tirol/templates/index.mako:17 tirol/templates/roadmap.mako:12
+msgid "nav.header.newsletter"
+msgstr "Newsletter"
+
+#: tirol/templates/index.mako:15 tirol/templates/roadmap.mako:10
+msgid "nav.header.overview"
+msgstr "Overview"
+
+#: tirol/templates/index.mako:16 tirol/templates/roadmap.mako:11
+msgid "nav.header.roadmap"
+msgstr "Roadmap"
+
+#: tirol/templates/newsletter.mako:3
+msgid "newsletter.description"
+msgstr "Subscribe Newsletter from us."
+
+#: tirol/templates/newsletter.mako:4
+msgid "newsletter.label"
+msgstr "Enter your email address below."
+
+#: tirol/templates/newsletter.mako:7
+msgid "newsletter.subscribe.button"
+msgstr "Get Notified"
+
+#: tirol/templates/index.mako:77
+msgid "newsletter.title"
+msgstr "Notify me about Scrolliris Updates"
+
+#: tirol/templates/roadmap.mako:4
+msgid "roadmap.title"
+msgstr "Roadmap"
