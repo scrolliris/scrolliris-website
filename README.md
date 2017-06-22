@@ -106,40 +106,40 @@ https://gitlab.com/lupine-software/innsbruck.git).
 
 ### How to generate new `*.po` file
 
-Use `./bin/linguine` utility command.
+Use `./bin/linguine-lite` utility command.
 
 ```zsh
-% ./bin/linguine generate message de
+% ./bin/linguine-lite generate message de
 ```
 
-### What is `linguine` command
+### What's `linguine-lite` command
 
 This is a shell script command for translation files.
 
 ```zsh
-% ./bin/linguine --help
+% ./bin/linguine-lite --help
 
-Usage:
- linguine <action> <domain> <locale>
+Usage: linguine-lite <action> <domain> <locale>
 
 The cli command to compile/generate/update gettext catalog files.
+...<snip>
 
 Options:
- -h, --help      display this help and exit
+  -h, --help   display this help and exit
 
 Positional arguments:
- <action>     {compile|c},{generate|g},{update|u}
- <domain>     message
- <locale>     en
+  <action>   {compile|c},{generate|g},{update|u}
+  <domain>   message
+  <locale>   en
 
 Actions:
- compile    compile *.po to *.mo for application
- generate   create new *.po file with latest *.pot
- update     update *.po using *.pot (template)
+  compile    compile *.po to *.mo for application
+  generate   create new *.po file with latest *.pot
+  update     update *.po using *.pot (template)
 
 Examples:
- % linguine update message en
- % linguine c message en
+  % linguine-lite update message en
+  % linguine-lite c message en
 ```
 
 ### How to compile catalog same condition with CI on local machine
@@ -203,7 +203,7 @@ Innsbruck; Copyright (c) 2017 Lupine Software, LLC
 
 ### Software
 
-The cli command `linguine` and `Makefile` are distributed as
+The cli command `linguine-lite` and `Makefile` are distributed as
 **GNU General Public License** (version 3)
 
 This program is free software: you can redistribute it and/or modify
