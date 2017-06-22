@@ -1,0 +1,18 @@
+/* TEAM */
+Name: Yasuhiro Asaka
+Role: Programmer
+Mail: yasuhiro.asaka@lupine-software.com
+From: Yokohama, Japan
+
+Name: Misaki Asaka
+Role: Designer
+Mail: misaki.asaka@lupine-software.com
+From: Saitama, Japan
+
+/* SITE */
+Last update: 2017/06/22
+Language: English
+Doctype: HTML5
+URL: https://scrolliris.com/
+Repository: https://gitlab.com/lupine-software/tirol
+License: GNU Affero General Public License (AGPL)
