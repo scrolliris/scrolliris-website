@@ -134,8 +134,19 @@ The translation catalog needs GNU gettext.
 Don't commit changes of translation project into this repo.
 
 ```zsh
+: setup
+% git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
+% git subtree add --prefix locale innsbruck  master
+
+: Is it correct way to manage it both?  # FIXME
+% cd locale
+% cp -R /path/to/innsbruck/.git .
+
 : synchronize with updates into specified branch
 % git pull -s subtree innsbruck master
+
+: subtree list
+% git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq
 ```
 
 
