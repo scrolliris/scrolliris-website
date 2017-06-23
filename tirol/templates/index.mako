@@ -68,7 +68,6 @@
     </div>
   </div>
 
-  % if newsletter_form_template:
   <div class="grid newsletter">
     <hr class="line">
     <div class="row">
@@ -76,14 +75,13 @@
         <div class="newsletter-container">
           <h3 class="heading">${_('newsletter.title')}</h3>
           <div class="newsletter-form">
-            <%include file='${newsletter_form_template}'/>
+            <%include file='./newsletter.mako'/>
           </div>
         </div>
       </div>
     </div>
     <hr class="line">
   </div>
-  % endif
 
   <div class="grid about">
     <div class="row">

@@ -148,12 +148,7 @@ def internal_server_error(req):
 def index(req):
     """ Overview.
     """
-    newsletter_form_template = path.join(
-        path.dirname(__file__), 'templates', 'newsletter.mako')
-    if path.isfile(newsletter_form_template):
-        return dict(newsletter_form_template=newsletter_form_template)
-    else:
-        return dict()
+    return dict()
 
 
 @view_config(route_name='roadmap',
