@@ -9,7 +9,7 @@
   <ul class="nav">
     <li><a class="overview link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="roadmap active link" href="${req.route_path('roadmap')}">${_('nav.header.roadmap')}</a></li>
-    <li><a class="newsletter link" href="${var['newsletter_link']}">${_('nav.header.newsletter')}</a></li>
+    <li><a class="newsletter link" href="${var['tinyletter_url']}">${_('nav.header.newsletter')}</a></li>
   </ul>
 </div>
 

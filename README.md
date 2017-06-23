@@ -28,6 +28,15 @@ Tirol; The IntROduction website for scrollIris
 * [Innsbruck](https://gitlab.com/lupine-software/innsbruck) as git subtree
 
 
+## Integrations
+
+* GitLab
+* Sentry
+* Tinyletter
+* Twitter
+* Typekit
+
+
 ## Setup
 
 ```zsh
@@ -127,6 +136,7 @@ E.g. to publish to gcp (appengine)
 : check with flake8 (alias `make style` is also available)
 (venv) % make check-style
 ```
+
 
 ## CI
 

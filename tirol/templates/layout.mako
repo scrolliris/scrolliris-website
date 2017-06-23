@@ -40,10 +40,9 @@
     <script src="${util.built_asset_url('vendor.js')}" charset="utf-8"></script>
     <script src="${util.built_asset_url('master.js')}" charset="utf-8"></script>
     <script>
-      ## Typekit
       (function(d) {
         var config = {
-              kitId: '${var['fontkit_id']}'
+              kitId: '${var['typekit_id']}'
             , scriptTimeout: 3000
             , async: true
             }

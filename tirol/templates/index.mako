@@ -14,7 +14,7 @@
   <ul class="nav">
     <li><a class="overview active link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="roadmap link" href="${req.route_path('roadmap')}">${_('nav.header.roadmap')}</a></li>
-    <li><a class="newsletter link" href="${var['newsletter_link']}" target="_blank">${_('nav.header.newsletter')}</a></li>
+    <li><a class="newsletter link" href="${var['tinyletter_url']}" target="_blank">${_('nav.header.newsletter')}</a></li>
   </ul>
 </div>
 
@@ -25,7 +25,7 @@
       <div class="col-8 off-4">
         <p class="description">${_('application.description')}</p>
         <div class="get-started">
-          <a class="primary try btn" href="${var['get_started_link']}">${_('get_started.title')}</a>
+          <a class="primary try btn" href="https://try.scrolliris.com/">${_('get_started.title')}</a>
           <p>${_('get_started.description')}</p>
         </div>
       </div>

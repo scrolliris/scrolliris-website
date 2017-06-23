@@ -120,12 +120,11 @@ class TemplateUtil(object):
         """ Return a dict has variables
         """
         env = Env()
-        return {
-            'newsletter_link': env.get('NEWSLETTER_LINK', '/'),
-            'get_started_link': env.get('GET_STARTED_LINK', '/'),
-            'twitter_link': env.get('TWITTER_LINK', '/'),
-            'source_code_link': env.get('SOURCE_CODE_LINK', '/'),
-            'fontkit_id': env.get('FONTKIT_ID', '')
+        return {  # external services
+            'gitlab_url': env.get('GITLAB_URL', '/'),
+            'tinyletter_url': env.get('TINYLETTER_URL', '/'),
+            'twitter_url': env.get('TWITTER_URL', '/'),
+            'typekit_id': env.get('TYPEKIT_ID', ''),
         }
 
 
