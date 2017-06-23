@@ -4,11 +4,6 @@
   ${_('application.name')}
 </%block>
 
-% if newsletter_form_template:
-<%block name='header'>
-</%block>
-% endif
-
 <div class="header" align="center">
   <h2><img class="logo" src="" width="52px" height="52px" alt="logo"></h2>
   <ul class="nav">
@@ -75,7 +70,7 @@
         <div class="newsletter-container">
           <h3 class="heading">${_('newsletter.title')}</h3>
           <div class="newsletter-form">
-            <%include file='./newsletter.mako'/>
+            <%include file='./_newsletter.mako'/>
           </div>
         </div>
       </div>
