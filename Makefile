@@ -21,17 +21,17 @@ setup:
 # server
 
 serve:
-	./bin/serve --env development --config config.ini --reload
+	./bin/serve --env development --config config/${extra}.ini --reload
 .PHONY: serve
 
 # testing
 
 test:
-	ENV=test py.test -c 'config.ini' -s -q
+	ENV=test py.test -c 'config/testing.ini' -s -q
 .PHONY: test
 
 test-coverage:
-	ENV=test py.test -c 'config.ini' -s -q --cov=tirol --cov-report \
+	ENV=test py.test -c 'config/testing.ini' -s -q --cov=tirol --cov-report \
 	  term-missing:skip-covered
 .PHONY: test-coverage
 

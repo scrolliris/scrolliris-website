@@ -30,7 +30,7 @@ def env(dotenv):
 def raw_settings(dotenv):
     from pyramid.paster import get_appsettings
 
-    ini_file = os.path.join(os.getcwd(), 'config.ini')
+    ini_file = os.path.join(os.getcwd(), 'config/testing.ini')
     return get_appsettings(ini_file)
 
 

@@ -82,7 +82,7 @@ Use `CherryPy` as wsgi server.
 (venv) % ENV=production make setup
 
 : or start server by yourself
-(venv) % ./bin/serve --env production --config config.ini --install
+(venv) % ./bin/serve --env production --config config/production.ini --install
 ```
 
 ### Publish

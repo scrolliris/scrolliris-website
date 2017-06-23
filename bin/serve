@@ -3,7 +3,7 @@
 
 env_name=""
 app_name="tirol"
-config_file="config.ini"
+config_file=""
 
 with_install="no"
 with_reload="no"

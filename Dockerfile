@@ -27,4 +27,4 @@ ENV WSGI_URL_SCHEME https
 EXPOSE 8080
 ENV PORT 8080
 
-CMD ./bin/serve -e production -c config.ini
+CMD ./bin/serve -e production -c config/production.ini
