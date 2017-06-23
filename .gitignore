@@ -8,6 +8,7 @@ __pycache__/
 .env
 .coverage
 
+/bin/gitlab-ci-multi-runner
 /locale/**/*.mo
 
 /venv*
