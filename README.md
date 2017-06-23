@@ -73,6 +73,8 @@ Check `Makefile`.
 
 ## Deployment
 
+### Serve
+
 Use `CherryPy` as wsgi server.
 
 ```zsh
@@ -81,6 +83,38 @@ Use `CherryPy` as wsgi server.
 
 : or start server by yourself
 (venv) % ./bin/serve --env production --config config.ini --install
+```
+
+### Publish
+
+At first, setup for production environment.
+
+```zsh
+: e.g. use google app engine
+(venv) % curl -sLO https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
+
+: check sha256 checksum
+(venv) % sha256sum google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
+95b98fc696f38cd8b219b4ee9828737081f2b5b3bd07a3879b7b2a6a5349a73f  google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
+
+(venv) % tar zxvf google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
+
+: we don\'t install this global environment even if development
+(venv) % CLOUDSDK_ROOT_DIR=. ./google-cloud-sdk/install.sh
+
+: load sdk tools
+(venv) % source ./bin/load-gcloud
+(venv) % gcloud init
+```
+
+### Deployment
+
+E.g. to publish to gcp (appengine)
+
+```zsh
+: deploy website
+(venv) % source ./bin/load-gcloud
+(venv) % gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
 ```
 
 

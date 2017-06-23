@@ -7,6 +7,7 @@ __pycache__/
 
 .env
 .coverage
+app.yaml
 
 /bin/gitlab-ci-multi-runner
 /locale/**/*.mo
@@ -16,6 +17,9 @@ __pycache__/
 
 /static/*
 !/static/.gitignore
+
+/google-*
+/bin/publi.sh
 
 /tmp/logs/*.log
 !/tmp/logs/.gitignore
