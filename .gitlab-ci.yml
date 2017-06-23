@@ -32,6 +32,7 @@ style:
     - pip --version
     - pip install --upgrade pip setuptools
   script:
+    - make clean
     - make setup
     - make check-style
   cache:
@@ -47,7 +48,6 @@ test:
   variables:
     ENV: test
     PIP_CACHE_DIR: pip-cache
-    GIT_SUBMODULE_STRATEGY: recursive
   before_script:
     - apt-get -qq update
     - apt-get -qq install -y --no-install-recommends gcc zlib1g zlib1g-dev
@@ -55,12 +55,10 @@ test:
     - python --version
     - pip --version
     - pip install --upgrade pip setuptools
-    - git submodule sync --recursive
-    - git submodule update --init --recursive
   script:
+    - make clean
     - make setup
     - make catalog-compile
-    - make clean
     - make coverage
   cache:
     untracked: true
