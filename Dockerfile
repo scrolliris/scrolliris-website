@@ -1,7 +1,7 @@
 FROM gcr.io/google-appengine/python
 
 # venv
-RUN virtualenv /env
+RUN virtualenv /env -p python3.5
 ENV VIRTUAL_ENV /env
 ENV PATH /env/bin:$PATH
 
@@ -20,9 +20,11 @@ WORKDIR app/
 RUN pip install -r requirements.txt
 RUN make catalog-compile
 
-ENV ENV=production \
-    NODE_ENV=production \
-    WSGI_URL_SCHEME=https
+ENV ENV production
+ENV NODE_ENV production
+ENV WSGI_URL_SCHEME https
 
 EXPOSE 8080
+ENV PORT 8080
+
 CMD ./bin/serve -e production -c config.ini
