@@ -21,7 +21,6 @@ RUN pip install -r requirements.txt
 RUN make catalog-compile
 
 ENV ENV production
-ENV NODE_ENV production
 ENV WSGI_URL_SCHEME https
 
 EXPOSE 8080
