@@ -125,6 +125,7 @@ class TemplateUtil(object):
             'tinyletter_url': env.get('TINYLETTER_URL', '/'),
             'twitter_url': env.get('TWITTER_URL', '/'),
             'typekit_id': env.get('TYPEKIT_ID', ''),
+            'userlike_script': env.get('USERLIKE_SCRIPT', '/'),
         }
 
 
