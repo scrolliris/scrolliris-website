@@ -32,7 +32,7 @@ msgstr ""
 #: tirol/templates/index.mako:26
 msgid "application.description"
 msgstr ""
-"Extend your publication readability beyond the scroll withScrolliris, "
+"Extend your publication readability beyond the scroll with Scrolliris, "
 "perfectly designed for Text. Get a readability feedback via completely "
 "open source browser widget and that's ready to integrate."
 
@@ -48,7 +48,8 @@ msgstr "Beyond the Scroll"
 msgid "feature.analysis.description"
 msgstr ""
 "Whether you're writing texts, Scrolliris provide you simplified "
-"readability analysis. Just include a script, that's done!"
+"text readability analysis. Just include a script, that's done! "
+"You can check shortly readability heatmap and garph."
 
 #: tirol/templates/index.mako:51
 msgid "feature.analysis.title"
@@ -68,8 +69,9 @@ msgstr "No Data Lock"
 #: tirol/templates/index.mako:59
 msgid "feature.privacy.description"
 msgstr ""
-"Scrolliris don't track who reader is, and what they are interested. "
-"Otherwise, it only cares texts. Reader's privacy will be protected."
+"Scrolliris don't track who the reader is, and what they are interested "
+"reading. Otherwise, it treats only texts. Reader's privacy will be protected."
+"Your reader would be understanding of your philosophy."
 
 #: tirol/templates/index.mako:58
 msgid "feature.privacy.title"
