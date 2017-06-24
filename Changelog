@@ -1,2 +1,7 @@
+24 Jun 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+	* Responsize layout (styr)
+	* Add chat service integration
+	* Setup deployment
+
 23 Jun 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Initial Commit
