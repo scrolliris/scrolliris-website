@@ -16,8 +16,8 @@
 <div class="container" align="center">
   <div class="grid title" align="center">
     <div class="row">
-      <h1 class="heading">${_('application.title')}</h1>
-      <div class="col-8 off-4">
+      <div class="col-8 off-4 col-l-14 off-l-1 col-n-16">
+        <h1 class="heading">${_('application.title')}</h1>
         <p class="description">${_('application.description')}</p>
         <div class="get-started">
           <a class="primary try btn" href="https://try.scrolliris.com/">${_('get_started.title')}</a>
@@ -39,26 +39,32 @@
     </div>
 
     <div class="row">
-      <div class="col-4 off-2" align="center">
-        <svg class="icon bar-chart" viewBox="0 0 8 8">
-        <use xlink:href="#open-iconic.min_bar-chart" class="icon-bar-chart"></use>
-        </svg>
-        <h3 class="heading">${_('feature.analysis.title')}</h3>
-        <p class="text">${_('feature.analysis.description')}</p>
+      <div class="col-4 off-2 col-l-7 off-l-1 col-m-16" align="center">
+        <section>
+          <svg class="icon bar-chart" viewBox="0 0 8 8">
+          <use xlink:href="#open-iconic.min_bar-chart" class="icon-bar-chart"></use>
+          </svg>
+          <h3 class="heading">${_('feature.analysis.title')}</h3>
+          <p class="text">${_('feature.analysis.description')}</p>
+        </section>
       </div>
-      <div class="col-4" align="center">
-        <svg class="icon lock-locked" viewBox="0 0 8 8">
-          <use xlink:href="#open-iconic.min_lock-locked" class="icon-lock-locked"></use>
-        </svg>
-        <h3 class="heading">${_('feature.privacy.title')}</h3>
-        <p class="text">${_('feature.privacy.description')}</p>
+      <div class="col-4 col-l-7 col-m-16" align="center">
+        <section>
+          <svg class="icon lock-locked" viewBox="0 0 8 8">
+            <use xlink:href="#open-iconic.min_lock-locked" class="icon-lock-locked"></use>
+          </svg>
+          <h3 class="heading">${_('feature.privacy.title')}</h3>
+          <p class="text">${_('feature.privacy.description')}</p>
+        </section>
       </div>
-      <div class="col-4" align="center">
-        <svg class="icon wrench" viewBox="0 0 8 8">
-          <use xlink:href="#open-iconic.min_wrench" class="icon-wrench"></use>
-        </svg>
-        <h3 class="heading">${_('feature.integration.title')}</h3>
-        <p class="text">${_('feature.integration.description')}</p>
+      <div class="col-4 col-l-7 off-l-4 col-m-16" align="center">
+        <section>
+          <svg class="icon wrench" viewBox="0 0 8 8">
+            <use xlink:href="#open-iconic.min_wrench" class="icon-wrench"></use>
+          </svg>
+          <h3 class="heading">${_('feature.integration.title')}</h3>
+          <p class="text">${_('feature.integration.description')}</p>
+        </section>
       </div>
     </div>
   </div>

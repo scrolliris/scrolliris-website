@@ -98,8 +98,6 @@ input[type="text"]
   font-size 18px
   font-weight 400
 
-
-
 // image
 .screenshot
   img
@@ -113,3 +111,28 @@ svg.icon
 
 svg.icon.pink
   fill #f45660
+
+
+// media queries (incl. layout)
+@media only screen and (max-width: 768px)
+  .announcement
+    padding 0.42rem 0.33rem 0.28rem 0.33rem
+    p
+      font-size 0.95em
+      font-weight 300
+      line-height 2.81rem
+      padding 0.2rem 0.6rem
+
+  input[type="submit"]
+    display block
+    margin-top 1.26rem
+    padding 0.18rem 0.62rem
+
+@media only screen and (max-width: 620px)
+  .announcement
+    padding 0.72rem 0.33rem 0.54rem 0.33rem
+    p
+      font-size 0.95em
+      font-weight 300
+      line-height 1.96rem
+      padding 0.2rem 0.4rem

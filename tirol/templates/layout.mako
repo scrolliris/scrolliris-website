@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <!--
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    -->
     <meta name="description" content="${_('meta.description')}">
     <meta name="author" content="${_('meta.author')}">
     <title><%block name='title'/></title>
@@ -29,7 +27,7 @@
 
     <div class="wrapper" align="center">
       <div class="announcement" align="center">
-        ${_('announcement.beta')}
+        <p>${_('announcement.beta')}</p>
       </div>
       ${self.body()}
       <%block name='footer'>
