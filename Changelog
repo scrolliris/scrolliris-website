@@ -1,3 +1,6 @@
+26 Jun 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+	* Add background image and transition animation
+
 24 Jun 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Responsize layout (styr)
 	* Add chat service integration
