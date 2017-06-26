@@ -43,7 +43,7 @@ var config = {
       ]
     , exclude: path.resolve(__dirname, 'tirol/assets')
     }, {
-      test:    /\.(png|woff|woff2|eot|ttf)$/
+      test:    /\.(svg|png|woff|woff2|eot|ttf)$/
     , loader:  'url-loader?limit=100000'
     , exclude: /node_modules/
     }, {

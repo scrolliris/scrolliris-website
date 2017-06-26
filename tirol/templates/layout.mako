@@ -15,7 +15,7 @@
     <link rel="robots" href="/robots.txt" type="text/plain">
     <%block name='header'/>
   </head>
-  <body>
+  <body class="fixed">
     <%def name="add_icons(svg_file)">
     ## img/FILE.[hash].svg
     <% svg_file = req.util.manifest_json.get(svg_file, 'img/' + svg_file) %>
