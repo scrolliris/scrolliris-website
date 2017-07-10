@@ -28,7 +28,7 @@
   </div>
 
   <div class="grid screenshot">
-    <img class="console-screenshot" width="980" height="587" src="${util.static_url('img/screenshot.png')}" alt="screenshot">
+    <img class="console-screenshot" width="980" src="${util.static_url('img/screenshot.png')}" alt="screenshot">
   </div>
 
   <div class="grid feature">
