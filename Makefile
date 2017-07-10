@@ -57,12 +57,9 @@ catalog: | catalog-compile
 
 # utilities
 
-check-style:
+check:
 	flake8
-.PHONY: check-style
-
-style: | check-style
-.PHONY: style
+.PHONY: check
 
 clean:
 	find . ! -readable -prune -o -print \
