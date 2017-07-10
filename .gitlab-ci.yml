@@ -36,7 +36,7 @@ check:
   script:
     - make clean
     - make setup
-    - make check-style
+    - make check
   cache:
     untracked: true
     paths:
