@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="${_('meta.description')}">
     <meta name="author" content="${_('meta.author')}">
     <title><%block name='title'/></title>
-    <link rel="stylesheet" href="${util.built_asset_url('vendor.css')}">
     <link rel="stylesheet" href="${util.built_asset_url('master.css')}">
+    <link rel="stylesheet" href="${util.built_asset_url('vendor.css')}">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="humans" href="/humans.txt" type="text/plain">

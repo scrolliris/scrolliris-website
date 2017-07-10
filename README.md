@@ -24,6 +24,7 @@ Tirol; The IntROduction website for scrollIris
 
 * Python `3.5.0`
 * Node.js `7.8.0` (build)
+* Raleway Thin (for logo, use `bin/font-fetch.sh`)
 * GNU gettext `>= 0.19.8.1` (translation)
 * [Innsbruck](https://gitlab.com/lupine-software/innsbruck) as git subtree
 

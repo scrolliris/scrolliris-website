@@ -108,18 +108,6 @@ gulp.task('build-install:master', function(done) {
 
 // -- [development tasks]
 
-// watch targets
-var paths = {
-  master:  [
-    path.join(assetsDir, 'master.js')
-  , path.join(assetsDir, 'css/*.styl')
-  , path.join(assetsDir, 'js/*.js')
-  ]
-, img: [
-    path.join(assetsDir, 'img/*')
-  ]
-};
-
 gulp.task('clean', function(done) {
   return gulp.src([
     'tmp/builds/*'
@@ -127,7 +115,9 @@ gulp.task('clean', function(done) {
   , 'static/*.json'
   , 'static/*.css'
   , 'static/*.txt'
-  , 'static/**/*.{eot,svg,ttf,woff,woff2}'
+  // except font/
+  //, 'static/**/*.{eot,svg,ttf,woff,woff2}'
+  , 'static/*.{eot,svg,ttf,woff,woff2}'
   , 'static/*.ico'
   , 'static/**/*.png'
   ], {
@@ -149,7 +139,18 @@ gulp.task('install', [
 , 'copy'
 ]);
 
-// watches
+// watche
+var paths = {
+  master:  [
+    path.join(assetsDir, 'master.js')
+  , path.join(assetsDir, 'css/*.styl')
+  , path.join(assetsDir, 'js/*.js')
+  ]
+, img: [
+    path.join(assetsDir, 'img/*')
+  ]
+};
+
 gulp.task('watch', ['env'], function(done) {
   gulp.watch('gulpfile.js', ['default']);
   gulp.watch(paths.master, ['build-install:master']);

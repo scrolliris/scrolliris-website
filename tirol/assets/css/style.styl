@@ -1,15 +1,16 @@
 body
   color rgba(255, 255, 255, 0.65)
   background-color #121517
-  background-image url(../img/background.svg), linear-gradient(#394a54, #121517 38%)
+  background linear-gradient(#394a54, #121517 58%)
+  background-image url(../img/background.svg), linear-gradient(#202428, #1a1e23 18%)
   background-repeat repeat-x
   background-attachment scroll
   background-position center top
+  transition-property all
+  transition-duration 4.8s
   // light -> dark
   //color #ffffff
   //background-color #121517
-  transition-property all
-  transition-duration 4.8s
 
 body.fixed
   transition-property none
@@ -17,9 +18,13 @@ body.fixed
   background-size cover
   background-position center 37%
   // light -> dark
-  //color #838383
+  //color #131415
   //background-color #ffffff
 
+@font-face
+  font-family 'Raleway Thin'
+  src url('../../../static/font/webfonts/raleway_thin-webfont.woff') format('woff'),
+      url('../../../static/font/webfonts/raleway_thin-webfont.ttf') format('truetype')
 
 // general tag
 a
@@ -39,6 +44,30 @@ input[type="text"]
     font-size 2.15rem
     span
       font-size 1.56rem
+  h1
+    font-family 'Raleway Thin', sans-serif
+    font-size 1.56em
+    vertical-align middle
+    text-align center
+    width 6.42em
+    height 1.71rem
+    padding 0.78rem 1.24rem
+    // general
+    .scroll
+      color lighten(#575551, 9%)
+    .iris
+      color lighten(#705e8d, 66%)
+    // grey
+    //.scroll
+    //  color lighten(#705E8D, 33%)
+    //.iris
+    //  color darken(#c4c4c0, 6%)
+    // inverted
+    //.scroll
+    //  color lighten(#575551, 42%)
+    //.iris
+    //  color darken(#705E8D, 29%)
+
   .logo-img
     // FIXME
     vertical-align middle
@@ -48,7 +77,6 @@ input[type="text"]
     border 1px solid #f2f2f2
 
 .footer
-  //background-color #131415
   background-image linear-gradient(#121517, #131415 50%)
   color #ffffff
   ul
@@ -82,9 +110,9 @@ input[type="text"]
 
 // description
 .title
-  h1
+  h2.heading
     font-weight bold
-    font-size 2.97em
+    font-size 2.57em
     color darken(#ffffff, 9%)
   .description
     font-size 1.18em
@@ -101,7 +129,7 @@ input[type="text"]
     color #f3f3f3
 
 .nav
-  margin-top 2.88rem
+  margin-top 2.48rem
   .link
     font-weight 300
     text-decoration none
@@ -111,7 +139,7 @@ input[type="text"]
     color #ededed
 
 .line
-  color darken(#f3f3f3, 89%)
+  border 1px dashed darken(#ededed, 72%)
   width 7.24rem
 
 .announcement
@@ -120,7 +148,20 @@ input[type="text"]
   display block
   font-size 18px
   font-weight 400
-  //box-shadow 0 0 0.18rem darken(#333333, 3%)
+  box-shadow 0 0 0.18rem darken(#333333, 13%)
+
+.newsletter
+  input[type="text"]
+    width 12.85rem
+  input.secondary.btn
+    color darken(#888888, 36%)
+    border 1px solid #f2f2f2
+    border-radius 1px
+    min-height 1.92rem
+    min-width 8.43rem
+    &:hover
+      color black
+      background-color #f2f2f2
 
 // image
 .screenshot

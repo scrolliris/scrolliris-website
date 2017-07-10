@@ -5,7 +5,7 @@
 </%block>
 
 <div class="header" align="center">
-  <h2><img class="logo-img" src="" width="52px" height="52px" alt="Scrolliris's Logo / TBD"></h2>
+  <h1><span class="scroll">Scroll</span><span class="iris">iris</span></h1>
   <ul class="nav">
     <li><a class="overview active link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="roadmap link" href="${req.route_path('roadmap')}">${_('nav.header.roadmap')}</a></li>
@@ -17,7 +17,7 @@
   <div class="grid title" align="center">
     <div class="row">
       <div class="col-8 off-4 col-l-14 off-l-1 col-n-16">
-        <h1 class="heading">${_('application.title')}</h1>
+        <h2 class="heading">${_('application.title')}</h2>
         <p class="description">${_('application.description')}</p>
         <div class="get-started">
           <a class="primary try btn" href="https://try.scrolliris.com/">${_('get_started.title')}</a>
