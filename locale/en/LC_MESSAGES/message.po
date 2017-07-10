@@ -26,8 +26,7 @@ msgstr ""
 #: tirol/templates/layout.mako:30
 msgid "announcement.beta"
 msgstr ""
-"BETA release of readability heatmap widget is comming soon. Stay "
-"tuned ;-)"
+"BETA version release is comming soon. Stay tuned ;-)"
 
 #: tirol/templates/index.mako:26
 msgid "application.description"
