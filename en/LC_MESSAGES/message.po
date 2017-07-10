@@ -49,22 +49,23 @@ msgid "feature.analysis.description"
 msgstr ""
 "Whether you're writing texts, Scrolliris provide you simplified "
 "text readability analysis. Just include a script, that's done! "
-"You can check shortly readability heatmap and garph."
+"You can check shortly readability heatmap and graph."
 
 #: tirol/templates/index.mako:51
 msgid "feature.analysis.title"
-msgstr "Easy Text Readability Analysis"
+msgstr "Text Readability Analysis"
 
 #: tirol/templates/index.mako:66
 msgid "feature.integration.description"
 msgstr ""
-"Integrate it your own publication. Scrolliris's text readability "
-"browser widget is free software. You can integrate it into your "
-"document as you like. Also you can even choose public data plan."
+"You can embed easily our script and widget your own publication. "
+"Scrolliris's text readability tracker and browser widget are both free "
+"software. You can even integrate it into your own document or system "
+"as you like."
 
 #: tirol/templates/index.mako:65
 msgid "feature.integration.title"
-msgstr "No Data Lock"
+msgstr "Easy Integration"
 
 #: tirol/templates/index.mako:59
 msgid "feature.privacy.description"
