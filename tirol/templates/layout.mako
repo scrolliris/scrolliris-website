@@ -16,15 +16,6 @@
     <%block name='header'/>
   </head>
   <body class="fixed">
-    <%def name="add_icons(svg_file)">
-    ## img/FILE.[hash].svg
-    <% svg_file = req.util.manifest_json.get(svg_file, 'img/' + svg_file) %>
-    <%include file='../../static/${svg_file}'/>
-    </%def>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
-    <% add_icons('vendor.svg') %>
-    </svg>
-
     <div class="wrapper" align="center">
       <div class="announcement" align="center">
         <p>${_('announcement.beta')}</p>
@@ -34,6 +25,15 @@
         <%include file='footer.mako'/>
       </%block>
     </div>
+
+    <%def name="add_icons(svg_file)">
+    ## img/FILE.[hash].svg
+    <% svg_file = req.util.manifest_json.get(svg_file, 'img/' + svg_file) %>
+    <%include file='../../static/${svg_file}'/>
+    </%def>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <% add_icons('vendor.svg') %>
+    </svg>
 
     <script src="${util.built_asset_url('vendor.js')}" charset="utf-8"></script>
     <script src="${util.built_asset_url('master.js')}" charset="utf-8"></script>
