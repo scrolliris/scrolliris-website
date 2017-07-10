@@ -14,10 +14,10 @@ except ImportError:
     babel_cmdclass = {}
 
 here = os.path.abspath(os.path.dirname(__file__))
-with open(os.path.join(here, *('doc', 'README.rst'))) as f:
-    README = f.read()
-with open(os.path.join(here, 'Changelog')) as f:
-    CHANGES = f.read()
+with open(os.path.join(here, *('doc', 'DESCRIPTION.rst'))) as f:
+    DESCRIPTION = f.read()
+with open(os.path.join(here, 'CHANGELOG')) as f:
+    CHANGELOG = f.read()
 
 requires = [
     'colorlog',
@@ -55,7 +55,7 @@ setup(
     name='tirol',
     version='0.1',
     description='The IntROduction website for ScroLliris.',
-    long_description=README + '\n\n' + CHANGES,
+    long_description=DESCRIPTION + '\n\n' + CHANGELOG,
     classifiers=[
         "Programming Language :: Python",
         "Framework :: Pyramid",
