@@ -5,13 +5,21 @@ body
   background-repeat repeat-x
   background-attachment scroll
   background-position center top
-  transition all 5.2s ease
+  // light -> dark
+  //color #ffffff
+  //background-color #121517
+  transition-property all
+  transition-duration 4.8s
 
 body.fixed
+  transition-property all
+  transition-duration 4.1s
   background-attachment fixed
   background-size cover
-  background-position center 54%
-  transition-property none
+  background-position center 37%
+  // light -> dark
+  //color #838383
+  //background-color #ffffff
 
 
 // general tag
@@ -32,6 +40,13 @@ input[type="text"]
     font-size 2.15rem
     span
       font-size 1.56rem
+  .logo-img
+    // FIXME
+    vertical-align middle
+    margin 0
+    width 360px
+    padding 8px 12px
+    border 1px solid #f2f2f2
 
 .footer
   //background-color #131415
@@ -54,7 +69,8 @@ input[type="text"]
   .get-started
     margin-top 4.11rem
     .try.btn
-      color darken(#a380d8, 36%)
+      //color darken(#a380d8, 36%)
+      color darken(#888888, 36%)
       border-radius 2px
       min-height 2.62rem
       min-width 11.33rem
@@ -70,7 +86,7 @@ input[type="text"]
   h1
     font-weight bold
     font-size 2.97em
-    color #ffffff
+    color darken(#ffffff, 9%)
   .description
     font-size 1.18em
 
@@ -86,6 +102,7 @@ input[type="text"]
     color #f3f3f3
 
 .nav
+  margin-top 2.88rem
   .link
     font-weight 300
     text-decoration none
@@ -100,7 +117,7 @@ input[type="text"]
 
 .announcement
   background-color #705e8d
-  box-shadow 0 0 0.28rem darken(#333333, 13%)
+  box-shadow 0 0 0.18rem darken(#333333, 3%)
   color #FFFFFF
   display block
   font-size 18px
@@ -111,7 +128,8 @@ input[type="text"]
   img
     max-width 1024px - 64px
     width 90%
-    box-shadow 0.46rem 0.46rem 1.2rem darken(#333333, 9%)
+    border 1px solid #efefef
+    //box-shadow 0.46rem 0.46rem 1.2rem darken(#333333, 9%)
 
 // svg
 svg.icon

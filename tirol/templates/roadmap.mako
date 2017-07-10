@@ -5,7 +5,7 @@
 </%block>
 
 <div class="header" align="center">
-  <h2><img class="logo" src="" width="52px" height="52px" alt="logo"></h2>
+  <h2><img class="logo-img" src="" width="52px" height="52px" alt="Scrolliris's Logo / TBD"></h2>
   <ul class="nav">
     <li><a class="overview link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="roadmap active link" href="${req.route_path('roadmap')}">${_('nav.header.roadmap')}</a></li>

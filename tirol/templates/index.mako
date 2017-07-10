@@ -5,7 +5,7 @@
 </%block>
 
 <div class="header" align="center">
-  <h2><img class="logo" src="" width="52px" height="52px" alt="logo"></h2>
+  <h2><img class="logo-img" src="" width="52px" height="52px" alt="Scrolliris's Logo / TBD"></h2>
   <ul class="nav">
     <li><a class="overview active link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="roadmap link" href="${req.route_path('roadmap')}">${_('nav.header.roadmap')}</a></li>
@@ -87,7 +87,7 @@
   <div class="grid about">
     <div class="row">
       <div class="col-16" align=center>
-        <h5><a class="logo" href="/"><img class="logo" src="" width="52px" height="52px" alt="logo"></a></h5>
+        <h5><a class="logo" href="https://lupine-software.com/"><img class="logo-img" src="${util.static_url('img/lupine-software-logo-64x64.png')}" width="64px" height="64px" alt="Lupine Software's Logo"></a></h5>
         <p>${_('about.text', mapping={'href': 'https://lupine-software.com/'})|n,trim}</p>
       </div>
     </div>
