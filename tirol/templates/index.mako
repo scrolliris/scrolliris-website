@@ -28,7 +28,7 @@
   </div>
 
   <div class="grid screenshot">
-    <img class="console-screenshot" src="${util.static_url('img/screenshot.png')}" alt="screenshot">
+    <img class="console-screenshot" width="980" height="587" src="${util.static_url('img/screenshot.png')}" alt="screenshot">
   </div>
 
   <div class="grid feature">
@@ -41,8 +41,8 @@
     <div class="row">
       <div class="col-4 off-2 col-l-7 off-l-1 col-m-16" align="center">
         <section>
-          <svg class="icon bar-chart" viewBox="0 0 8 8">
-          <use xlink:href="#open-iconic.min_bar-chart" class="icon-bar-chart"></use>
+          <svg class="icon bar-chart" viewBox="0 0 8 8" width="48" height="48">
+            <use xlink:href="#open-iconic.min_bar-chart" class="icon-bar-chart"></use>
           </svg>
           <h3 class="heading">${_('feature.analysis.title')}</h3>
           <p class="text">${_('feature.analysis.description')}</p>
@@ -50,7 +50,7 @@
       </div>
       <div class="col-4 col-l-7 col-m-16" align="center">
         <section>
-          <svg class="icon lock-locked" viewBox="0 0 8 8">
+          <svg class="icon lock-locked" viewBox="0 0 8 8" width="48" height="48">
             <use xlink:href="#open-iconic.min_lock-locked" class="icon-lock-locked"></use>
           </svg>
           <h3 class="heading">${_('feature.privacy.title')}</h3>
@@ -59,7 +59,7 @@
       </div>
       <div class="col-4 col-l-7 off-l-4 col-m-16" align="center">
         <section>
-          <svg class="icon wrench" viewBox="0 0 8 8">
+          <svg class="icon wrench" viewBox="0 0 8 8" width="48" height="48">
             <use xlink:href="#open-iconic.min_wrench" class="icon-wrench"></use>
           </svg>
           <h3 class="heading">${_('feature.integration.title')}</h3>
