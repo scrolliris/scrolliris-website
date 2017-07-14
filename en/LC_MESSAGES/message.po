@@ -32,8 +32,8 @@ msgstr ""
 msgid "application.description"
 msgstr ""
 "Extend your publication readability beyond the scroll with Scrolliris, "
-"perfectly designed for Text. Get a readability feedback via completely "
-"open source browser widget and that's ready to integrate."
+"perfectly designed for text. Get readability feedback via completely "
+"open source browser widget that's ready to integrate."
 
 #: tirol/templates/index.mako:4 tirol/templates/roadmap.mako:4
 msgid "application.name"
@@ -58,9 +58,9 @@ msgstr "Text Readability Analysis"
 msgid "feature.integration.description"
 msgstr ""
 "You can embed easily our script and widget your own publication. "
-"Scrolliris's text readability tracker and browser widget are both free "
-"software. You can even integrate it into your own document or system "
-"as you like."
+"Scrolliris's text readability tracker and browser reflector widget are both "
+"free software. You can even build it by yourself for your own document or "
+"system as you like."
 
 #: tirol/templates/index.mako:65
 msgid "feature.integration.title"
@@ -70,8 +70,8 @@ msgstr "Easy Integration"
 msgid "feature.privacy.description"
 msgstr ""
 "Scrolliris don't track who the reader is, and what they are interested "
-"reading. Otherwise, it treats only texts. Reader's privacy will be protected."
-"Your reader would be understanding of your philosophy."
+"reading. Otherwise, it treats only texts. Reader's privacy is always "
+"protected. Your reader would be understanding of your philosophy."
 
 #: tirol/templates/index.mako:58
 msgid "feature.privacy.title"
@@ -88,8 +88,8 @@ msgstr "2017 Lupine Software, LLC"
 #: tirol/templates/index.mako:29
 msgid "get_started.description"
 msgstr ""
-"Improve text readability and perceived affordance with our BETA "
-"browser widget."
+"Improve text readability and perceived affordance with our browser "
+"reflector widget."
 
 #: tirol/templates/index.mako:28
 msgid "get_started.title"
