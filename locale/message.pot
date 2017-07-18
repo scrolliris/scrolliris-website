@@ -1,5 +1,5 @@
 # Translations template for tirol.
-# Copyright (C) 2017 Lupine Software, LLC
+# Copyright (C) 2017 Lupine Software LLC
 # This file is distributed under the same license as the tirol project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #

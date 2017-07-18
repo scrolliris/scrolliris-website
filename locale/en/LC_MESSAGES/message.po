@@ -1,5 +1,5 @@
 # Innsbruck
-# Copyright (C) 2017 Lupine Software, LLC
+# Copyright (C) 2017 Lupine Software LLC
 # This file is distributed under the same license as the Innsbruck project.
 # Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>, 2017.
 #
@@ -21,7 +21,7 @@ msgid "about.text"
 msgstr ""
 "Made with <svg viewBox=\"0 0 8 8\" class=\"tiny icon pink\"><use xlink:"
 "href=\"#open-iconic.min_heart\" class=\"icon-heart\"></use></svg> by "
-"<a href=\"$href\">Lupine Software, LLC</a>"
+"<a href=\"$href\">Lupine Software LLC</a>"
 
 #: tirol/templates/layout.mako:30
 msgid "announcement.beta"
@@ -83,7 +83,7 @@ msgstr "We encourage reading and writing longer texts on the web"
 
 #: tirol/templates/footer.mako:10
 msgid "footer.copyright"
-msgstr "2017 Lupine Software, LLC"
+msgstr "2017 Lupine Software LLC"
 
 #: tirol/templates/index.mako:29
 msgid "get_started.description"
@@ -97,7 +97,7 @@ msgstr "Try Demo"
 
 #: tirol/templates/layout.mako:8
 msgid "meta.author"
-msgstr "Lupine Software, LLC"
+msgstr "Lupine Software LLC"
 
 #: tirol/templates/layout.mako:7
 msgid "meta.description"
