@@ -199,7 +199,7 @@ contact [@scrolliris](https://twitter.com/scrolliris) on Twitter.
 
 ## License
 
-Innsbruck; Copyright (c) 2017 Lupine Software, LLC
+Innsbruck; Copyright (c) 2017 Lupine Software LLC
 
 ### Software
 
