@@ -8,14 +8,13 @@
     <meta name="author" content="${_('meta.author')}">
     <title><%block name='title'/></title>
     <link rel="stylesheet" href="${util.built_asset_url('master.css')}">
-    <link rel="stylesheet" href="${util.built_asset_url('vendor.css')}">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="humans" href="/humans.txt" type="text/plain">
     <link rel="robots" href="/robots.txt" type="text/plain">
     <%block name='header'/>
   </head>
-  <body class="fixed">
+  <body>
     <div class="wrapper" align="center">
       <div class="announcement" align="center">
         <p>${_('announcement.beta')}</p>
@@ -35,8 +34,6 @@
     <% add_icons('vendor.svg') %>
     </svg>
 
-    <script async src="${util.built_asset_url('vendor.js')}" charset="utf-8"></script>
-    <script async src="${util.built_asset_url('master.js')}" charset="utf-8"></script>
     <%include file='./_font.mako'/>
     <%include file='./_chat.mako'/>
   </body>

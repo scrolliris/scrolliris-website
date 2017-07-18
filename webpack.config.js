@@ -1,6 +1,6 @@
 'use strict';
 
-var path    = require('path')
+var path = require('path')
   , webpack = require('webpack')
   , ExtractTextPlugin = require('extract-text-webpack-plugin')
   , ManifestPlugin = require('webpack-manifest-plugin')
@@ -14,41 +14,40 @@ var filename = '[name]';
 if (nodeEnv == 'production') {
   filename += '.[contenthash]';
 }
-var cssBundler    = new ExtractTextPlugin(filename + '.css')
-  , stylusBundler = new ExtractTextPlugin(filename + '.css')
-  , svgBundler    = new ExtractTextPlugin('img/' + filename + '.svg')
+var stylusBundler = new ExtractTextPlugin(filename + '.css')
+  , svgBundler = new ExtractTextPlugin('img/' + filename + '.svg')
   ;
 
 var config = {
   output: {
-    path:     path.resolve(__dirname, 'tmp/builds/')
+    path: path.resolve(__dirname, 'tmp/builds/')
   , filename: (nodeEnv == 'production' ? '[name].[chunkhash].js' : '[name].js')
   }
 , module: {
     loaders: [{
-      test:    /\.css$/
-    , loader:  cssBundler.extract(['css'])
+      test: /\.css$/
+    , loader: stylusBundler.extract(['css'])
     }, {
-      test:    /\.styl$/
-    , loader:  stylusBundler.extract(['css', 'stylus'])
+      test: /\.styl$/
+    , loader: stylusBundler.extract(['css', 'stylus'])
     , include: [
         path.resolve(__dirname, 'tirol/assets')
       ]
     }, {
-      test:    /\.svg$/
-    , loader:  svgBundler.extract(['svg-sprite'])
+      test: /\.svg$/
+    , loader: svgBundler.extract(['svg-sprite'])
     , include: [
         path.resolve(__dirname,
           'node_modules/open-iconic/sprite/open-iconic.min.svg')
       ]
     , exclude: path.resolve(__dirname, 'tirol/assets')
     }, {
-      test:    /\.(svg|png|woff|woff2|eot|ttf)$/
-    , loader:  'url-loader?limit=100000'
+      test: /\.(svg|png|woff|woff2|eot|ttf)$/
+    , loader: 'url-loader?limit=100000'
     , exclude: /node_modules/
     }, {
-      test:    /\.js$/
-    , loader:  'babel-loader'
+      test: /\.js$/
+    , loader: 'babel-loader'
     , include: [
         path.resolve(__dirname, 'tirol/assets')
       ]
@@ -64,7 +63,6 @@ var config = {
 , plugins: (function() {
     var _plugins = [
       stylusBundler
-    , cssBundler
     , svgBundler
     ];
     _plugins.push(
@@ -85,9 +83,9 @@ var config = {
       );
       _plugins.push(
         new LicenseWebpackPlugin({
-          pattern:          /^(MIT|ISC|BSD.*)$/
-        , filename:         'freesoftware-licenses.txt'
-        , addLicenseText:   false
+          pattern: /^(MIT|ISC|BSD.*)$/
+        , filename: 'freesoftware-licenses.txt'
+        , addLicenseText: false
         , licenseFilenames: [
           // These filese are needed to check license in package.json.
             'LICENSE', 'LICENSE.md', 'LICENSE.txt'
@@ -99,7 +97,7 @@ var config = {
       );
       _plugins.push(
         new webpack.optimize.UglifyJsPlugin({
-          debug:    false
+          debug: false
         , minimize: true
         , compress: {
             warnings: false

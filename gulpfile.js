@@ -42,10 +42,6 @@ var build = function(files) {
   .pipe(gulp.dest(path.resolve(__dirname, 'tmp/builds/')));
 }
 
-gulp.task('build:vendor', ['env'], function(done) {
-  return build(['vendor.js']);
-});
-
 gulp.task('build:master', ['env'], function(done) {
   return build(['master.js']);
 });
@@ -68,11 +64,10 @@ gulp.task('copy:txt', ['env'], function(done) {
   .pipe(copy('static/', {prefix: 3}));
 })
 
-// builds __each__ {vendor|master}.js into %(appName)/tmp/builds
+// builds master.js into %(appName)/tmp/builds
 // this run webpack each times.
 gulp.task('build', [
   'build:master'
-, 'build:vendor'
 ]);
 
 // builds all scripts at once with license plugin for production mode
@@ -80,7 +75,6 @@ gulp.task('build', [
 gulp.task('build:all', ['env'], function(done) {
   return build([
     'master.js'
-  , 'vendor.js'
   ]);
 });
 
