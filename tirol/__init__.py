@@ -111,6 +111,9 @@ class TemplateUtil(object):
     def static_url(self, path):
         return self.req.static_url(STATIC_DIR + '/' + path)
 
+    def static_path(self, path):
+        return self.req.static_path(STATIC_DIR + '/' + path)
+
     def built_asset_url(self, path):
         path = self.manifest_json.get(path, path)
         return self.static_url(path)
