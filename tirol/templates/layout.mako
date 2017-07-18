@@ -35,8 +35,8 @@
     <% add_icons('vendor.svg') %>
     </svg>
 
-    <script src="${util.built_asset_url('vendor.js')}" charset="utf-8"></script>
-    <script src="${util.built_asset_url('master.js')}" charset="utf-8"></script>
+    <script async src="${util.built_asset_url('vendor.js')}" charset="utf-8"></script>
+    <script async src="${util.built_asset_url('master.js')}" charset="utf-8"></script>
     <%include file='./_font.mako'/>
     <%include file='./_chat.mako'/>
   </body>
