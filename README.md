@@ -34,7 +34,6 @@ The website of [https://scrolliris.com/](https://scrolliris.com/).
 ## Integrations
 
 * GitLab
-* Sentry
 * Tinyletter
 * Twitter
 * Typekit

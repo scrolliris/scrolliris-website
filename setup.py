@@ -44,7 +44,6 @@ testing_requires = [
 
 production_requires = [
     'CherryPy',
-    'raven',
 ]
 
 cmdclass = {}
