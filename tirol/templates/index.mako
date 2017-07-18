@@ -1,4 +1,4 @@
-<%inherit file='./layout.mako'/>
+<%inherit file='./_layout.mako'/>
 
 <%block name='title'>
   ${_('application.name')}
