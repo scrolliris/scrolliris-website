@@ -7,7 +7,7 @@ https://gitlab.com/lupine-software/tirol/commits/master) [![coverage report](
 https://gitlab.com/lupine-software/tirol/badges/master/coverage.svg)](
 https://gitlab.com/lupine-software/tirol/commits/master)
 
-![Scrolliris](https://gitlab.com/lupine-software/tirol/raw/master/static/img/scrolliris-logo-300x300.png)
+![Scrolliris](https://gitlab.com/lupine-software/tirol/raw/master/tirol/assets/img/scrolliris-logo-300x300.png)
 
 ```txt
  ______             _
