@@ -7,6 +7,8 @@ https://gitlab.com/lupine-software/tirol/commits/master) [![coverage report](
 https://gitlab.com/lupine-software/tirol/badges/master/coverage.svg)](
 https://gitlab.com/lupine-software/tirol/commits/master)
 
+![Scrolliris](https://gitlab.com/lupine-software/tirol/raw/master/static/img/scrolliris-logo-300x300.png)
+
 ```txt
  ______             _
 (_) |o             | |
@@ -17,7 +19,7 @@ https://gitlab.com/lupine-software/tirol/commits/master)
 Tirol; The IntROduction website for scrollIris
 ```
 
-[https://scrolliris.com/](https://scrolliris.com/).
+The website of [https://scrolliris.com/](https://scrolliris.com/).
 
 
 ## Requirements
