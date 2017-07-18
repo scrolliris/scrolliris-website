@@ -212,7 +212,7 @@ Don't commit changes of translation project into this repo.
 
 ## License
 
-Tirol; Copyright (c) 2017 Lupine Software, LLC.
+Tirol; Copyright (c) 2017 Lupine Software LLC.
 
 
 This is free software;  
