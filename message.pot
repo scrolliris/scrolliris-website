@@ -1,5 +1,5 @@
 # Translations template for tirol.
-# Copyright (C) 2017 Lupine Software LLC
+# Copyright (C) 2017 Lupine Software, LLC
 # This file is distributed under the same license as the tirol project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tirol 0.1\n"
 "Report-Msgid-Bugs-To: feedback@lupine-software.com\n"
-"POT-Creation-Date: 2017-06-23 07:42+0900\n"
+"POT-Creation-Date: 2017-07-20 19:23+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,30 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+
+#: tirol/templates/_layout.mako:7
+msgid "meta.description"
+msgstr ""
+
+#: tirol/templates/_layout.mako:8
+msgid "meta.author"
+msgstr ""
+
+#: tirol/templates/_layout.mako:27
+msgid "announcement.beta"
+msgstr ""
+
+#: tirol/templates/_newsletter.mako:2
+msgid "newsletter.description"
+msgstr ""
+
+#: tirol/templates/_newsletter.mako:3
+msgid "newsletter.label"
+msgstr ""
+
+#: tirol/templates/_newsletter.mako:7
+msgid "newsletter.subscribe.button"
+msgstr ""
 
 #: tirol/templates/footer.mako:5
 msgid "nav.footer.about"
@@ -33,67 +57,67 @@ msgstr ""
 msgid "footer.copyright"
 msgstr ""
 
-#: tirol/templates/index.mako:4 tirol/templates/roadmap.mako:4
+#: tirol/templates/index.mako:4 tirol/templates/timeline.mako:4
 msgid "application.name"
 msgstr ""
 
-#: tirol/templates/index.mako:15 tirol/templates/roadmap.mako:10
+#: tirol/templates/index.mako:11 tirol/templates/timeline.mako:11
 msgid "nav.header.overview"
 msgstr ""
 
-#: tirol/templates/index.mako:16 tirol/templates/roadmap.mako:11
-msgid "nav.header.roadmap"
+#: tirol/templates/index.mako:12 tirol/templates/timeline.mako:12
+msgid "nav.header.timeline"
 msgstr ""
 
-#: tirol/templates/index.mako:17 tirol/templates/roadmap.mako:12
+#: tirol/templates/index.mako:13 tirol/templates/timeline.mako:13
 msgid "nav.header.newsletter"
 msgstr ""
 
-#: tirol/templates/index.mako:24
+#: tirol/templates/index.mako:21
 msgid "application.title"
 msgstr ""
 
-#: tirol/templates/index.mako:26
+#: tirol/templates/index.mako:22
 msgid "application.description"
 msgstr ""
 
-#: tirol/templates/index.mako:28
+#: tirol/templates/index.mako:24
 msgid "get_started.title"
 msgstr ""
 
-#: tirol/templates/index.mako:29
+#: tirol/templates/index.mako:25
 msgid "get_started.description"
 msgstr ""
 
-#: tirol/templates/index.mako:42
+#: tirol/templates/index.mako:38
 msgid "feature.title"
 msgstr ""
 
-#: tirol/templates/index.mako:51
+#: tirol/templates/index.mako:48
 msgid "feature.analysis.title"
 msgstr ""
 
-#: tirol/templates/index.mako:52
+#: tirol/templates/index.mako:49
 msgid "feature.analysis.description"
 msgstr ""
 
-#: tirol/templates/index.mako:58
+#: tirol/templates/index.mako:57
 msgid "feature.privacy.title"
 msgstr ""
 
-#: tirol/templates/index.mako:59
+#: tirol/templates/index.mako:58
 msgid "feature.privacy.description"
 msgstr ""
 
-#: tirol/templates/index.mako:65
+#: tirol/templates/index.mako:66
 msgid "feature.integration.title"
 msgstr ""
 
-#: tirol/templates/index.mako:66
+#: tirol/templates/index.mako:67
 msgid "feature.integration.description"
 msgstr ""
 
-#: tirol/templates/index.mako:77
+#: tirol/templates/index.mako:78
 msgid "newsletter.title"
 msgstr ""
 
@@ -101,31 +125,7 @@ msgstr ""
 msgid "about.text"
 msgstr ""
 
-#: tirol/templates/layout.mako:7
-msgid "meta.description"
-msgstr ""
-
-#: tirol/templates/layout.mako:8
-msgid "meta.author"
-msgstr ""
-
-#: tirol/templates/layout.mako:30
-msgid "announcement.beta"
-msgstr ""
-
-#: tirol/templates/newsletter.mako:3
-msgid "newsletter.description"
-msgstr ""
-
-#: tirol/templates/newsletter.mako:4
-msgid "newsletter.label"
-msgstr ""
-
-#: tirol/templates/newsletter.mako:7
-msgid "newsletter.subscribe.button"
-msgstr ""
-
-#: tirol/templates/roadmap.mako:4
-msgid "roadmap.title"
+#: tirol/templates/timeline.mako:4
+msgid "timeline.title"
 msgstr ""
 
