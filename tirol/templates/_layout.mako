@@ -43,5 +43,6 @@
 
     <%include file='./_font.mako'/>
     <%include file='./_chat.mako'/>
+    <script src="${req.util.built_asset_url('master.js')}"></script>
   </body>
 </html>

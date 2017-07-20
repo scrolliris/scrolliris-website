@@ -206,6 +206,8 @@ def add_renderer_globals(evt):
         _ = req.translate
         if _:
             evt['_'] = _
+            # the keys for this method will be skiped at extraction
+            evt['__'] = _
 
     evt['var'] = util.var
 

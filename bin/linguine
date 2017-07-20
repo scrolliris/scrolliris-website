@@ -32,7 +32,7 @@ USG
 PACKAGE_NAME="tirol"
 PACKAGE_VERSION="0.0"
 MSGID_BUGS_ADDRESS="feedback@lupine-software.com"
-COPYRIGHT="Lupine Software, LLC"
+COPYRIGHT="Lupine Software LLC"
 
 KEYWORD="_"
 WIDTH=73
