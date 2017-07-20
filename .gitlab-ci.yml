@@ -44,35 +44,35 @@ check:
   except:
     - tags
 
-make:
-  stage: make-catalog
-  image: python:3.5
-  variables:
-    ENV: test
-    PIP_CACHE_DIR: pip-cache
-  before_script:
-    - apt-get -qq update
-    - apt-get -qq install -y --no-install-recommends gcc zlib1g zlib1g-dev
-    - apt-get -qq install -y --no-install-recommends gettext
-    - python --version
-    - pip --version
-    - gettext --version
-    - pip install --upgrade pip setuptools
-    - git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
-    - rm -fr locale
-    - git config --global user.email "yasuhiro.asaka@grauwoelfchen.net"
-    - git config --global user.name "Yasuhiro Asaka"
-    - git subtree add --prefix locale innsbruck master
-  script:
-    - make clean
-    - make setup
-    - make catalog-compile
-  cache:
-    untracked: true
-    paths:
-      - pip-cache
-  except:
-    - tags
+# make:
+#   stage: make-catalog
+#   image: python:3.5
+#   variables:
+#     ENV: test
+#     PIP_CACHE_DIR: pip-cache
+#   before_script:
+#     - apt-get -qq update
+#     - apt-get -qq install -y --no-install-recommends gcc zlib1g zlib1g-dev
+#     - apt-get -qq install -y --no-install-recommends gettext
+#     - python --version
+#     - pip --version
+#     - gettext --version
+#     - pip install --upgrade pip setuptools
+#     - git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
+#     - rm -fr locale
+#     - git config --global user.email "yasuhiro.asaka@grauwoelfchen.net"
+#     - git config --global user.name "Yasuhiro Asaka"
+#     - git subtree add --prefix locale innsbruck master
+#   script:
+#     - make clean
+#     - make setup
+#     - make catalog-compile
+#   cache:
+#     untracked: true
+#     paths:
+#       - pip-cache
+#   except:
+#     - tags
 
 test:
   stage: run-test
