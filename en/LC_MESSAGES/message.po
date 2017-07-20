@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tirol 0.1\n"
 "Report-Msgid-Bugs-To: feedback@lupine-software.com\n"
-"POT-Creation-Date: 2017-07-20 19:23+0900\n"
+"POT-Creation-Date: 2017-07-21 02:08+0900\n"
 "PO-Revision-Date: 2017-06-23 03:27+0900\n"
 "Last-Translator: Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>\n"
 "Language-Team: en <feedback@lupine-software.com>\n"
@@ -147,3 +147,55 @@ msgstr "Notify me about Scrolliris Updates"
 #: tirol/templates/timeline.mako:4
 msgid "timeline.title"
 msgstr "Timeline"
+
+msgid "timeline.entry.001.date"
+msgstr "16 Jun"
+
+msgid "timeline.entry.001.description"
+msgstr ""
+"We graduated from <a href=\"https://www.startupschool.org/\" target="
+"\"_blank\">Startup School</a> by Y Combinator (SUS2017). <a href="
+"\"https://www.startupschool.org/presentations/199\" target=\"_blank"
+"\">Our pitch video presentation</a> is live on their site as "
+"virtual presentation day."
+
+msgid "timeline.entry.001.title"
+msgstr "Publish a pitch video"
+
+msgid "timeline.entry.002.date"
+msgstr "12-13 Jul"
+
+msgid "timeline.entry.002.description"
+msgstr ""
+"We got several review and feedback from friends.<br>If you are "
+"interested in fully-beta initial trial, please contact us <a href="
+"\"mailto:feedback@lupine-software.com\">feedback@lupine-software."
+"com</a>"
+
+msgid "timeline.entry.002.title"
+msgstr "Private beta test"
+
+msgid "timeline.entry.003.date"
+msgstr "19 Jul"
+
+msgid "timeline.entry.003.description"
+msgstr ""
+"We created our brand-new logo :-D <br><img src=\"/assets/img/"
+"scrolliris-logo-64x64.png\" width=\"64\" height=\"64\" style="
+"\"margin:0.6rem;display:block;\">"
+
+msgid "timeline.entry.003.title"
+msgstr "Create logo!"
+
+msgid "timeline.entry.004.date"
+msgstr "<del>14 Jul</del>&nbsp;It's little while delay :'("
+
+msgid "timeline.entry.004.description"
+msgstr ""
+"Initial beta release is postpond for performance improvements."
+"<br>We're working on several endpoints in Europe, East Asia and US. "
+"We'll announce about release via <a href=\"https://tinyletter.com/"
+"scrolliris\">Newsletter</a>."
+
+msgid "timeline.entry.004.title"
+msgstr "Initial public beta release"

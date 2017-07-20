@@ -1,5 +1,5 @@
 # Translations template for tirol.
-# Copyright (C) 2017 Lupine Software, LLC
+# Copyright (C) 2017 Lupine Software LLC
 # This file is distributed under the same license as the tirol project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tirol 0.1\n"
 "Report-Msgid-Bugs-To: feedback@lupine-software.com\n"
-"POT-Creation-Date: 2017-07-20 19:23+0900\n"
+"POT-Creation-Date: 2017-07-21 02:08+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,3 +129,40 @@ msgstr ""
 msgid "timeline.title"
 msgstr ""
 
+#: tirol/templates/timeline.mako:12
+#. update following lines manually
+msgid "timeline.entry.001.date"
+msgstr ""
+
+msgid "timeline.entry.001.description"
+msgstr ""
+
+msgid "timeline.entry.001.title"
+msgstr ""
+
+msgid "timeline.entry.002.date"
+msgstr ""
+
+msgid "timeline.entry.002.description"
+msgstr ""
+
+msgid "timeline.entry.002.title"
+msgstr ""
+
+msgid "timeline.entry.003.date"
+msgstr ""
+
+msgid "timeline.entry.003.description"
+msgstr ""
+
+msgid "timeline.entry.003.title"
+msgstr ""
+
+msgid "timeline.entry.004.date"
+msgstr ""
+
+msgid "timeline.entry.004.description"
+msgstr ""
+
+msgid "timeline.entry.004.title"
+msgstr ""
