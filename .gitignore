@@ -10,7 +10,7 @@ __pycache__/
 app.yaml
 
 /bin/gitlab-ci-multi-runner
-/locale/**/*.mo
+/locale
 
 /venv*
 /node_modules
