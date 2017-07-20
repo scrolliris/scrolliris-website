@@ -25,8 +25,7 @@ msgstr ""
 
 #: tirol/templates/layout.mako:30
 msgid "announcement.beta"
-msgstr ""
-"BETA version release is comming soon. Stay tuned ;-)"
+msgstr "BETA version release is comming soon. Stay tuned ;-)"
 
 #: tirol/templates/index.mako:26
 msgid "application.description"
@@ -46,9 +45,9 @@ msgstr "Beyond the Scroll"
 #: tirol/templates/index.mako:52
 msgid "feature.analysis.description"
 msgstr ""
-"Whether you're writing texts, Scrolliris provide you simplified "
-"text readability analysis. Just include a script, that's done! "
-"You can check shortly readability heatmap and graph."
+"Whether you're writing texts, Scrolliris provide you simplified text "
+"readability analysis. Just include a script, that's done! You can "
+"check shortly readability heatmap and graph."
 
 #: tirol/templates/index.mako:51
 msgid "feature.analysis.title"
@@ -58,9 +57,9 @@ msgstr "Text Readability Analysis"
 msgid "feature.integration.description"
 msgstr ""
 "You can embed easily our script and widget your own publication. "
-"Scrolliris's text readability tracker and browser reflector widget are both "
-"free software. You can even build it by yourself for your own document or "
-"system as you like."
+"Scrolliris's text readability tracker and browser reflector widget are "
+"both free software. You can even build it by yourself for your own "
+"document or system as you like."
 
 #: tirol/templates/index.mako:65
 msgid "feature.integration.title"
