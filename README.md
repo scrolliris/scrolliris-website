@@ -195,11 +195,7 @@ Don't commit changes of translation project into this repo.
 ```zsh
 : setup
 % git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
-% git subtree add --prefix locale innsbruck  master
-
-: Is it correct way to manage it both?  # FIXME
-% cd locale
-% cp -R /path/to/innsbruck/.git .
+% git subtree add --prefix locale innsbruck master
 
 : synchronize with updates into specified branch
 % git pull -s subtree innsbruck master
