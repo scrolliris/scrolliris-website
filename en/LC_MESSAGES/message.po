@@ -144,10 +144,8 @@ msgstr "Get Notified"
 msgid "newsletter.title"
 msgstr "Notify me about Scrolliris Updates"
 
-#: tirol/templates/timeline.mako:4
-msgid "timeline.title"
-msgstr "Timeline"
-
+#. update following lines manually
+#: tirol/templates/timeline.mako:12
 msgid "timeline.entry.001.date"
 msgstr "16 Jun"
 
@@ -156,8 +154,8 @@ msgstr ""
 "We graduated from <a href=\"https://www.startupschool.org/\" target="
 "\"_blank\">Startup School</a> by Y Combinator (SUS2017). <a href="
 "\"https://www.startupschool.org/presentations/199\" target=\"_blank"
-"\">Our pitch video presentation</a> is live on their site as "
-"virtual presentation day."
+"\">Our pitch video presentation</a> is live on their site as virtual "
+"presentation day."
 
 msgid "timeline.entry.001.title"
 msgstr "Publish a pitch video"
@@ -169,8 +167,8 @@ msgid "timeline.entry.002.description"
 msgstr ""
 "We got several review and feedback from friends.<br>If you are "
 "interested in fully-beta initial trial, please contact us <a href="
-"\"mailto:feedback@lupine-software.com\">feedback@lupine-software."
-"com</a>"
+"\"mailto:feedback@lupine-software.com\">feedback@lupine-software.com</"
+"a>"
 
 msgid "timeline.entry.002.title"
 msgstr "Private beta test"
@@ -199,3 +197,7 @@ msgstr ""
 
 msgid "timeline.entry.004.title"
 msgstr "Initial public beta release"
+
+#: tirol/templates/timeline.mako:4
+msgid "timeline.title"
+msgstr "Timeline"
