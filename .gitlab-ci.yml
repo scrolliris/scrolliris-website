@@ -1,7 +1,6 @@
 stages:
   - build-assets
   - check-style
-  #- make-catalog
   - run-test
 
 build:
