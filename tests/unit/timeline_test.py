@@ -1,4 +1,4 @@
-""" Roadmap view unit tests.
+""" Timeline view unit tests.
 """
 import pytest
 
@@ -10,10 +10,10 @@ def setup(config):  # pylint: disable=unused-argument
     pass
 
 
-def test_view_roadmap(dummy_request):
-    """ Test roadmap.
+def test_view_timeline(dummy_request):
+    """ Test timeline.
     """
-    from tirol import roadmap
+    from tirol import timeline
 
-    res = roadmap(dummy_request)
+    res = timeline(dummy_request)
     assert dict == type(res)

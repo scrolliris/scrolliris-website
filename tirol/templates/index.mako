@@ -9,7 +9,7 @@
   <h1><span class="scroll">Scroll</span><span class="iris">iris</span></h1>
   <ul class="nav">
     <li><a class="overview active link" href="/">${_('nav.header.overview')}</a></li>
-    <li><a class="roadmap link" href="${req.route_path('roadmap')}">${_('nav.header.roadmap')}</a></li>
+    <li><a class="timeline link" href="${req.route_path('timeline')}">${_('nav.header.timeline')}</a></li>
     <li><a class="newsletter link" href="${var['tinyletter_url']}" target="_blank">${_('nav.header.newsletter')}</a></li>
   </ul>
 </div>

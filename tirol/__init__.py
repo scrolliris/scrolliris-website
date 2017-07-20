@@ -155,10 +155,10 @@ def index(req):
     return dict()
 
 
-@view_config(route_name='roadmap',
-             renderer=tpl('roadmap.mako'), request_method='GET')
-def roadmap(req):
-    """ Roadmap.
+@view_config(route_name='timeline',
+             renderer=tpl('timeline.mako'), request_method='GET')
+def timeline(req):
+    """ Timeline.
     """
     return dict()
 
@@ -235,7 +235,7 @@ def main(_, **settings):
         name='assets', path=STATIC_DIR, cache_max_age=cache_max_age)
 
     config.add_route('index', '/')  # overview
-    config.add_route('roadmap', '/roadmap')
+    config.add_route('timeline', '/timeline')
     # FIXME
     # config.add_route('policy', '/policy')
     # config.add_route('term', '/term')
