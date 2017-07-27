@@ -7,6 +7,7 @@
     <meta name="description" content="${_('meta.description')}">
     <meta name="author" content="${_('meta.author')}">
     <title><%block name='title'/></title>
+    <style>body{background-color:#ffffff;}</style>
     <link rel="stylesheet" href="${req.util.built_asset_url('master.css')}">
     <link rel="shortcut icon" type="image/x-icon" href="${req.util.static_url('favicon.ico')}">
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 96x96 128x128 256x256" href="${req.util.static_path('favicon.ico')}">
