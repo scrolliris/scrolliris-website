@@ -19,9 +19,9 @@ msgstr ""
 #: tirol/templates/index.mako:92
 msgid "about.text"
 msgstr ""
-"Made with <svg viewBox=\"0 0 8 8\" class=\"tiny icon pink\"><use xlink:"
-"href=\"#open-iconic.min_heart\" class=\"icon-heart\"></use></svg> by "
-"<a href=\"$href\">Lupine Software LLC</a>"
+"Made with <svg viewBox=\"0 0 8 8\" width=\"16\" height=\"16\" class=\"tiny "
+"icon pink\"><use xlink:href=\"#open-iconic.min_heart\" class=\"icon-"
+"heart\"></use></svg> by <a href=\"$href\">Lupine Software LLC</a>"
 
 #: tirol/templates/_layout.mako:27
 msgid "announcement.beta"
