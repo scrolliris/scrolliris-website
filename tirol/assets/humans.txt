@@ -7,10 +7,10 @@ From: Yokohama, Japan
 Name: Misaki Asaka
 Role: Designer
 Mail: misaki.asaka@lupine-software.com
-From: Saitama, Japan
+From: Kazo, Japan
 
 /* SITE */
-Last update: 2017/06/22
+Last update: 2017/07/27
 Language: English
 Doctype: HTML5
 URL: https://scrolliris.com/
