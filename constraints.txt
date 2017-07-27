@@ -1,4 +1,5 @@
 Babel==2.3.4
+better_exceptions==0.1.8
 colorlog==2.7.0
 Paste==2.0.3
 PasteScript==2.0.2

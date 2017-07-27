@@ -20,6 +20,7 @@ with open(os.path.join(here, 'CHANGELOG')) as f:
     CHANGELOG = f.read()
 
 requires = [
+    'better_exceptions',
     'colorlog',
     'Paste',
     'PasteScript',

@@ -12,12 +12,14 @@ from pyramid.response import Response
 from pyramid.view import view_config
 from pyramid.threadlocal import get_current_registry
 from pyramid.view import notfound_view_config
+import better_exceptions
 
 from wsgiref.handlers import BaseHandler
 import sys
 
 from .env import Env
 
+better_exceptions.MAX_LENGTH = None
 STATIC_DIR = path.join(path.dirname(path.abspath(__file__)), '../static')
 
 
