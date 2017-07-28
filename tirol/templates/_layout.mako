@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="${_('meta.description')}">
     <meta name="author" content="${_('meta.author')}">
+    <meta name="keywords" content="Scrolliris,Lupine Software">
     <title><%block name='title'/></title>
     <style>body{background-color:#ffffff;}</style>
     <link rel="stylesheet" href="${req.util.built_asset_url('master.css')}">
