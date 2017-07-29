@@ -8,8 +8,6 @@
     <meta name="author" content="${_('meta.author')}">
     <meta name="keywords" content="Scrolliris,Lupine Software">
     <title><%block name='title'/></title>
-    <style>body{background-color:#ffffff;}</style>
-    <link rel="stylesheet" href="${req.util.built_asset_url('master.css')}">
     <link rel="shortcut icon" type="image/x-icon" href="${req.route_url('index') + 'favicon.ico'}">
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 96x96 128x128 192x192" href="/favicon.ico">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="${req.util.static_path('img/touch-icon-180.png')}">
@@ -24,9 +22,11 @@
     <link rel="icon" type="image/png" sizes="64x64" href="${req.util.static_path('img/favicon-64.png')}">
     <link rel="icon" type="image/png" sizes="48x48" href="${req.util.static_path('img/favicon-48.png')}">
     <link rel="icon" type="image/png" sizes="32x32" href="${req.util.static_path('img/favicon-32.png')}">
-    <link rel="icon" type="image/png" sizes="16x16" href="${req.util.static_path('img/favicon-12.png')}">
-    <link rel="humans" href="/humans.txt" type="text/plain">
-    <link rel="robots" href="/robots.txt" type="text/plain">
+    <link rel="icon" type="image/png" sizes="16x16" href="${req.util.static_path('img/favicon-16.png')}">
+    <link rel="humans" type="text/plain" href="/humans.txt">
+    <link rel="robots" type="text/plain" href="/robots.txt">
+    <style>body{background-color:#ffffff;}</style>
+    <link rel="stylesheet" href="${req.util.built_asset_url('master.css')}">
     <%block name='header'/>
   </head>
   <body>
