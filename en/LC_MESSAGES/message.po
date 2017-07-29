@@ -24,7 +24,7 @@ msgstr ""
 "\"icon-heart\"></use></svg> by <a href=\"$href\">Lupine Software LLC</"
 "a>"
 
-#: tirol/templates/_layout.mako:27
+#: tirol/templates/_layout.mako:35
 msgid "announcement.beta"
 msgstr "BETA version release is comming soon. Stay tuned ;-)"
 
@@ -104,6 +104,10 @@ msgid "meta.description"
 msgstr ""
 "Scrolliris; A publication platform which utilizes text readability "
 "analysis and/or its browser widget."
+
+#: tirol/templates/_layout.mako:9
+msgid "meta.keywords"
+msgstr "Scrolliris,Lupine Software"
 
 #: tirol/templates/footer.mako:5
 msgid "nav.footer.about"

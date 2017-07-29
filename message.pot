@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tirol 0.1\n"
 "Report-Msgid-Bugs-To: feedback@lupine-software.com\n"
-"POT-Creation-Date: 2017-07-21 02:08+0900\n"
+"POT-Creation-Date: 2017-07-29 18:10+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,11 @@ msgstr ""
 msgid "meta.author"
 msgstr ""
 
-#: tirol/templates/_layout.mako:27
+#: tirol/templates/_layout.mako:9
+msgid "meta.keywords"
+msgstr ""
+
+#: tirol/templates/_layout.mako:35
 msgid "announcement.beta"
 msgstr ""
 
