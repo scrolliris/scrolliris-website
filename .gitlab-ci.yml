@@ -58,11 +58,6 @@ check:
 #     - pip --version
 #     - gettext --version
 #     - pip install --upgrade pip setuptools
-#     - git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
-#     - rm -fr locale
-#     - git config --global user.email "yasuhiro.asaka@grauwoelfchen.net"
-#     - git config --global user.name "Yasuhiro Asaka"
-#     - git subtree add --prefix locale innsbruck master
 #   script:
 #     - make clean
 #     - make setup
@@ -88,11 +83,6 @@ test:
     - pip --version
     - gettext --version
     - pip install --upgrade pip setuptools
-    - git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
-    - rm -fr locale
-    - git config --global user.email "yasuhiro.asaka@grauwoelfchen.net"
-    - git config --global user.name "Yasuhiro Asaka"
-    - git subtree add --prefix locale innsbruck master
   script:
     - make clean
     - make setup
