@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="${_('meta.description')}">
     <meta name="author" content="${_('meta.author')}">
-    <meta name="keywords" content="Scrolliris,Lupine Software">
+    <meta name="keywords" content="${_('meta.keywords')}">
     <title><%block name='title'/></title>
     <link rel="shortcut icon" type="image/x-icon" href="${req.route_url('index') + 'favicon.ico'}">
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 96x96 128x128 192x192" href="/favicon.ico">
