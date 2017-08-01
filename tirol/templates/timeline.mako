@@ -14,10 +14,10 @@
   </ul>
 </div>
 
-<div class="container" align="center">
+<div class="content" align="center">
   <div class="grid timeline" align="center">
     <div class="row">
-      <div class="col-16">
+      <div class="column-16">
 
         <%def name="timeline_block(icon, number, is_hidden=True)">
           <div class="timeline-block">

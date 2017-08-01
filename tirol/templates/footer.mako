@@ -1,6 +1,6 @@
 <div class="grid footer">
   <div class="row" align="center">
-    <div class="col-16">
+    <div class="column-16">
       <ul class="nav">
         <li><a href="/humans.txt">${_('nav.footer.about')}</a></li>
         <li><a href="${var['twitter_url']}" target="_blank">${_('nav.footer.twitter')}</a></li>
