@@ -13,6 +13,6 @@ From: Kazo, Japan
 Last update: 2017/07/27
 Language: English
 Doctype: HTML5
-URL: https://scrolliris.com/
+URL: https://about.scrolliris.com/
 Repository: https://gitlab.com/lupine-software/tirol
 License: GNU Affero General Public License (AGPL)

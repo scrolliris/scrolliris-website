@@ -2,7 +2,7 @@ Tirol
 =====
 
 Introduction
------
+------------
 
-``Tirol``` is the website of `Scrolliris <https://scrolliris.com/>`_.
+``Tirol``` is the website of `Scrolliris <https://about.scrolliris.com/>`_.
 

@@ -19,7 +19,7 @@ https://gitlab.com/lupine-software/tirol/commits/master)
 Tirol; The IntROduction website for scrollIris
 ```
 
-The website of [https://scrolliris.com/](https://scrolliris.com/).
+The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 
 
 ## Requirements
