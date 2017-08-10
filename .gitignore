@@ -19,7 +19,7 @@ app.yaml
 !/static/.gitignore
 
 /google-*
-/bin/publi.sh
+/bin/publish
 
 /tmp/logs/*.log
 !/tmp/logs/.gitignore
