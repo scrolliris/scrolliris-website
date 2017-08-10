@@ -16,14 +16,13 @@ ADD . app/
 
 WORKDIR app/
 
-# same as ENV=production make setup
 RUN pip install -r requirements.txt
 RUN make catalog-compile
 
-ENV ENV production
-ENV WSGI_URL_SCHEME http
 ENV HOST 0.0.0.0
 ENV PORT 8080
+ENV ENV production
+ENV WSGI_URL_SCHEME http
 EXPOSE 8080
 
 CMD ./bin/serve -e production -c config/production.ini
