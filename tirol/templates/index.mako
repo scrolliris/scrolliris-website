@@ -1,11 +1,9 @@
 <%inherit file='./_layout.mako'/>
 
-<%block name='title'>
-  ${_('application.name')}
-</%block>
+<%block name='title'>${_('application.name')}</%block>
 
 <div class="header" align="center">
-  <img width="64" height"64" src="${util.static_url('img/scrolliris-logo-64x64.png')}" alt="Scrolliris's Logo">
+  <img width="64" height="64" src="${util.static_url('img/scrolliris-logo-64x64.png')}" alt="Scrolliris's Logo">
   <h1><span class="scroll">Scroll</span><span class="iris">iris</span></h1>
   <ul class="nav">
     <li><a class="overview active link" href="/">${_('nav.header.overview')}</a></li>
