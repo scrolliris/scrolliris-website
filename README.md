@@ -10,7 +10,7 @@ Innsbruck; translatIoN project using gNu gettext for Scrolliris, it's called inn
 ```
 
 This is translation project for the Scrolliris [Website](
-https://scrolliris.com/) which called as [Tirol](
+https://about.scrolliris.com/) which called as [Tirol](
 https://gitlab.com/lupine-software/tirol) (code name).
 
 
