@@ -4,6 +4,7 @@
 /**/*.mo
 
 /venv*
+/tmp
 
 # CI
 /build-output
