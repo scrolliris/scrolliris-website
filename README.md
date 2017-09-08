@@ -24,7 +24,7 @@ The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 
 ## Requirements
 
-* Python `3.5.0`
+* Python `3.5.0` (or `>= 2.7.13`)
 * Node.js `7.8.0` (build)
 * Raleway Thin (for logo, use `bin/font-fetch.sh`)
 * GNU gettext `>= 0.19.8.1` (translation)
