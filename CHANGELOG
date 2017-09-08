@@ -1,3 +1,6 @@
+09 Sep 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+	* Add python 2.7 support
+
 27 Jul 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add a package for error investigation (better_exceptions)
 	* Update templates (improve initial ux, before style application)

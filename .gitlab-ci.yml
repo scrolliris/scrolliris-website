@@ -1,5 +1,6 @@
 stages:
   - build-assets
+  - check-style2.7
   - check-style
   - run-test
 
@@ -20,6 +21,27 @@ build:
     untracked: true
     paths:
       - node_modules
+  except:
+    - tags
+
+check27:
+  stage: check-style2.7
+  image: python:2.7
+  variables:
+    ENV: development
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - python --version
+    - pip --version
+    - pip install --upgrade pip setuptools
+  script:
+    - make clean
+    - make setup
+    - make check
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
   except:
     - tags
 
@@ -68,6 +90,32 @@ check:
 #       - pip-cache
 #   except:
 #     - tags
+
+test27:
+  stage: run-test2.7
+  image: python:2.7
+  variables:
+    ENV: test
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - apt-get -qq update
+    - apt-get -qq install -y --no-install-recommends gcc zlib1g zlib1g-dev
+    - apt-get -qq install -y --no-install-recommends gettext
+    - python --version
+    - pip --version
+    - gettext --version
+    - pip install --upgrade pip setuptools
+  script:
+    - make clean
+    - make setup
+    - make catalog-compile
+    - make coverage
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
 
 test:
   stage: run-test

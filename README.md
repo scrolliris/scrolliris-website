@@ -53,11 +53,39 @@ The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 (venv) % nodeenv --python-virtualenv --with-npm --node=7.8.0
 : re-activate for node.js at this time
 (venv) % source venv/bin/activate
+(venv) % npm update --global npm
 (venv) % npm --version
 5.3.0
 ```
 
-### Development
+### Dependencies
+
+#### Innsbruck
+
+See translation project [Innsbruck](
+https://gitlab.com/lupine-software/innsbruck).
+
+Don't commit directly the changes on above translation project into this repo.
+
+```zsh
+: setup `locale`
+% git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
+% git subtree add --prefix locale innsbruck master
+
+: synchronize with updates into specified branch
+% git pull -s subtree innsbruck master
+
+: subtree list
+% git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq
+```
+
+#### Raleway Thin
+
+TODO
+
+
+
+## Development
 
 Use `waitress` as wsgi server.  
 Check `Makefile`.
@@ -82,10 +110,19 @@ Check `Makefile`.
 (venv) % make serve
 ```
 
+### Style & Lint
+
+* flake8
+* pylint
+
+```zsh
+: add hook
+(venv) % flake8 --install-hook git
+(venv) % make style
+```
+
 
 ## Deployment
-
-### Serve
 
 Use `CherryPy` as wsgi server.
 
@@ -97,51 +134,45 @@ Use `CherryPy` as wsgi server.
 (venv) % ./bin/serve --env production --config config/production.ini --install
 ```
 
-### Publish
+### Publishing
 
-At first, setup for production environment.
+E.g. Google App Engine
 
 ```zsh
-: e.g. use google app engine
-(venv) % curl -sLO https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
+: take latest sdk from https://cloud.google.com/sdk/downloads
+% cd lib
+(venv) % curl -sLO https://dl.google.com/dl/cloudsdk/channels/rapid/ \
+  downloads/google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
 
 : check sha256 checksum
-(venv) % sha256sum google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
-95b98fc696f38cd8b219b4ee9828737081f2b5b3bd07a3879b7b2a6a5349a73f  google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
+(venv) % echo "<CHECKSUM>" "" ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz \
+  | sha256sum -c -
+./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz: OK
+(venv) % tar zxvf google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
 
-(venv) % tar zxvf google-cloud-sdk-157.0.0-linux-x86_64.tar.gz
-
-: we don\'t install this global environment even if development
+: setup lib/ as a root for sdk
 (venv) % CLOUDSDK_ROOT_DIR=. ./google-cloud-sdk/install.sh
+(venv) % cd ../
 
 : load sdk tools
 (venv) % source ./bin/load-gcloud
 (venv) % gcloud init
 ```
 
-### Deployment
-
-E.g. to publish to gcp (appengine)
-
 ```zsh
-: deploy website
+: publish website
 (venv) % source ./bin/load-gcloud
 (venv) % gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
 ```
 
 
-## Style check & Lint
-
-* flake8
-* pylint
+## Testing
 
 ```zsh
-: check with flake8 (alias `make style` is also available)
-(venv) % make check-style
+(venv) % make test
 ```
 
-
-## CI
+### CI
 
 You can check it by yourself using `gitlab-ci-multi-runner` on locale machine.
 It requires `docker`.
@@ -152,6 +183,18 @@ It requires `docker`.
 : use script
 % ./bin/ci-runner test
 ```
+
+#### Links
+
+See documents.
+
+* https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/issues/312
+* https://docs.gitlab.com/runner/install/linux-manually.html
+
+
+## Documentation
+
+TODO
 
 
 ## Translation
@@ -182,33 +225,15 @@ The translation catalog needs GNU gettext.
 
 ### Work-flow
 
-0. (generate)
-1. extract
+0. extract
+1. generate
 2. update
 3. compile
-
-
-### Subtree
-
-Don't commit changes of translation project into this repo.
-
-```zsh
-: setup
-% git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
-% git subtree add --prefix locale innsbruck master
-
-: synchronize with updates into specified branch
-% git pull -s subtree innsbruck master
-
-: subtree list
-% git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq
-```
 
 
 ## License
 
 Tirol; Copyright (c) 2017 Lupine Software LLC
-
 
 This is free software;  
 You can redistribute it and/or modify it under the terms of the

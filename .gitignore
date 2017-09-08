@@ -1,26 +1,31 @@
 __pycache__/
-
+*.pyc
 *.egg-info/
 *.egg
-
 .cache
 
 .env
+.env.ci
 .coverage
-app.yaml
 
+app.yaml
+appengine_config.py
+
+/bin/publish
 /bin/gitlab-ci-multi-runner
+
 /locale
 
-/venv*
-/node_modules
-
 /static/*
-!/static/.gitignore
+!/static/**/*/.gitignore
 
-/google-*
-/bin/publish
+/lib/*
+/vendor
 
 /tmp/logs/*.log
 !/tmp/logs/.gitignore
 /tmp/builds/*
+/tmp/_cache
+
+/venv*
+/node_modules

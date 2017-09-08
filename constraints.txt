@@ -8,6 +8,9 @@ pyramid==1.8.3
 pyramid_assetviews==1.0a3
 pyramid-mako==1.0.2
 
+# python2.7
+ipaddress==1.0.18
+
 # production
 CherryPy==8.1.2
 
