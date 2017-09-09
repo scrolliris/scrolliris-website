@@ -2,6 +2,7 @@ stages:
   - build-assets
   - check-style2.7
   - check-style
+  - run-test2.7
   - run-test
 
 build:
