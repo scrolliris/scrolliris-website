@@ -1,6 +1,8 @@
 Babel==2.3.4
+bleach==1.5.0
 better_exceptions==0.1.8
 colorlog==2.7.0
+MarkupSafe==1.0
 Paste==2.0.3
 PasteScript==2.0.2
 python-dotenv==0.6.0

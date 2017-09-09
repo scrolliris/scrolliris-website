@@ -21,8 +21,10 @@ with open(os.path.join(here, 'CHANGELOG')) as f:
 
 requires = [
     'better_exceptions',
+    'bleach',
     'colorlog',
     'ipaddress',  # python 2.7
+    'MarkupSafe',
     'Paste',
     'PasteScript',
     'python-dotenv',
