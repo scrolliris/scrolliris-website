@@ -26,7 +26,9 @@ msgstr ""
 
 #: tirol/templates/_layout.mako:35
 msgid "announcement.beta"
-msgstr "BETA version release is comming soon. Stay tuned ;-)"
+msgstr "BETA version release is <span class=\"highlight\">live</span>!! "
+"Let's <a class=\"signup\" href=\"https://scrolliris.com/signup\">sign up"
+"</a> ;-)"
 
 #: tirol/templates/index.mako:22
 msgid "application.description"
