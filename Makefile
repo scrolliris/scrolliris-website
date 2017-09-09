@@ -61,6 +61,11 @@ check:
 	flake8
 .PHONY: check
 
+lint:
+	pylint tirol
+	pylint tests
+.PHONY: lint
+
 clean:
 	find . ! -readable -prune -o -print \
 		! -path "./.git/*" ! -path "./node_modules/*" ! -path "./venv*" \
