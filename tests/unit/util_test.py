@@ -83,7 +83,7 @@ def test_manifest_json_content(dummy_request, tmpdir, monkeypatch, mocker):
     assert expected == util.manifest_json
     assert 1 == path.isfile.call_count  # pylint: disable=no-member
     # must be cached
-    _ = util.manifest_json
+    assert expected == util.manifest_json
     assert 1 == path.isfile.call_count  # pylint: disable=no-member
 
 
@@ -101,7 +101,7 @@ def test_var_loading_env_var(dummy_request, monkeypatch, mocker):
     assert expected == util.var['gitlab_url']
     assert 1 == Env.__init__.call_count  # pylint: disable=no-member
     # must be cached
-    _ = util.var
+    assert expected == util.var['gitlab_url']
     assert 1 == Env.__init__.call_count  # pylint: disable=no-member
 
 
