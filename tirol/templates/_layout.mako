@@ -32,7 +32,7 @@
   <body>
     <div class="wrapper" align="center">
       <div class="announcement" align="center">
-        <p>${_('announcement.beta')}</p>
+        <p>${_('announcement.beta')|n,trim,clean(tags=['a', 'span'], attributes=['class', 'href'])}</p>
       </div>
       ${self.body()}
       <%block name='footer'>
