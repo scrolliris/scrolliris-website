@@ -16,7 +16,6 @@ from wsgiref.handlers import BaseHandler
 import sys
 
 from .env import Env
-from .util import TemplateUtility
 
 better_exceptions.MAX_LENGTH = None
 STATIC_DIR = path.join(path.dirname(path.abspath(__file__)), '../static')
@@ -152,7 +151,7 @@ def add_localizer(evt):
 
 @subscriber(BeforeRender)
 def add_renderer_globals(evt):
-    ctx, req = evt['context'], evt['request']
+    _, req = evt['context'], evt['request']
 
     # shortcut method for template
     if req and hasattr(req, 'translate'):
