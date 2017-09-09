@@ -1,10 +1,8 @@
-import json
 import logging
 from os import path
 
 from paste.translogger import TransLogger
 from pyramid.config import Configurator
-from pyramid.decorator import reify
 from pyramid.events import subscriber, BeforeRender, NewRequest
 import pyramid.httpexceptions as exc
 from pyramid.i18n import TranslationString
@@ -18,6 +16,7 @@ from wsgiref.handlers import BaseHandler
 import sys
 
 from .env import Env
+from .util import TemplateUtility
 
 better_exceptions.MAX_LENGTH = None
 STATIC_DIR = path.join(path.dirname(path.abspath(__file__)), '../static')
@@ -83,57 +82,6 @@ sh.setFormatter(logging.Formatter('%(message)s'))
 logger.addHandler(sh)
 
 
-# -- utils
-
-class TemplateUtil(object):
-    """
-    The utility for templates.
-    """
-    def __init__(self, ctx, req, **kwargs):
-        self.context, self.req = ctx, req
-
-        if getattr(req, 'util', None) is None:
-            req.util = self
-        self.__dict__.update(kwargs)
-
-    @reify
-    def manifest_json(self):
-        manifest_file = path.join(
-            path.dirname(__file__), '..', 'static', 'manifest.json')
-        data = {}
-        if path.isfile(manifest_file):
-            with open(manifest_file) as data_file:
-                data = json.load(data_file)
-
-        return data
-
-    def is_matched(self, matchdict):
-        return self.req.matchdict == matchdict
-
-    def static_url(self, path):
-        return self.req.static_url(STATIC_DIR + '/' + path)
-
-    def static_path(self, path):
-        return self.req.static_path(STATIC_DIR + '/' + path)
-
-    def built_asset_url(self, path):
-        path = self.manifest_json.get(path, path)
-        return self.static_url(path)
-
-    @reify
-    def var(self):  # pylint: disable=no-self-use
-        """ Return a dict has variables
-        """
-        env = Env()
-        return {  # external services
-            'gitlab_url': env.get('GITLAB_URL', '/'),
-            'tinyletter_url': env.get('TINYLETTER_URL', '/'),
-            'twitter_url': env.get('TWITTER_URL', '/'),
-            'typekit_id': env.get('TYPEKIT_ID', ''),
-            'userlike_script': env.get('USERLIKE_SCRIPT', '/'),
-        }
-
-
 # -- views
 
 @notfound_view_config(renderer=tpl('404.mako'),
@@ -180,13 +128,22 @@ def timeline(req):
 # -- subscribers
 
 @subscriber(NewRequest)
-def add_localizer(evt):
+def add_cache_control(evt):
     req = evt.request
     res = req.response
 
     env = Env()
     if env.get('ENV', 'production') != 'production':
         res.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+
+
+@subscriber(NewRequest)
+def add_localizer(evt):
+    """Add translator function as `req.translate`
+
+    Access this function from `_` or `__` (see renderer global variables)
+    """
+    req = evt.request
 
     if req:
         localizer = req.localizer
@@ -196,12 +153,6 @@ def add_localizer(evt):
 @subscriber(BeforeRender)
 def add_renderer_globals(evt):
     ctx, req = evt['context'], evt['request']
-    util = getattr(req, 'util', None)
-
-    # `util` in template
-    if util is None and req is not None:
-        util = TemplateUtil(ctx, req)
-        evt['util'] = util
 
     # shortcut method for template
     if req and hasattr(req, 'translate'):
@@ -210,8 +161,6 @@ def add_renderer_globals(evt):
             evt['_'] = _
             # the keys for this method will be skiped at extraction
             evt['__'] = _
-
-    evt['var'] = util.var
 
 
 # -- main

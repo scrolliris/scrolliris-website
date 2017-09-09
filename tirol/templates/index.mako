@@ -87,7 +87,7 @@
     <div class="row">
       <div class="column-16" align=center>
         <h5><a class="logo" href="https://lupine-software.com/"><img class="logo-img" src="${util.static_url('img/lupine-software-logo-64x64.png')}" width="64px" height="64px" alt="Lupine Software's Logo"></a></h5>
-        <p>${_('about.text', mapping={'href': 'https://lupine-software.com/'})|n,trim}</p>
+        <p>${_('about.text', mapping={'href': 'https://lupine-software.com/'})|n,trim,clean(tags=['a', 'svg', 'use'], attributes={'a': ['class', 'href'], 'svg': util.allow_svg('0 0 8 8'), 'use': ['href', 'class']})}</p>
       </div>
     </div>
   </div>
