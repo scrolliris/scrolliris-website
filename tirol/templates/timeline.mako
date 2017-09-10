@@ -28,8 +28,8 @@
             </div>
             <div class="timeline-content${' is-hidden' if is_hidden else ' bounce-in'}">
               <h2>${__('timeline.entry.'+number+'.title')}</h2>
-              <span class="timeline-date">${__('timeline.entry.'+number+'.date')|n,trim}</span>
-              <p>${__('timeline.entry.'+number+'.description')|n,trim}</p>
+              <span class="timeline-date">${__('timeline.entry.'+number+'.date')|n,trim,clean(tags=['del'])}</span>
+              <p>${__('timeline.entry.'+number+'.description')|n,trim,clean(tags=['a', 'br', 'img'], attributes={'a': ['href', 'target'], 'img': ['src', 'width', 'height', 'style']})}</p>
             </div>
           </div>
         </%def>
