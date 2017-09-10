@@ -193,17 +193,16 @@ msgid "timeline.entry.003.title"
 msgstr "Create logo!"
 
 msgid "timeline.entry.004.date"
-msgstr "<del>14 Jul</del>&nbsp;It's little while delay :'("
+msgstr "<del>14 Jul</del> → 01 Sep"
 
 msgid "timeline.entry.004.description"
 msgstr ""
-"Initial beta release is postpond for performance improvements."
-"<br>We're working on several endpoints in Europe, East Asia and US. "
-"We'll announce about release via <a href=\"https://tinyletter.com/"
-"scrolliris\">Newsletter</a>."
+"<del>Public beta release is postpond</del> It's live now! "
+"Currently, widget integration for external site (like blog) is available. "
+"Let's try!"
 
 msgid "timeline.entry.004.title"
-msgstr "Initial public beta release"
+msgstr "Public beta release"
 
 #: tirol/templates/timeline.mako:4
 msgid "timeline.title"
