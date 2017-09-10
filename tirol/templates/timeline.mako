@@ -29,13 +29,13 @@
             <div class="timeline-content${' is-hidden' if is_hidden else ' bounce-in'}">
               <h2>${__('timeline.entry.'+number+'.title')}</h2>
               <span class="timeline-date">${__('timeline.entry.'+number+'.date')|n,trim,clean(tags=['del'])}</span>
-              <p>${__('timeline.entry.'+number+'.description')|n,trim,clean(tags=['a', 'br', 'img'], attributes={'a': ['href', 'target'], 'img': ['src', 'width', 'height', 'style']})}</p>
+              <p>${__('timeline.entry.'+number+'.description')|n,trim,clean(tags=['a', 'br', 'del', 'img'], attributes={'a': ['href', 'target'], 'img': ['src', 'width', 'height', 'style']})}</p>
             </div>
           </div>
         </%def>
 
         <section id="timeline">
-          ${timeline_block(icon='warning', number='004', is_hidden=False)}
+          ${timeline_block(icon='flag', number='004', is_hidden=False)}
           ${timeline_block(icon='heart', number='003', is_hidden=False)}
           ${timeline_block(icon='eye', number='002')}
           ${timeline_block(icon='power-standby', number='001')}
