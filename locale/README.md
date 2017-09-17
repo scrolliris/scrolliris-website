@@ -2,8 +2,7 @@
 
 `/ínzbrùk/`
 
-[![build status](https://gitlab.com/lupine-software/Innsbruck/badges/master/build.svg)](
-https://gitlab.com/lupine-software/innsbruck/commits/master)
+[![build status][gitlab-ci-build]][gitlab-commits]
 
 ```txt
 Innsbruck; translatIoN project using gNu gettext for Scrolliris, it's called innsBRUCK
@@ -67,7 +66,7 @@ TODO
 
 ## Compile
 
-Check `Makefile`.
+See `Makefile`.
 
 ```zsh
 % make
@@ -93,7 +92,7 @@ Open your `terminal` application, follow these steps, normally.
 : 3. Compile as a check of validity (use `make` command described above)
 % make
 
-: 4. Commit your changes (Don\'t ad *.mo files)
+: 4. Commit your changes (Don\'t add `*.mo` files, add only `*.po`)
 % git add .
 % git commit
 
@@ -152,7 +151,10 @@ If you do this, you need docker on linux.
 Prepare `gitlab-ci-multi-runner` in your local machine.
 
 ```zsh
-: gitlab-ci (localy)
+: use setup script
+% ./bin/setup-gitlab-ci-multi-runner
+
+: or install runner (gitlab-ci-multi-runner) into somewhere, manually
 % curl -sL https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com\
   /latest/binaries/gitlab-ci-multi-runner-linux-amd64 \
   -o bin/gitlab-ci-multi-runner
@@ -177,7 +179,7 @@ Start docker as service, then run `ci-runner`.
 : this is equivalent as above command
 % ./bin/gitlab-ci-multi-runner exec docker \
   --cache-dir /cache \
-  --docker-volumes `pwd`/build-output:/cache \
+  --docker-volumes `pwd`/tmp/_cache:/cache \
   --env <ENVVAR>=... \
   ...
   <JOB>
@@ -233,3 +235,7 @@ A copy of the license is included in the section entitled "GNU
 Free Documentation License".
 
 See [LICENSE](LICENSE). (GFDL 1.3)
+
+
+[gitlab-ci-build]: https://gitlab.com/lupine-software/innsbruck/badges/master/build.svg
+[gitlab-commits]: https://gitlab.com/lupine-software/innsbruck/commits/master
