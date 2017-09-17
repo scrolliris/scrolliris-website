@@ -73,7 +73,7 @@ Don't commit directly the changes on above translation project into this repo.
 % git subtree add --prefix locale innsbruck master
 
 : synchronize with updates into specified branch
-% git pull -s subtree innsbruck master
+% git pull -s subtree -Xsubtree=locale innsbruck master
 
 : subtree list
 % git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq
@@ -88,7 +88,7 @@ TODO
 ## Development
 
 Use `waitress` as wsgi server.  
-Check `Makefile`.
+See `Makefile`.
 
 ```zsh
 % cd /path/to/tirol
