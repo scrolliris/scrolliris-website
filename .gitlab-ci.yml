@@ -10,10 +10,12 @@ cache:
 compile:
   stage: compile-catalog
   image: debian:latest
+  variables:
+    APT_CACHE_DIR: apt-cache
   before_script:
-    - export APT_CACHE=`pwd`/apt-cache && mkdir -pv $APT_CACHE
-    - apt-get update -yq && apt-get -o dir::cache::archives="$APT_CACHE"
-      install -y gettext make
+    - mkdir -pv $APT_CACHE_DIR && apt-get -qq update
+    - apt-get -qq -o dir::cache::archives="$APT_CACHE_DIR" install -y
+      gettext make
   script:
     - make catalog
   except:
