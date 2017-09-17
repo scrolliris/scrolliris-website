@@ -118,7 +118,7 @@ See `Makefile`.
 ```zsh
 : add hook
 (venv) % flake8 --install-hook git
-(venv) % make style
+(venv) % make check
 ```
 
 
@@ -139,13 +139,20 @@ Use `CherryPy` as wsgi server.
 E.g. Google App Engine
 
 ```zsh
+: this script install cloud sdk into `./lib` directory
+(venv) % ./bin/setup-google-cloud-sdk
+```
+
+Above script is equivalent following steps.
+
+```zsh
 : take latest sdk from https://cloud.google.com/sdk/downloads
 % cd lib
 (venv) % curl -sLO https://dl.google.com/dl/cloudsdk/channels/rapid/ \
   downloads/google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
 
 : check sha256 checksum
-(venv) % echo "<CHECKSUM>" "" ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz \
+(venv) % echo "CHECKSUM" "" ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz \
   | sha256sum -c -
 ./google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz: OK
 (venv) % tar zxvf google-cloud-sdk-<VERSION>-linux-x86_64.tar.gz
@@ -153,14 +160,10 @@ E.g. Google App Engine
 : setup lib/ as a root for sdk
 (venv) % CLOUDSDK_ROOT_DIR=. ./google-cloud-sdk/install.sh
 (venv) % cd ../
-
-: load sdk tools
-(venv) % source ./bin/load-gcloud
-(venv) % gcloud init
 ```
 
 ```zsh
-: publish website
+: publish website (create `app.yaml`)
 (venv) % source ./bin/load-gcloud
 (venv) % gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
 ```
