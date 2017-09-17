@@ -1,12 +1,11 @@
 Babel==2.3.4
 bleach==2.0.0
 better_exceptions==0.1.8
-colorlog==2.7.0
 MarkupSafe==1.0
 Paste==2.0.3
 PasteScript==2.0.2
 python-dotenv==0.6.0
-pyramid==1.8.3
+pyramid==1.9.1
 pyramid_assetviews==1.0a3
 pyramid-mako==1.0.2
 
@@ -18,8 +17,12 @@ CherryPy==8.1.2
 
 # development
 flake8==3.2.1
+flake8_docstrings==1.1.0
 pylint==1.7.1
 waitress==1.0.0
+
+# development,testing
+colorlog==2.7.0
 
 # testing
 pytest==3.0.5
