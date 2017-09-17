@@ -1,3 +1,7 @@
+17 Sep 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
+	* Update npm (and node_modules)
+	* Update pyramid 1.9
+
 09 Sep 2017; Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>:
 	* Add python 2.7 support
 
