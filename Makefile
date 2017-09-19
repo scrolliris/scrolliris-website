@@ -1,27 +1,21 @@
 ifeq (, $(ENV))
-	extra := development
+	env := development
 else ifeq (test, $(ENV))
-	extra := testing
+	env := testing
 else
-	extra := $(ENV)
-endif
-
-ifeq (test, $(ENV))
-	section := main
-else
-	section := tirol
+	env := $(ENV)
 endif
 
 # installation
 
 setup:
-	pip install -e '.[${extra}]' -c constraints.txt
+	pip install -e '.[${env}]' -c constraints.txt
 .PHONY: setup
 
 # server
 
 serve:
-	./bin/serve --env development --config config/${extra}.ini --reload
+	./bin/serve --env development --config config/${env}.ini --reload
 .PHONY: serve
 
 # testing
@@ -44,9 +38,9 @@ catalog-compile:
 	./bin/linguine compile message en
 .PHONY: catalog-compile
 
-catalog-extract:
-	./bin/linguine extract message
-.PHONY: catalog-extract
+catalog-envct:
+	./bin/linguine envct message
+.PHONY: catalog-envct
 
 catalog-update:
 	./bin/linguine update message en
