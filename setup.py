@@ -22,8 +22,6 @@ with open(os.path.join(here, 'CHANGELOG')) as f:
 requires = [
     'better_exceptions',
     'bleach',
-    'colorlog',
-    'ipaddress',  # python 2.7
     'MarkupSafe',
     'Paste',
     'PasteScript',
@@ -31,9 +29,12 @@ requires = [
     'pyramid',
     'pyramid_assetviews',
     'pyramid_mako',
+    # python 2.7
+    'ipaddress',
 ]
 
 development_requires = [
+    'colorlog',
     'Babel',
     'flake8',
     'pylint',
@@ -41,6 +42,7 @@ development_requires = [
 ]
 
 testing_requires = [
+    'colorlog',
     'pytest',
     'pytest-cov',
     'pytest-mock',
