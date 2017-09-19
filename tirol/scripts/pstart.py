@@ -6,8 +6,6 @@ from pyramid.paster import (
     setup_logging
 )
 
-from tirol.env import Env
-
 
 def usage(argv):
     """Print pstart command usage
@@ -18,23 +16,24 @@ def usage(argv):
     sys.exit(1)
 
 
-def main(argv=sys.argv, _quiet=False):
+def main(argv, _quiet=False):
     """Starts main production server process
     """
     if len(argv) < 2:
         usage(argv)
 
-    Env.load_dotenv_vars()
-    env = Env()
-
     config_file = argv[1] if 1 in argv else 'config/production.ini'
-    wsgi_app = get_app(config_file)
+    wsgi_app = get_app(config_file, 'tirol')
     setup_logging(config_file)
 
-    from paste.script.cherrypy_server import cpwsgi_server
-    return cpwsgi_server(wsgi_app, host=env.host, port=env.port,
-                         numthreads=10, request_queue_size=100)
+    return wsgi_app
 
 
 if __name__ == '__main__':
-    sys.exit(main() or 0)
+    from paste.script.cherrypy_server import cpwsgi_server
+    from tirol.env import Env
+
+    Env.load_dotenv_vars()
+    env = Env()  # pylint: disable=invalid-name
+    cpwsgi_server(main(sys.argv), host=env.host, port=env.port,
+                  numthreads=10, request_queue_size=100)
