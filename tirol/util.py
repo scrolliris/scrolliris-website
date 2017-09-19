@@ -42,14 +42,17 @@ class TemplateUtility(object):
 
     @reify
     def manifest_json(self):
-        manifest_file = path.join(
-            path.dirname(__file__), '..', 'static', 'manifest.json')
+        manifest_file = path.join(self.project_root, 'static', 'manifest.json')
         data = {}
         if path.isfile(manifest_file):
             with open(manifest_file) as data_file:
                 data = json.load(data_file)
 
         return data
+
+    @reify
+    def project_root(self):
+        return path.join(path.dirname(__file__), '..')
 
     @reify
     def var(self):  # pylint: disable=no-self-use
