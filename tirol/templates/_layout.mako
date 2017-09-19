@@ -36,7 +36,7 @@
       </div>
       ${self.body()}
       <%block name='footer'>
-        <%include file='footer.mako'/>
+        <%include file='_footer.mako'/>
       </%block>
     </div>
 
