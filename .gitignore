@@ -11,7 +11,8 @@ __pycache__/
 .coverage
 
 app.yaml
-appengine_config.py
+/*_config.py
+/wsgi.py
 
 /bin/publish
 /bin/gitlab-ci-multi-runner
