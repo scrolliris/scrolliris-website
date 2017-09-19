@@ -105,15 +105,16 @@ gulp.task('build-install:master', function(done) {
 gulp.task('clean', function(done) {
   return gulp.src([
     'tmp/builds/*'
-  , 'static/*.js'
-  , 'static/*.json'
-  , 'static/*.css'
-  , 'static/*.txt'
+  , 'static/**/*.js'
+  , 'static/**/*.json'
+  , 'static/**/*.css'
+  , 'static/**/*.txt'
   // except font/
   //, 'static/**/*.{eot,svg,ttf,woff,woff2}'
-  , 'static/*.{eot,svg,ttf,woff,woff2}'
-  , 'static/*.ico'
+  , 'static/**/*.{eot,svg,ttf,woff,woff2}'
+  , 'static/**/*.ico'
   , 'static/**/*.png'
+  , '!static/font/**/*'
   ], {
     read: false
   })
