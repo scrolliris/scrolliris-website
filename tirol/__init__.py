@@ -1,7 +1,6 @@
 import logging
 from os import path
 
-from paste.translogger import TransLogger
 from pyramid.config import Configurator
 from pyramid.events import subscriber, BeforeRender, NewRequest
 import pyramid.httpexceptions as exc
@@ -198,5 +197,7 @@ def main(_, **settings):
 
     config.scan()
     app = config.make_wsgi_app()
-    app = TransLogger(app, setup_console_handler=False)
+    # enable file logger [wsgi/access_log]
+    # from paste.translogger import TransLogger
+    # app = TransLogger(app, setup_console_handler=False)
     return app
