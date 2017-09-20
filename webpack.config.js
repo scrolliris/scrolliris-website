@@ -20,7 +20,7 @@ var stylusBundler = new ExtractTextPlugin(filename + '.css')
 
 var config = {
   output: {
-    path: path.resolve(__dirname, 'tmp/builds/')
+    path: path.resolve(__dirname, 'tmp/build/')
   , filename: (nodeEnv == 'production' ? '[name].[chunkhash].js' : '[name].js')
   }
 , module: {
