@@ -4,12 +4,12 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": "7.8.0",
-    "npm": "~5.3.0"
+    "node": "7.10.1",
+    "npm": "5.4.2"
   },
   "scripts": {
     "test": "node --version",
-    "postinstall": "gulp"
+    "postinstall": "./node_modules/.bin/gulp"
   },
   "dependencies": {
     "babel-core": "6.22.1",
@@ -23,7 +23,7 @@
     "gulp-copy": "1.0.0",
     "gulp-env": "0.4.0",
     "license-webpack-plugin": "0.4.2",
-    "npm": "5.0.3",
+    "npm": "5.4.2",
     "open-iconic": "1.1.1",
     "run-sequence": "1.2.2",
     "style-loader": "0.13.1",
