@@ -25,7 +25,7 @@ The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 ## Requirements
 
 * Python `3.5.4` (or `>= 2.7.13`)
-* Node.js `7.10.1` (npm `5.4.1`, for build assets)
+* Node.js `7.10.1` (npm `5.4.2`, for build assets)
 * Raleway Thin (for logo, use `bin/font-fetch.sh`)
 * GNU gettext `>= 0.19.8.1` (translation)
 * [Innsbruck](https://gitlab.com/lupine-software/innsbruck) as git subtree
@@ -53,9 +53,9 @@ The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 (venv) % nodeenv --python-virtualenv --with-npm --node=7.10.1
 : re-activate for node.js at this time
 (venv) % source venv/bin/activate
-(venv) % npm update --global npm@5.4.1
+(venv) % npm update --global npm@5.4.2
 (venv) % npm --version
-5.4.1
+5.4.2
 ```
 
 ### Dependencies

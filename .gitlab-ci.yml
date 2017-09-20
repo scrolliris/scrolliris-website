@@ -7,12 +7,13 @@ stages:
 
 build:
   stage: build-assets
-  image: node:7.8.0
+  image: node:7.10.1
   variables:
     NODE_ENV: production
   before_script:
+    - npm install npm@5.4.2
     - node --version
-    - npm --version
+    - node_modules/.bin/npm --version
     - npm install --ignore-scripts
     - mkdir -p static/font/webfonts
     - touch static/font/webfonts/raleway_thin-webfont.{woff,ttf}
