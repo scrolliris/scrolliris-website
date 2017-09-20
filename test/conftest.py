@@ -76,7 +76,7 @@ def function_helper():
     yield
 
 
-# -- View tests
+# -- unit test
 
 @pytest.fixture(scope='session')
 def config(request, settings):
@@ -86,7 +86,7 @@ def config(request, settings):
 
     # FIXME:
     #    these includings from .ini file are not evaluated
-    #    in unit tests.
+    #    in unittest.
     # config.include('pyramid_mako')
 
     config.add_translation_dirs('tirol:../locale')
@@ -122,7 +122,7 @@ def dummy_request(extra_environ):
     return req
 
 
-# -- Functional tests
+# -- functional test
 
 @pytest.fixture(scope='session')
 def _app(raw_settings):

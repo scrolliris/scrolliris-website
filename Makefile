@@ -57,7 +57,7 @@ check:
 
 lint:
 	pylint tirol
-	pylint tests
+	pylint test
 .PHONY: lint
 
 clean:

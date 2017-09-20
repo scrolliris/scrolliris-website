@@ -39,7 +39,7 @@ var build = function(files) {
   }))
   .pipe(named())
   .pipe(webpack(webpackConfig))
-  .pipe(gulp.dest(path.resolve(__dirname, 'tmp/builds/')));
+  .pipe(gulp.dest(path.resolve(__dirname, 'tmp/build/')));
 }
 
 gulp.task('build:master', ['env'], function(done) {
@@ -64,7 +64,7 @@ gulp.task('copy:txt', ['env'], function(done) {
   .pipe(copy('static/', {prefix: 3}));
 })
 
-// builds master.js into %(appName)/tmp/builds
+// builds master.js into %(appName)/tmp/build
 // this run webpack each times.
 gulp.task('build', [
   'build:master'
@@ -81,14 +81,14 @@ gulp.task('build:all', ['env'], function(done) {
 
 // -- [make tasks]
 
-// places assets files from tmp/builds into static/
+// places assets files from tmp/build into static/
 gulp.task('distribute', function(done) {
   return gulp.src([
-    'tmp/builds/*.js'
-  , 'tmp/builds/*.css'
-  , 'tmp/builds/*.txt'
-  , 'tmp/builds/**/*.svg'
-  , 'tmp/builds/manifest.json'
+    'tmp/build/*.js'
+  , 'tmp/build/*.css'
+  , 'tmp/build/*.txt'
+  , 'tmp/build/**/*.svg'
+  , 'tmp/build/manifest.json'
   ])
   .pipe(named())
   .pipe(copy('static/', {prefix: 2}));
@@ -104,7 +104,7 @@ gulp.task('build-install:master', function(done) {
 
 gulp.task('clean', function(done) {
   return gulp.src([
-    'tmp/builds/*'
+    'tmp/build/*'
   , 'static/**/*.js'
   , 'static/**/*.json'
   , 'static/**/*.css'
@@ -121,7 +121,7 @@ gulp.task('clean', function(done) {
   .pipe(clean());
 });
 
-// copies other static files from assets into %(appName)/tmp/builds
+// copies other static files from assets into %(appName)/tmp/build
 gulp.task('copy', [
   'copy:img'
 , 'copy:favicon'
