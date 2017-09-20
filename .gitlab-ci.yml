@@ -1,8 +1,8 @@
 stages:
   - build-assets
-  - check-style2.7
+  - check-style27
   - check-style
-  - run-test2.7
+  - run-test27
   - run-test
 
 build:
@@ -26,7 +26,7 @@ build:
     - tags
 
 check27:
-  stage: check-style2.7
+  stage: check-style27
   image: python:2.7
   variables:
     ENV: development
@@ -93,7 +93,7 @@ check:
 #     - tags
 
 test27:
-  stage: run-test2.7
+  stage: run-test27
   image: python:2.7
   variables:
     ENV: test
