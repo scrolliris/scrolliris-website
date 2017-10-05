@@ -5,7 +5,7 @@ import sys
 from pyramid.decorator import reify
 from pyramid.request import Request
 
-from .env import Env
+from tirol.env import Env
 
 __all__ = ['CustomRequest']
 
@@ -37,7 +37,7 @@ class CustomRequest(Request):
             env_dict = self._trim_port(env_dict)
 
         new_args = (env_dict, args[1:])
-        if sys.version_info >= (3, 5):
+        if sys.version_info[0] > 3:
             super().__init__(*new_args, **kwargs)
         else:
             super(Request, self).__init__(*new_args, **kwargs)
