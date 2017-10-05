@@ -8,7 +8,7 @@ from tirol.env import Env
 def main(argv=None, quiet=False):
     """Run original pserve with .env support
     """
-    # `pserve` (PServeCommand) needs `hupper`, `hupper` has dependency **fcntl**.
+    # `pserve` (PServeCommand) needs `hupper`, it has dependency to **fcntl**.
     # In some environment (e.g. app engine), fcntl is not found :'(
     from pyramid.scripts.pserve import PServeCommand
 
