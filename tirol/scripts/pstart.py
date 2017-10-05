@@ -1,3 +1,5 @@
+"""Module to start application server
+"""
 import os
 import sys
 
@@ -8,7 +10,7 @@ from pyramid.paster import (
 
 
 def usage(argv):
-    """Print pstart command usage
+    """Prints tirol_pstart command usage
     """
     cmd = os.path.basename(argv[0])
     print('usage: %s <config_uri> [var=value]\n'
@@ -22,9 +24,9 @@ def main(argv, _quiet=False):
     if len(argv) < 2:
         usage(argv)
 
-    config_file = argv[1] if 1 in argv else 'config/production.ini'
-    wsgi_app = get_app(config_file, 'tirol')
-    setup_logging(config_file)
+    config_uri = argv[1] if 1 in argv else 'config/production.ini'
+    wsgi_app = get_app(config_uri, 'tirol')
+    setup_logging(config_uri)
 
     return wsgi_app
 
