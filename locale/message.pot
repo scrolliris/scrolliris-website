@@ -1,36 +1,120 @@
-# Translations template for tirol.
-# Copyright (C) 2017 Lupine Software LLC
-# This file is distributed under the same license as the tirol project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Innsbruck package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: tirol 0.1\n"
-"Report-Msgid-Bugs-To: feedback@lupine-software.com\n"
-"POT-Creation-Date: 2017-07-29 18:10+0900\n"
+"Project-Id-Version: Innsbruck 0.1\n"
+"Report-Msgid-Bugs-To: support@scrolliris.com\n"
+"POT-Creation-Date: 2017-10-06 01:28+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.3.4\n"
 
-#: tirol/templates/_layout.mako:7
-msgid "meta.description"
+#: tirol/templates/index.mako:88
+msgid "about.text"
+msgstr ""
+
+#: tirol/templates/_layout.mako:36
+msgid "announcement.beta"
+msgstr ""
+
+#: tirol/templates/index.mako:18
+msgid "application.description"
+msgstr ""
+
+#: tirol/templates/_layout.mako:11 tirol/templates/timeline.mako:3
+msgid "application.name"
+msgstr ""
+
+#: tirol/templates/_layout.mako:11
+msgid "application.short_description"
+msgstr ""
+
+#: tirol/templates/index.mako:17
+msgid "application.title"
+msgstr ""
+
+#: tirol/templates/index.mako:45
+msgid "feature.analysis.description"
+msgstr ""
+
+#: tirol/templates/index.mako:44
+msgid "feature.analysis.title"
+msgstr ""
+
+#: tirol/templates/index.mako:63
+msgid "feature.integration.description"
+msgstr ""
+
+#: tirol/templates/index.mako:62
+msgid "feature.integration.title"
+msgstr ""
+
+#: tirol/templates/index.mako:54
+msgid "feature.privacy.description"
+msgstr ""
+
+#: tirol/templates/index.mako:53
+msgid "feature.privacy.title"
+msgstr ""
+
+#: tirol/templates/index.mako:34
+msgid "feature.title"
+msgstr ""
+
+#: tirol/templates/_footer.mako:10
+msgid "footer.copyright"
+msgstr ""
+
+#: tirol/templates/index.mako:21
+msgid "get_started.description"
+msgstr ""
+
+#: tirol/templates/index.mako:20
+msgid "get_started.title"
+msgstr ""
+
+#: tirol/templates/_layout.mako:10
+msgid "meta.author"
 msgstr ""
 
 #: tirol/templates/_layout.mako:8
-msgid "meta.author"
+msgid "meta.description"
 msgstr ""
 
 #: tirol/templates/_layout.mako:9
 msgid "meta.keywords"
 msgstr ""
 
-#: tirol/templates/_layout.mako:35
-msgid "announcement.beta"
+#: tirol/templates/_footer.mako:5
+msgid "nav.footer.about"
+msgstr ""
+
+#: tirol/templates/_footer.mako:7
+msgid "nav.footer.source_code"
+msgstr ""
+
+#: tirol/templates/_footer.mako:6
+msgid "nav.footer.twitter"
+msgstr ""
+
+#: tirol/templates/index.mako:9 tirol/templates/timeline.mako:11
+msgid "nav.header.newsletter"
+msgstr ""
+
+#: tirol/templates/index.mako:7 tirol/templates/timeline.mako:9
+msgid "nav.header.overview"
+msgstr ""
+
+#: tirol/templates/index.mako:8 tirol/templates/timeline.mako:10
+msgid "nav.header.timeline"
 msgstr ""
 
 #: tirol/templates/_newsletter.mako:2
@@ -45,128 +129,10 @@ msgstr ""
 msgid "newsletter.subscribe.button"
 msgstr ""
 
-#: tirol/templates/footer.mako:5
-msgid "nav.footer.about"
-msgstr ""
-
-#: tirol/templates/footer.mako:6
-msgid "nav.footer.twitter"
-msgstr ""
-
-#: tirol/templates/footer.mako:7
-msgid "nav.footer.source_code"
-msgstr ""
-
-#: tirol/templates/footer.mako:10
-msgid "footer.copyright"
-msgstr ""
-
-#: tirol/templates/index.mako:4 tirol/templates/timeline.mako:4
-msgid "application.name"
-msgstr ""
-
-#: tirol/templates/index.mako:11 tirol/templates/timeline.mako:11
-msgid "nav.header.overview"
-msgstr ""
-
-#: tirol/templates/index.mako:12 tirol/templates/timeline.mako:12
-msgid "nav.header.timeline"
-msgstr ""
-
-#: tirol/templates/index.mako:13 tirol/templates/timeline.mako:13
-msgid "nav.header.newsletter"
-msgstr ""
-
-#: tirol/templates/index.mako:21
-msgid "application.title"
-msgstr ""
-
-#: tirol/templates/index.mako:22
-msgid "application.description"
-msgstr ""
-
-#: tirol/templates/index.mako:24
-msgid "get_started.title"
-msgstr ""
-
-#: tirol/templates/index.mako:25
-msgid "get_started.description"
-msgstr ""
-
-#: tirol/templates/index.mako:38
-msgid "feature.title"
-msgstr ""
-
-#: tirol/templates/index.mako:48
-msgid "feature.analysis.title"
-msgstr ""
-
-#: tirol/templates/index.mako:49
-msgid "feature.analysis.description"
-msgstr ""
-
-#: tirol/templates/index.mako:57
-msgid "feature.privacy.title"
-msgstr ""
-
-#: tirol/templates/index.mako:58
-msgid "feature.privacy.description"
-msgstr ""
-
-#: tirol/templates/index.mako:66
-msgid "feature.integration.title"
-msgstr ""
-
-#: tirol/templates/index.mako:67
-msgid "feature.integration.description"
-msgstr ""
-
-#: tirol/templates/index.mako:78
+#: tirol/templates/index.mako:74
 msgid "newsletter.title"
 msgstr ""
 
-#: tirol/templates/index.mako:92
-msgid "about.text"
-msgstr ""
-
-#: tirol/templates/timeline.mako:4
+#: tirol/templates/timeline.mako:3
 msgid "timeline.title"
-msgstr ""
-
-#: tirol/templates/timeline.mako:12
-#. update following lines manually
-msgid "timeline.entry.001.date"
-msgstr ""
-
-msgid "timeline.entry.001.description"
-msgstr ""
-
-msgid "timeline.entry.001.title"
-msgstr ""
-
-msgid "timeline.entry.002.date"
-msgstr ""
-
-msgid "timeline.entry.002.description"
-msgstr ""
-
-msgid "timeline.entry.002.title"
-msgstr ""
-
-msgid "timeline.entry.003.date"
-msgstr ""
-
-msgid "timeline.entry.003.description"
-msgstr ""
-
-msgid "timeline.entry.003.title"
-msgstr ""
-
-msgid "timeline.entry.004.date"
-msgstr ""
-
-msgid "timeline.entry.004.description"
-msgstr ""
-
-msgid "timeline.entry.004.title"
 msgstr ""

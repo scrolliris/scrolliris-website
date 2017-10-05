@@ -13,7 +13,7 @@ Options:
 
 Arguments:
   <action>   {compile|c},{generate|g},{update|u}
-  <domain>   message
+  <domain>   {message,timeline}
   <locale>   en
 
 Actions:
@@ -23,7 +23,7 @@ Actions:
 
 Examples:
   % linguine u message en
-  % linguine c message en
+  % linguine c timeline en
 USG
 }
 
@@ -61,7 +61,7 @@ while [ $# -gt 0 ]; do
       ACTION="${1}"
       shift
       ;;
-    "message")
+    "message"|"timeline")
       DOMAIN="${1}"
       shift
       ;;

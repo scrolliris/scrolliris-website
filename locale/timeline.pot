@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Innsbruck package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Innsbruck 0.1\n"
+"Report-Msgid-Bugs-To: support@scrolliris.com\n"
+"POT-Creation-Date: 2017-10-06 00:25+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: tirol/templates/timeline.mako
+msgid "timeline.entry.001.date"
+msgstr ""
+
+msgid "timeline.entry.001.description"
+msgstr ""
+
+msgid "timeline.entry.001.title"
+msgstr ""
+
+msgid "timeline.entry.002.date"
+msgstr ""
+
+msgid "timeline.entry.002.description"
+msgstr ""
+
+msgid "timeline.entry.002.title"
+msgstr ""
+
+msgid "timeline.entry.003.date"
+msgstr ""
+
+msgid "timeline.entry.003.description"
+msgstr ""
+
+msgid "timeline.entry.003.title"
+msgstr ""
+
+msgid "timeline.entry.004.date"
+msgstr ""
+
+msgid "timeline.entry.004.description"
+msgstr ""
+
+msgid "timeline.entry.004.title"
+msgstr ""
+
