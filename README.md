@@ -21,6 +21,9 @@ Tirol; The IntROduction website for scrollIris
 
 The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 
+[https://gitlab.com/lupine-software/tirol](
+https://gitlab.com/lupine-software/tirol)
+
 
 ## Requirements
 
@@ -53,7 +56,7 @@ The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 (venv) % nodeenv --python-virtualenv --with-npm --node=7.10.1
 : re-activate for node.js at this time
 (venv) % source venv/bin/activate
-(venv) % npm update --global npm@5.4.2
+(venv) % npm install --global npm@5.4.2
 (venv) % npm --version
 5.4.2
 ```
@@ -110,7 +113,7 @@ See `Makefile`.
 (venv) % make serve
 ```
 
-### Style & Lint
+### Style check & Lint
 
 * flake8
 * pylint
@@ -118,6 +121,8 @@ See `Makefile`.
 ```zsh
 : add hook
 (venv) % flake8 --install-hook git
+
+: run make check target
 (venv) % make check
 ```
 
@@ -134,7 +139,7 @@ Use `CherryPy` as wsgi server.
 (venv) % ./bin/serve --env production --config config/production.ini --install
 ```
 
-### Publishing
+### Delivery
 
 E.g. Google App Engine
 
@@ -166,6 +171,13 @@ Above script is equivalent following steps.
 : publish website (create `app.yaml`)
 (venv) % source ./bin/load-gcloud
 (venv) % gcloud app deploy ./app.yaml --project <project-id> --verbosity=info
+```
+
+E.g. Heroku
+
+```zsh
+(venv) % echo '3.6.X' >> ./runtime.txt
+(venv) % git push heroku master
 ```
 
 
