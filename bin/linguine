@@ -84,22 +84,15 @@ while [ $# -gt 0 ]; do
 done
 
 run_extract_command() {
-  # python file only
-  # FILE_LIST="`find ./tirol -name '*.py' -print`"
-  # xgettext --default-domain=${DOMAIN} --sort-output --keyword=$KEYWORD \
-  #   --output-dir=locale --output=${DOMAIN}.pot \
-  #   --from-code=UTF-8 --language=Python --width=$WIDTH \
-  #   --msgid-bugs-address=$MSGID_BUGS_ADDRESS \
-  #   --directory=. \
-  #   --package-name=$PACKAGE_NAME --package-version=$PACKAGE_VERSION \
-  #   $FILE_LIST
-
-  # use Babel, development only
-  python setup.py extract_messages --output locale/message.pot \
-    --charset="utf-8" --width=$WIDTH --keywords "$KEYWORD" \
-    --msgid-bugs-address "$MSGID_BUGS_ADDRESS" \
-    --copyright-holder "$COPYRIGHT" \
-    --strip-comments
+  FILE_LIST="`find ./tirol -type f \( -name '*.py' -or -name '*.mako' \) \
+    -print`"
+  xgettext --default-domain=${DOMAIN} --sort-output --keyword=$KEYWORD \
+    --output-dir=locale --output=${DOMAIN}.pot \
+    --from-code=UTF-8 --language=Python --width=$WIDTH \
+    --msgid-bugs-address=$MSGID_BUGS_ADDRESS \
+    --directory=. \
+    --package-name=$PACKAGE_NAME --package-version=$PACKAGE_VERSION \
+    $FILE_LIST
 }
 
 run_generate_command() {
