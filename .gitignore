@@ -1,7 +1,8 @@
-__pycache__/
-*.pyc
-*.egg-info/
+__pycache__
+*.egg-info
 *.egg
+*.pyc
+
 .cache
 
 .*-version
@@ -14,21 +15,21 @@ app.yaml
 /*_config.py
 /wsgi.py
 
+runtime.txt
+
 /bin/publish
 /bin/gitlab-ci-multi-runner
 
 /locale
-
 /static/*
 !/static/**/*/.gitignore
-
 /lib/*
 /vendor
 
-/tmp/log/*.log
-!/tmp/log/.gitignore
+/tmp/log/*
 /tmp/build/*
-/tmp/_cache
+/tmp/_cache/*
+!/tmp/**/.gitignore
 
 /venv*
 /node_modules
