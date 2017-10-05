@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="${_('meta.description')}">
-    <meta name="author" content="${_('meta.author')}">
-    <meta name="keywords" content="${_('meta.keywords')}">
-    <title><%block name='title'/></title>
+    ## avoid miss-extraction by `xgetttext`
+    <% meta_description = _('meta.description') %><meta name="description" content="${meta_description}">
+    <% meta_keywords = _('meta.keywords') %><meta name="keywords" content="${meta_keywords}">
+    <% meta_author = _('meta.author') %><meta name="author" content="${meta_author}">
+    <title><%block name='title'>${_('application.name')} - ${_('application.short_description')}</%block></title>
     <link rel="shortcut icon" type="image/x-icon" href="${req.route_url('index') + 'favicon.ico'}">
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 96x96 128x128 192x192" href="/favicon.ico">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="${req.util.static_path('img/touch-icon-180.png')}">

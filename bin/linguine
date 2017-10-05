@@ -13,7 +13,7 @@ Options:
 
 Arguments:
   <action>   {compile|c},{extract|e},{generate|g},{update|u}
-  <domain>   message
+  <domain>   {message,timeline}
   [locale]   en
 
 Actions:
@@ -24,14 +24,16 @@ Actions:
 
 Examples:
   % linguine e message
-  % linguine u message en
-  % linguine c message en
+  % linguine g message en
+  % linguine u timeline en
+  % linguine c timeline en
 USG
 }
 
-PACKAGE_NAME="tirol"
-PACKAGE_VERSION="0.0"
-MSGID_BUGS_ADDRESS="feedback@lupine-software.com"
+# see https://gitlab.com/lupine-software/innsbruck
+PACKAGE_NAME="Innsbruck"
+PACKAGE_VERSION="0.1"
+MSGID_BUGS_ADDRESS="support@scrolliris.com"
 COPYRIGHT="Lupine Software LLC"
 
 KEYWORD="_"
@@ -68,7 +70,7 @@ while [ $# -gt 0 ]; do
       ACTION="${1}"
       shift
       ;;
-    "message")
+    "message"|"timeline")
       DOMAIN="${1}"
       shift
       ;;

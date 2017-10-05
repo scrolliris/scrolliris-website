@@ -36,14 +36,16 @@ coverage: | test-coverage
 
 catalog-compile:
 	./bin/linguine compile message en
+	./bin/linguine compile timeline en
 .PHONY: catalog-compile
 
-catalog-envct:
-	./bin/linguine envct message
-.PHONY: catalog-envct
+catalog-extract:
+	./bin/linguine extract message
+.PHONY: catalog-extract
 
 catalog-update:
 	./bin/linguine update message en
+	./bin/linguine update timeline en
 .PHONY: catalog-update
 
 catalog: | catalog-compile

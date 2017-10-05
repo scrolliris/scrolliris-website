@@ -1,8 +1,6 @@
 <%inherit file='./_layout.mako'/>
 
-<%block name='title'>
- ${_('timeline.title')} | ${_('application.name')}
-</%block>
+<%block name='title'>${_('timeline.title')} | ${_('application.name')}</%block>
 
 <div class="header" align="center">
   <img width="64" height"64" src="${util.static_url('img/scrolliris-logo-64x64.png')}">
@@ -27,13 +25,14 @@
               </svg>
             </div>
             <div class="timeline-content${' is-hidden' if is_hidden else ' bounce-in'}">
-              <h2>${__('timeline.entry.'+number+'.title')}</h2>
-              <span class="timeline-date">${__('timeline.entry.'+number+'.date')|n,trim,clean(tags=['del'])}</span>
-              <p>${__('timeline.entry.'+number+'.description')|n,trim,clean(tags=['a', 'br', 'del', 'img'], attributes={'a': ['href', 'target'], 'img': ['src', 'width', 'height', 'style']})}</p>
+              <h2>${__('timeline.entry.'+number+'.title', domain='timeline')}</h2>
+              <span class="timeline-date">${__('timeline.entry.'+number+'.date', domain='timeline')|n,trim,clean(tags=['del'])}</span>
+              <p>${__('timeline.entry.'+number+'.description', domain='timeline')|n,trim,clean(tags=['a', 'br', 'del', 'img'], attributes={'a': ['href', 'target'], 'img': ['src', 'width', 'height', 'style']})}</p>
             </div>
           </div>
         </%def>
 
+        ## translation is looked up via `__` + domain from timeline.pot
         <section id="timeline">
           ${timeline_block(icon='flag', number='004', is_hidden=False)}
           ${timeline_block(icon='heart', number='003', is_hidden=False)}
