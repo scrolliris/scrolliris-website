@@ -2,10 +2,16 @@
 
 `/ínzbrùk/`
 
-[![build status][gitlab-ci-build]][gitlab-commits]
+[![pipelinestatus][ci-build]][commit]
 
 ```txt
-Innsbruck; translatIoN project using gNu gettext for Scrolliris, it's called innsBRUCK
+   _                      _                      _
+  | |                    | |                    | |
+  | | _  _    _  _    ,  | |   ,_           __  | |
+_ |/ / |/ |  / |/ |  / \_|/ \_/  |  |   |  /    |/_)
+\_/\/  |  |_/  |  |_/ \/  \_/    |_/ \_/|_/\___/| \_/
+
+Innsbruck; translatIoN using gNu gettext for Scrolliris, it's called innsBRUCK
 ```
 
 This is translation project for the Scrolliris [Website](
@@ -201,17 +207,25 @@ contact [@scrolliris](https://twitter.com/scrolliris) on Twitter.
 
 ## License
 
-Innsbruck; Copyright (c) 2017 Lupine Software LLC
+This project is distributed as various licenses by parts.
 
-### Software
+```txt
+Innsbruck
+Copyright (c) 2017 Lupine Software LLC
+```
 
-The cli command `linguine-lite` and `Makefile` are distributed as
-**GNU General Public License** (version 3)
+### Software (program)
 
+`GPL-3.0`
+
+The programs in this project are distributed as
+GNU General Public License. (version 3)
+
+```txt
 This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+it under the terms of the GNU General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -220,22 +234,26 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
+```
 
-### Text
+### Documentation
 
-The text files for translation (`*.po` and `*.pot`), this `README.md` and
-`LICENSE` file are distributed as **GNU Free Documentation License**.
-(version 1.3)
+`GFDL-1.3`
 
+The translation files (`*.po` and `*.pot`) are distributed as
+GNU Free Documentation License. (version 1.3)
+
+```txt
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
 or any later version published by the Free Software Foundation;
 with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
 A copy of the license is included in the section entitled "GNU
 Free Documentation License".
+```
 
-See [LICENSE](LICENSE). (GFDL 1.3)
+See [LICENSE](LICENSE).
 
 
-[gitlab-ci-build]: https://gitlab.com/lupine-software/innsbruck/badges/master/build.svg
-[gitlab-commits]: https://gitlab.com/lupine-software/innsbruck/commits/master
+[ci-build]: https://gitlab.com/lupine-software/innsbruck/badges/master/build.svg
+[commit]: https://gitlab.com/lupine-software/innsbruck/commits/master
