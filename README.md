@@ -2,12 +2,10 @@
 
 `/təɾóul/`
 
-[![build status](https://gitlab.com/lupine-software/tirol/badges/master/build.svg)](
-https://gitlab.com/lupine-software/tirol/commits/master) [![coverage report](
-https://gitlab.com/lupine-software/tirol/badges/master/coverage.svg)](
-https://gitlab.com/lupine-software/tirol/commits/master)
+[![pipeline status][ci-build]][commit] [
+![coverage report][ci-cov]][commit]
 
-![Scrolliris](https://gitlab.com/lupine-software/tirol/raw/master/tirol/assets/img/scrolliris-logo-300x300.png)
+![Scrolliris](tirol/assets/img/scrolliris-logo-300x300.png)
 
 ```txt
  ______             _
@@ -20,6 +18,9 @@ Tirol; The IntROduction website for scrollIris
 ```
 
 The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
+
+
+## Repository
 
 [https://gitlab.com/lupine-software/tirol](
 https://gitlab.com/lupine-software/tirol)
@@ -308,3 +309,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 ```
 
 See [LICENSE](LICENSE).
+
+[ci-build]: https://gitlab.com/lupine-software/tirol/badges/master/build.svg
+[ci-cov]:https://gitlab.com/lupine-software/tirol/badges/master/coverage.svg
+[commit]: https://gitlab.com/lupine-software/tirol/commits/master
