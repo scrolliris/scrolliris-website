@@ -248,6 +248,8 @@ The translation catalog needs GNU gettext.
 
 ## License
 
+This project is distributed as various licenses by parts.
+
 ### Documentation
 
 `GFDL-1.3`
