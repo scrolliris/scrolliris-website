@@ -6,19 +6,27 @@ else
 	env := $(ENV)
 endif
 
-# installation
+# -- installation
 
 setup:
 	pip install -e '.[${env}]' -c constraints.txt
 .PHONY: setup
 
-# server
+setup-force:
+	pip install --upgrade --force-reinstall -e '.[${env}]' -c constraints.txt
+.PHONY: setup-force
+
+update:
+	pip install --upgrade -e '.[${env}]' -c constraints.txt
+.PHONY: update
+
+# -- application
 
 serve:
 	./bin/serve --env development --config config/${env}.ini --reload
 .PHONY: serve
 
-# testing
+# -- testing
 
 test:
 	ENV=test py.test -c 'config/testing.ini' -s -q
@@ -32,7 +40,7 @@ test-coverage:
 coverage: | test-coverage
 .PHONY: coverage
 
-# translation
+# -- translation
 
 catalog-compile:
 	./bin/linguine compile message en
@@ -51,7 +59,7 @@ catalog-update:
 catalog: | catalog-compile
 .PHONY: catalog
 
-# utilities
+# -- utility
 
 check:
 	flake8
@@ -61,6 +69,23 @@ lint:
 	pylint tirol
 	pylint test
 .PHONY: lint
+
+vet: | check lint
+.PHONY: vet
+
+lint:
+	pylint tirol
+	pylint test
+.PHONY: lint
+
+build:
+ifeq (, $(shell which gulp 2>/dev/null))
+	$(info gulp command not found. run `npm install -g gulp-cli`)
+	$(info )
+else
+	gulp
+endif
+.PHONY: build
 
 clean:
 	find . ! -readable -prune -o -print \
@@ -75,6 +100,7 @@ else
 	gulp clean
 endif
 .PHONY: clean
+
 
 .DEFAULT_GOAL = coverage
 default: coverage
