@@ -11,7 +11,7 @@
 _ |/ / |/ |  / |/ |  / \_|/ \_/  |  |   |  /    |/_)
 \_/\/  |  |_/  |  |_/ \/  \_/    |_/ \_/|_/\___/| \_/
 
-Innsbruck; translatIoN using gNu gettext for Scrolliris, it's called innsBRUCK
+Innsbruck; translatIoN project using gNu gettext, it's called innSBRUCK
 ```
 
 This is translation project for the Scrolliris [Website](
@@ -21,7 +21,8 @@ https://gitlab.com/lupine-software/tirol) (code name).
 
 ## Repository
 
-https://gitlab.com/lupine-software/innsbruck.git
+[https://gitlab.com/lupine-software/innsbruck](
+https://gitlab.com/lupine-software/innsbruck)
 
 
 ## Requirements
@@ -161,7 +162,7 @@ Prepare `gitlab-ci-multi-runner` in your local machine.
 % ./bin/setup-gitlab-ci-multi-runner
 
 : or install runner (gitlab-ci-multi-runner) into somewhere, manually
-% curl -sL https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com\
+% curl -sL https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com \
   /latest/binaries/gitlab-ci-multi-runner-linux-amd64 \
   -o bin/gitlab-ci-multi-runner
 % chmod +x bin/gitlab-ci-multi-runner
