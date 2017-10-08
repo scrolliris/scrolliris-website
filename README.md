@@ -248,10 +248,61 @@ The translation catalog needs GNU gettext.
 
 ## License
 
-Tirol; Copyright (c) 2017 Lupine Software LLC
+### Documentation
 
-This is free software;  
+`GFDL-1.3`
+
+The files in the `tirol/doc` directory are distributed as
+GNU Free Documentation License. (version 1.3)
+
+```txt
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+```
+
+Check the [GNU Free Documentation License](
+https://www.gnu.org/licenses/fdl-1.3.en.html).
+
+### Resource (image)
+
+`CC-BY-NC-SA-4.0`
+
+The files in the `tirol/assets/img` directory are licensed under the
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+Public License.
+
+[![Creative Commons License](
+https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](
+http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+Check the [Legalcode](
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+### Software (program)
+
+`AGPL-3.0`
+
+```txt
+Tirol
+Copyright (c) 2017 Lupine Software LLC
+
+This is free software:  
 You can redistribute it and/or modify it under the terms of the
-GNU Affero General Public License (AGPL).
+GNU Affero General Public License as published by the
+Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+```
 
 See [LICENSE](LICENSE).
