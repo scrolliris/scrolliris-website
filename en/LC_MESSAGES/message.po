@@ -110,7 +110,7 @@ msgstr "Lupine Software LLC"
 msgid "meta.description"
 msgstr ""
 "Scrolliris; A publication platform which utilizes text readability "
-"analysis and/or its browser widget."
+"analysis through a script on web browser."
 
 #: tirol/templates/_layout.mako:9
 msgid "meta.keywords"
