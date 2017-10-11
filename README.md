@@ -2,7 +2,7 @@
 
 `/ínzbrùk/`
 
-[![pipelinestatus][ci-build]][commit]
+[![pipeline status][pipeline]][commit]
 
 ```txt
    _                      _                      _
@@ -11,7 +11,7 @@
 _ |/ / |/ |  / |/ |  / \_|/ \_/  |  |   |  /    |/_)
 \_/\/  |  |_/  |  |_/ \/  \_/    |_/ \_/|_/\___/| \_/
 
-Innsbruck; translatIoN project using gNu gettext, it's called innSBRUCK
+Innsbruck; translatIoN project using gNu gettext, it's called innsBRUCK
 ```
 
 This is translation project for the Scrolliris [Website](
@@ -21,8 +21,7 @@ https://gitlab.com/lupine-software/tirol) (code name).
 
 ## Repository
 
-[https://gitlab.com/lupine-software/innsbruck](
-https://gitlab.com/lupine-software/innsbruck)
+https://gitlab.com/lupine-software/innsbruck.git
 
 
 ## Requirements
@@ -162,7 +161,7 @@ Prepare `gitlab-ci-multi-runner` in your local machine.
 % ./bin/setup-gitlab-ci-multi-runner
 
 : or install runner (gitlab-ci-multi-runner) into somewhere, manually
-% curl -sL https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com \
+% curl -sL https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com\
   /latest/binaries/gitlab-ci-multi-runner-linux-amd64 \
   -o bin/gitlab-ci-multi-runner
 % chmod +x bin/gitlab-ci-multi-runner
@@ -208,9 +207,9 @@ contact [@scrolliris](https://twitter.com/scrolliris) on Twitter.
 
 ## License
 
-This project is distributed as various licenses by parts.
+This project is distributed as multiple licenses by parts.
 
-```txt
+```
 Innsbruck
 Copyright (c) 2017 Lupine Software LLC
 ```
@@ -219,14 +218,14 @@ Copyright (c) 2017 Lupine Software LLC
 
 `GPL-3.0`
 
-The programs in this project are distributed as
+The cli command `linguine-lite` and `Makefile` are distributed as
 GNU General Public License. (version 3)
 
 ```txt
 This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -237,12 +236,12 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 ```
 
-### Documentation
+### Text (translation)
 
 `GFDL-1.3`
 
-The translation files (`*.po` and `*.pot`) are distributed as
-GNU Free Documentation License. (version 1.3)
+This work is distributed as GNU Free Documentation License.
+(version 1.3)
 
 ```txt
 Permission is granted to copy, distribute and/or modify this document
@@ -256,5 +255,5 @@ Free Documentation License".
 See [LICENSE](LICENSE).
 
 
-[ci-build]: https://gitlab.com/lupine-software/innsbruck/badges/master/build.svg
+[pipeline]: https://gitlab.com/lupine-software/innsbruck/badges/master/pipeline.svg
 [commit]: https://gitlab.com/lupine-software/innsbruck/commits/master
