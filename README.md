@@ -2,8 +2,7 @@
 
 `/təɾóul/`
 
-[![pipeline status][ci-build]][commit] [
-![coverage report][ci-cov]][commit]
+[![pipeline status][pipeline]][commit] [![coverage report][coverage]][commit]
 
 ![Scrolliris](tirol/assets/img/scrolliris-logo-300x300.png)
 
@@ -251,6 +250,11 @@ The translation catalog needs GNU gettext.
 
 This project is distributed as various licenses by parts.
 
+```txt
+Tirol
+Copyright (c) 2017 Lupine Software LLC
+```
+
 ### Documentation
 
 `GFDL-1.3`
@@ -290,9 +294,6 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 `AGPL-3.0`
 
 ```txt
-Tirol
-Copyright (c) 2017 Lupine Software LLC
-
 This is free software: You can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
 published by the Free Software Foundation, either version 3 of the
@@ -309,6 +310,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 See [LICENSE](LICENSE).
 
-[ci-build]: https://gitlab.com/lupine-software/tirol/badges/master/build.svg
-[ci-cov]: https://gitlab.com/lupine-software/tirol/badges/master/coverage.svg
+
+[pipeline]: https://gitlab.com/lupine-software/tirol/badges/master/build.svg
+[coverage]: https://gitlab.com/lupine-software/tirol/badges/master/coverage.svg
 [commit]: https://gitlab.com/lupine-software/tirol/commits/master
