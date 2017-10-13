@@ -81,6 +81,43 @@
     <hr class="line">
   </div>
 
+  <div class="grid link">
+    <div class="row" align="center">
+      <div class="link-container">
+        <div class="offset-5 column-2 offset-v-2 column-v-4 column-m-16">
+          <section>
+            <a href="https://help.scrolliris.com/">
+              <svg class="icon question-mark" viewBox="0 0 8 8" width="48" height="48">
+                <use xlink:href="#open-iconic.min_question-mark" class="icon-question-mark"></use>
+              </svg>
+              <span class="help">${_('nav.link.help')}</span>
+            </a>
+          </section>
+        </div>
+        <div class="column-2 column-v-4 column-m-16">
+          <section>
+            <a href="https://log.scrolliris.com/">
+              <svg class="icon pulse" viewBox="0 0 8 8" width="48" height="48">
+                <use xlink:href="#open-iconic.min_pulse" class="icon-pulse"></use>
+              </svg>
+              <span class="changelog">${_('nav.link.log')}</span>
+            </a>
+          </section>
+        </div>
+        <div class="column-2 column-v-4 column-m-16">
+          <section>
+            <a href="https://doc.scrolliris.com/how_it_works/overview.html">
+              <svg class="icon document" viewBox="0 0 8 8" width="48" height="48">
+                <use xlink:href="#open-iconic.min_document" class="icon-document"></use>
+              </svg>
+              <span class="documentation">${_('nav.link.doc')}</span>
+            </a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="grid about">
     <div class="row">
       <div class="column-16" align=center>
