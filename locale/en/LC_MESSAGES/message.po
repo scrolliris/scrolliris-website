@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Innsbruck 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-10-06 01:28+0900\n"
+"POT-Creation-Date: 2017-10-13 23:13+0900\n"
 "PO-Revision-Date: 2017-06-23 03:27+0900\n"
 "Last-Translator: Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>\n"
 "Language-Team: en <support@scrolliris.com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: tirol/templates/index.mako:88
+#: tirol/templates/index.mako:126
 msgid "about.text"
 msgstr ""
 "Made with <svg viewBox=\"0 0 8 8\" width=\"16\" height=\"16\" class="
@@ -118,7 +118,7 @@ msgstr "Scrolliris,Lupine Software"
 
 #: tirol/templates/_footer.mako:5
 msgid "nav.footer.about"
-msgstr "About"
+msgstr "About us"
 
 #: tirol/templates/_footer.mako:7
 msgid "nav.footer.source_code"
@@ -139,6 +139,18 @@ msgstr "Overview"
 #: tirol/templates/index.mako:8 tirol/templates/timeline.mako:10
 msgid "nav.header.timeline"
 msgstr "Timeline"
+
+#: tirol/templates/index.mako:113
+msgid "nav.link.doc"
+msgstr "Documentation"
+
+#: tirol/templates/index.mako:93
+msgid "nav.link.help"
+msgstr "Support"
+
+#: tirol/templates/index.mako:103
+msgid "nav.link.log"
+msgstr "Changelog"
 
 #: tirol/templates/_newsletter.mako:2
 msgid "newsletter.description"

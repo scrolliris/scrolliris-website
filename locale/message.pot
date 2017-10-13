@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Innsbruck 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-10-06 01:28+0900\n"
+"POT-Creation-Date: 2017-10-13 23:13+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: tirol/templates/index.mako:88
+#: tirol/templates/index.mako:126
 msgid "about.text"
 msgstr ""
 
@@ -115,6 +115,18 @@ msgstr ""
 
 #: tirol/templates/index.mako:8 tirol/templates/timeline.mako:10
 msgid "nav.header.timeline"
+msgstr ""
+
+#: tirol/templates/index.mako:113
+msgid "nav.link.doc"
+msgstr ""
+
+#: tirol/templates/index.mako:93
+msgid "nav.link.help"
+msgstr ""
+
+#: tirol/templates/index.mako:103
+msgid "nav.link.log"
 msgstr ""
 
 #: tirol/templates/_newsletter.mako:2
