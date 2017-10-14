@@ -19,7 +19,7 @@
         <p class="description">${_('application.description')}</p>
         <div class="get-started">
           <p><a class="primary try button" href="https://try.scrolliris.com/">${_('get_started.title')}</a></p>
-          or <a class="signup link" href="https://scrolliris.com/signup">Sign up</a>
+          ${_('misc.or')} <a class="signup link" href="https://scrolliris.com/signup">${_('action.signup')}</a>
           <p>${_('get_started.description')}</p>
         </div>
       </div>
@@ -130,7 +130,7 @@
 
     <hr class="line">
 
-    <a class="secondary signup button" href="https://scrolliris.com/signup">Sign up</a>
+    <a class="secondary signup button" href="https://scrolliris.com/signup">${_('action.signup')}</a>
     <h6>${_('link.question.title')}</h6>
     <p>${_('link.question.mail', mapping={'mail': 'support@scrolliris.com'})|n,trim,clean(tags=['a', 'code'], attributes={'a': ['href'], 'code':[]})}</p>
   </div>
