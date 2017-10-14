@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Innsbruck 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-10-13 23:13+0900\n"
+"POT-Creation-Date: 2017-10-14 14:13+0900\n"
 "PO-Revision-Date: 2017-06-23 03:27+0900\n"
 "Last-Translator: Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>\n"
 "Language-Team: en <support@scrolliris.com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: tirol/templates/index.mako:126
+#: tirol/templates/index.mako:136
 msgid "about.text"
 msgstr ""
 "Made with <svg viewBox=\"0 0 8 8\" width=\"16\" height=\"16\" class="
@@ -49,6 +49,34 @@ msgstr "A publication platform which utilizes text readability analysis"
 #: tirol/templates/index.mako:17
 msgid "application.title"
 msgstr "Beyond the Scroll"
+
+#: tirol/templates/_customer.mako:2
+msgid "customer.description"
+msgstr ""
+"Join thousands of organizations who trust Scrolliris to improve the "
+"readability of their text."
+
+#: tirol/templates/_customer.mako:12
+msgid "customer.description.01"
+msgstr ""
+"<a href=\"$href\" target=\"_blank\">ODDB</a> provides medical drug "
+"information and documentation like fachinformation and "
+"patienteninformation for specialists in pharmaceutical industry."
+
+#: tirol/templates/_customer.mako:26
+msgid "customer.description.02"
+msgstr ""
+"<a href=\"$href\" target=\"_blank\">ywesee GmbH</a> is an open source "
+"software company with a bias for open standards and a dedicated focus "
+"on the health care industry."
+
+#: tirol/templates/_customer.mako:15 tirol/templates/_customer.mako:29
+msgid "customer.location.switzerland"
+msgstr "Switzerland"
+
+#: tirol/templates/index.mako:73
+msgid "customer.title"
+msgstr "Our Customers"
 
 #: tirol/templates/index.mako:45
 msgid "feature.analysis.description"
@@ -140,15 +168,15 @@ msgstr "Overview"
 msgid "nav.header.timeline"
 msgstr "Timeline"
 
-#: tirol/templates/index.mako:113
+#: tirol/templates/index.mako:124
 msgid "nav.link.doc"
 msgstr "Documentation"
 
-#: tirol/templates/index.mako:93
+#: tirol/templates/index.mako:104
 msgid "nav.link.help"
 msgstr "Support"
 
-#: tirol/templates/index.mako:103
+#: tirol/templates/index.mako:114
 msgid "nav.link.log"
 msgstr "Changelog"
 
@@ -164,7 +192,7 @@ msgstr "Enter your email address below."
 msgid "newsletter.subscribe.button"
 msgstr "Get Notified"
 
-#: tirol/templates/index.mako:74
+#: tirol/templates/index.mako:84
 msgid "newsletter.title"
 msgstr "Notify me about Scrolliris Updates"
 
