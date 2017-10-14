@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Innsbruck 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-10-14 14:13+0900\n"
+"POT-Creation-Date: 2017-10-14 15:03+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: tirol/templates/index.mako:136
+#: tirol/templates/index.mako:137
 msgid "about.text"
 msgstr ""
 
@@ -25,7 +25,7 @@ msgstr ""
 msgid "announcement.beta"
 msgstr ""
 
-#: tirol/templates/index.mako:18
+#: tirol/templates/index.mako:19
 msgid "application.description"
 msgstr ""
 
@@ -37,7 +37,7 @@ msgstr ""
 msgid "application.short_description"
 msgstr ""
 
-#: tirol/templates/index.mako:17
+#: tirol/templates/index.mako:18
 msgid "application.title"
 msgstr ""
 
@@ -57,35 +57,35 @@ msgstr ""
 msgid "customer.location.switzerland"
 msgstr ""
 
-#: tirol/templates/index.mako:73
+#: tirol/templates/index.mako:74
 msgid "customer.title"
 msgstr ""
 
-#: tirol/templates/index.mako:45
+#: tirol/templates/index.mako:46
 msgid "feature.analysis.description"
 msgstr ""
 
-#: tirol/templates/index.mako:44
+#: tirol/templates/index.mako:45
 msgid "feature.analysis.title"
 msgstr ""
 
-#: tirol/templates/index.mako:63
+#: tirol/templates/index.mako:64
 msgid "feature.integration.description"
 msgstr ""
 
-#: tirol/templates/index.mako:62
+#: tirol/templates/index.mako:63
 msgid "feature.integration.title"
 msgstr ""
 
-#: tirol/templates/index.mako:54
+#: tirol/templates/index.mako:55
 msgid "feature.privacy.description"
 msgstr ""
 
-#: tirol/templates/index.mako:53
+#: tirol/templates/index.mako:54
 msgid "feature.privacy.title"
 msgstr ""
 
-#: tirol/templates/index.mako:34
+#: tirol/templates/index.mako:35
 msgid "feature.title"
 msgstr ""
 
@@ -93,11 +93,11 @@ msgstr ""
 msgid "footer.copyright"
 msgstr ""
 
-#: tirol/templates/index.mako:21
+#: tirol/templates/index.mako:22
 msgid "get_started.description"
 msgstr ""
 
-#: tirol/templates/index.mako:20
+#: tirol/templates/index.mako:21
 msgid "get_started.title"
 msgstr ""
 
@@ -125,6 +125,10 @@ msgstr ""
 msgid "nav.footer.twitter"
 msgstr ""
 
+#: tirol/templates/index.mako:10
+msgid "nav.header.login"
+msgstr ""
+
 #: tirol/templates/index.mako:9 tirol/templates/timeline.mako:11
 msgid "nav.header.newsletter"
 msgstr ""
@@ -137,15 +141,15 @@ msgstr ""
 msgid "nav.header.timeline"
 msgstr ""
 
-#: tirol/templates/index.mako:124
+#: tirol/templates/index.mako:125
 msgid "nav.link.doc"
 msgstr ""
 
-#: tirol/templates/index.mako:104
+#: tirol/templates/index.mako:105
 msgid "nav.link.help"
 msgstr ""
 
-#: tirol/templates/index.mako:114
+#: tirol/templates/index.mako:115
 msgid "nav.link.log"
 msgstr ""
 
@@ -161,7 +165,7 @@ msgstr ""
 msgid "newsletter.subscribe.button"
 msgstr ""
 
-#: tirol/templates/index.mako:84
+#: tirol/templates/index.mako:85
 msgid "newsletter.title"
 msgstr ""
 
