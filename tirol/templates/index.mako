@@ -7,6 +7,7 @@
     <li><a class="overview active link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="timeline link" href="${req.route_path('timeline')}">${_('nav.header.timeline')}</a></li>
     <li><a class="newsletter link" href="${var['tinyletter_url']}" target="_blank">${_('nav.header.newsletter')}</a></li>
+    <li><a class="login link" href="https://scrolliris.com/login">${_('nav.header.login')}</a></li>
   </ul>
 </div>
 
