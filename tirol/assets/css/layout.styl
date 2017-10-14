@@ -2,10 +2,10 @@
 .content
   min-height 18.2rem
 
-.header
+.wrapper > .header
   max-height 19.5rem
   min-height 6.9rem
-  padding 2.16rem 0
+  padding 2.16rem 0 0.55rem 0
   .description
     margin-top 1.48rem
     max-width 28.5rem
@@ -16,7 +16,7 @@
   .get-started
     margin 4.22rem 0 2.22rem 0
 
-.footer
+.wrapper > .footer
   padding-top 3.55rem
   .info
     padding-top 0.66rem
@@ -42,12 +42,13 @@
 .line
   margin 2.22rem 0
 
-.header
+.wrapper > .header
+  background-color #fbf9fd
   .nav
     li
       margin-right 0.781em
 
-.footer
+.wrapper > .footer
   .nav
     li:first-child
       margin-right 1.281em
@@ -55,10 +56,16 @@
       margin-left 1.281em
 
 // grid
+.grid.title
+  padding 2.1rem 0
+  background-color #ffffff
+
 .grid.screenshot
   margin 5.49rem 0
 
 .grid.feature
+  padding 2.44rem 0 1.85rem 0
+  background-color lighten(#f3f3f3, 9%)
   .heading
     margin 1.71rem auto 2.86rem auto
     max-width 37.29rem
@@ -68,28 +75,34 @@
   p.text
     max-width 21.42rem
 
+.grid.customer
+  margin 3.43rem 0 2.15rem 0
+  padding 2.3rem 0
+
 .grid.newsletter
-  margin 4.43rem 0 2.72rem 0
+  padding 5.43rem 0 4.72rem 0
+  background-color #ffffff
   .newsletter-container
     form
       margin 2.16rem auto
 
 .grid.link
-  margin 4.62rem 0
+  padding 4.62rem 0 2.22rem 0
+  background-color lighten(#f3f3f3, 9%)
   .link-container
     margin 2.43rem 0 2.52rem 0
     padding-bottom 3.2rem
   section
     margin-bottom 3.941rem
 
-
 .grid.about
-  margin 3rem 0 1.69rem 0
+  padding 4.82rem 0 3.69rem 0
   a
     display inline-block
     margin 0 0.28rem
 
 .grid.timeline
+  background-color #ffffff
   min-height 630px
   vertical-align middle
 
@@ -131,7 +144,7 @@ svg.tiny.icon
   max-width 16px
   max-height 16px
 
-.feature
+.gird.feature
   sng.icon
     margin-top 1.98rem
     margin-bottom 13px

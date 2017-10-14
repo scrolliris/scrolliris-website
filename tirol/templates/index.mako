@@ -1,8 +1,8 @@
 <%inherit file='./_layout.mako'/>
 
 <div class="header" align="center">
-  <img width="64" height="64" src="${util.static_url('img/scrolliris-logo-64x64.png')}" alt="Scrolliris's Logo">
-  <h1><span class="scroll">Scroll</span><span class="iris">iris</span></h1>
+  <a href="/"><img width="64" height="64" src="${util.static_url('img/scrolliris-logo-64x64.png')}" alt="Scrolliris's Logo"></a>
+  <h1 class="logo"><span class="scroll">Scroll</span><span class="iris">iris</span></h1>
   <ul class="nav">
     <li><a class="overview active link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="timeline link" href="${req.route_path('timeline')}">${_('nav.header.timeline')}</a></li>
@@ -18,7 +18,8 @@
         <h2 class="heading">${_('application.title')}</h2>
         <p class="description">${_('application.description')}</p>
         <div class="get-started">
-          <a class="primary try button" href="https://try.scrolliris.com/">${_('get_started.title')}</a>
+          <p><a class="primary try button" href="https://try.scrolliris.com/">${_('get_started.title')}</a></p>
+          or <a class="signup link" href="https://scrolliris.com/signup">Sign up</a>
           <p>${_('get_started.description')}</p>
         </div>
       </div>
@@ -91,8 +92,6 @@
     </div>
   </div>
 
-  <hr class="line">
-
   <div class="grid link">
     <div class="row" align="center">
       <div class="link-container">
@@ -128,6 +127,12 @@
         </div>
       </div>
     </div>
+
+    <hr class="line">
+
+    <a class="secondary signup button" href="https://scrolliris.com/signup">Sign up</a>
+    <h6>${_('link.question.title')}</h6>
+    <p>${_('link.question.mail', mapping={'mail': 'support@scrolliris.com'})|n,trim,clean(tags=['a', 'code'], attributes={'a': ['href'], 'code':[]})}</p>
   </div>
 
   <div class="grid about">

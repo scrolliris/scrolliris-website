@@ -21,6 +21,8 @@ input[type="text"]
 
 // section
 .header
+  .logo
+    margin-bottom 2.53rem
   .description
     font-size 2.15rem
     span
@@ -106,7 +108,7 @@ h3.heading
   padding-bottom 0
 
 .nav
-  margin-top 2.48rem
+  margin-top 1.28rem
   .link
     font-weight 300
     text-decoration none
@@ -116,8 +118,8 @@ h3.heading
     color darken(#838383, 21%)
 
 .line
-  border 1px dashed darken(#ededed, 33%)
-  width 7.24rem
+  border 1px solid darken(#ededed, 3%)
+  width 16.24rem
 
 .announcement
   background-color #705e8d
@@ -133,7 +135,7 @@ h3.heading
     color lighten(#838383, 26%)
     font-weight bold
 
-.customer
+.grid.customer
   .box
     min-height 25.6rem
   .footer
@@ -154,21 +156,15 @@ h3.heading
       display block
       padding 0.43rem 0;
 
-.newsletter
+.grid.newsletter
   input[type="text"]
     border 1px solid lighten(#838383, 21%)
     width 12.85rem
+    padding-bottom 0.46rem
   input.secondary.button
-    color darken(#838383, 9%)
-    border 1px solid #f3f3f3
-    border-radius 1px
-    min-height 1.92rem
+    min-height 1.22rem
     min-width 8.43rem
     font-size 0.88em
-    &:hover
-      color darken(#838383, 36%)
-      border-color darken(#f3f3f3, 9%)
-      background-color lighten(#f3f3f3, 28%)
 
 .grid.link
   svg.icon
@@ -178,9 +174,18 @@ h3.heading
   span.documentation
     display block
     margin 2.02rem 0
+  .signup.button
+    margin 1.24rem 0 2.28rem 0
+    padding 0.45rem 1.49rem
+  code
+    border none
+    border-radius 0
+    &:hover
+      text-decoration underline
+
 
 // image
-.screenshot
+.grid.screenshot
   img
     max-width 980px
     max-height 587px

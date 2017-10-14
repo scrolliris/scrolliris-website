@@ -3,8 +3,7 @@
 <%block name='title'>${_('timeline.title')} | ${_('application.name')}</%block>
 
 <div class="header" align="center">
-  <img width="64" height"64" src="${util.static_url('img/scrolliris-logo-64x64.png')}">
-  <h1><span class="scroll">Scroll</span><span class="iris">iris</span></h1>
+  <a href="/"><img width="32" height"32" src="${util.static_url('img/scrolliris-logo-64x64.png')}"></a>
   <ul class="nav">
     <li><a class="overview link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="timeline active link" href="${req.route_path('timeline')}">${_('nav.header.timeline')}</a></li>
@@ -42,4 +41,5 @@
         </section>
       </div>
     </div>
+  </div>
 </div>
