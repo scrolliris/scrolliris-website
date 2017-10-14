@@ -36,7 +36,7 @@
     </div>
 
     <div class="row">
-      <div class="column-4 offset-2 column-l-7 offset-l-1 column-m-16" align="center">
+      <div class="offset-2 column-4 offset-l-1 column-l-7 column-m-16" align="center">
         <section>
           <svg class="icon bar-chart" viewBox="0 0 8 8" width="48" height="48">
             <use xlink:href="#open-iconic.min_bar-chart" class="icon-bar-chart"></use>
@@ -54,7 +54,7 @@
           <p class="text">${_('feature.privacy.description')}</p>
         </section>
       </div>
-      <div class="column-4 column-l-7 offset-l-4 column-m-16" align="center">
+      <div class="column-4 offset-l-4 column-l-8 column-m-16" align="center">
         <section>
           <svg class="icon wrench" viewBox="0 0 8 8" width="48" height="48">
             <use xlink:href="#open-iconic.min_wrench" class="icon-wrench"></use>
@@ -66,8 +66,18 @@
     </div>
   </div>
 
+  <div class="grid customer">
+    <div class="row">
+      <div class="column-16" align=center>
+        <div class="customer-container">
+          <h3 class="heading">${_('customer.title')}</h3>
+          <%include file='./_customer.mako'/>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="grid newsletter">
-    <hr class="line">
     <div class="row">
       <div class="column-16" align=center>
         <div class="newsletter-container">
@@ -78,8 +88,9 @@
         </div>
       </div>
     </div>
-    <hr class="line">
   </div>
+
+  <hr class="line">
 
   <div class="grid link">
     <div class="row" align="center">
