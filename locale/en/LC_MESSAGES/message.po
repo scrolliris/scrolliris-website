@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Innsbruck 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-10-14 15:03+0900\n"
+"POT-Creation-Date: 2017-10-14 15:14+0900\n"
 "PO-Revision-Date: 2017-06-23 03:27+0900\n"
 "Last-Translator: Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>\n"
 "Language-Team: en <support@scrolliris.com>\n"
@@ -156,7 +156,7 @@ msgstr "Source Code"
 msgid "nav.footer.twitter"
 msgstr "Twitter"
 
-#: tirol/templates/index.mako:10
+#: tirol/templates/index.mako:10 tirol/templates/timeline.mako:12
 msgid "nav.header.login"
 msgstr "Login"
 
