@@ -73,11 +73,6 @@ lint:
 vet: | check lint
 .PHONY: vet
 
-lint:
-	pylint tirol
-	pylint test
-.PHONY: lint
-
 build:
 ifeq (, $(shell which gulp 2>/dev/null))
 	$(info gulp command not found. run `npm install -g gulp-cli`)
