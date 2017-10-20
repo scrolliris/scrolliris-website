@@ -1,6 +1,5 @@
-""" Setup Script.
-"""
 import os
+import sys
 
 from setuptools import setup, find_packages
 
@@ -21,9 +20,13 @@ requires = [
     'pyramid',
     'pyramid_assetviews',
     'pyramid_mako',
-    # python 2.7
-    'ipaddress',
 ]
+
+if sys.version_info[0] < 3:  # python 2.7
+    requires.extend([
+        'ipaddress',
+        'typing',
+    ])
 
 development_requires = [
     'colorlog',
