@@ -1,15 +1,15 @@
 <%inherit file='./_layout.mako'/>
 
-<div class="header" align="center">
-  <a href="/"><img width="64" height="64" src="${util.static_url('img/scrolliris-logo-64x64.png')}" alt="Scrolliris's Logo"></a>
-  <h1 class="logo"><span class="scroll">Scroll</span><span class="iris">iris</span></h1>
-  <ul class="nav">
+<%block name='nav'>
+<div class="global-nav">
+  <ul class="nav" align="center">
     <li><a class="overview active link" href="/">${_('nav.header.overview')}</a></li>
     <li><a class="timeline link" href="${req.route_path('timeline')}">${_('nav.header.timeline')}</a></li>
     <li><a class="newsletter link" href="${var['tinyletter_url']}" target="_blank">${_('nav.header.newsletter')}</a></li>
     <li><a class="login link" href="https://scrolliris.com/login">${_('nav.header.login')}</a></li>
   </ul>
 </div>
+</%block>
 
 <div class="content" align="center">
   <div class="grid title" align="center">
@@ -128,11 +128,9 @@
       </div>
     </div>
 
-    <hr class="line">
-
     <a class="secondary signup button" href="https://scrolliris.com/signup">${_('action.signup')}</a>
     <h6>${_('link.question.title')}</h6>
-    <p>${_('link.question.mail', mapping={'mail': 'support@scrolliris.com'})|n,trim,clean(tags=['a', 'code'], attributes={'a': ['href'], 'code':[]})}</p>
+    <p class="text">${_('link.question.mail', mapping={'mail': 'support@scrolliris.com'})|n,trim,clean(tags=['a', 'code'], attributes={'a': ['href'], 'code':[]})}</p>
   </div>
 
   <div class="grid about">

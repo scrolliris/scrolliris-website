@@ -27,14 +27,16 @@
     <link rel="humans" type="text/plain" href="/humans.txt">
     <link rel="robots" type="text/plain" href="/robots.txt">
     <style>body{background-color:#ffffff;}</style>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300" rel="stylesheet">
     <link rel="stylesheet" href="${req.util.built_asset_url('master.css')}">
-    <%block name='header'/>
+    <%block name='extra_style'/>
   </head>
   <body>
     <div class="wrapper" align="center">
-      <div class="announcement" align="center">
-        <p>${_('announcement.beta')|n,trim,clean(tags=['a', 'span'], attributes=['class', 'href'])}</p>
-      </div>
+      <%block name='header'>
+        <%include file='_header.mako'/>
+      </%block>
+      <%block name='nav'></%block>
       ${self.body()}
       <%block name='footer'>
         <%include file='_footer.mako'/>
@@ -54,5 +56,6 @@
     <%include file='_font.mako'/>
     <%include file='_chat.mako'/>
     <script src="${req.util.built_asset_url('master.js')}"></script>
+    <%block name='extra_script'/>
   </body>
 </html>

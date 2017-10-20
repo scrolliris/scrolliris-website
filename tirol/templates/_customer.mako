@@ -29,7 +29,7 @@
         <span class="location">${_('customer.location.switzerland')}</span>
       </div>
     </div>
-    <div class="column-4 offset-v-4 column-v-8 column-n-16" align=center>
+    <div class="mobile-hidden column-4 offset-v-4 column-v-8 column-n-16" align=center>
       <div class="flat attached none box">
       </div>
       <div class="attached flat none footer">

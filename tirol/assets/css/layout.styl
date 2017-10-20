@@ -2,10 +2,11 @@
 .content
   min-height 18.2rem
 
-.wrapper > .header
-  max-height 19.5rem
-  min-height 6.9rem
-  padding 2.16rem 0 0.55rem 0
+header
+  color #fbf9fd
+  background-color #454545
+  max-height 4.5rem
+  padding 0.16rem 0 0.55rem 0
   .description
     margin-top 1.48rem
     max-width 28.5rem
@@ -32,47 +33,66 @@
 
 
 // component
+.announcement
+  width 100%
+  margin 0
+  padding 0.44rem 0 0.48rem 0
+  p
+    margin 0
+    padding 0 0.33rem
+
+.global-nav
+  margin 0
+  background-color #f0ede6
+
 .nav
+  line-height 1.12em
+  margin-top 0.48rem
+  margin 0
+  text-align center
+  width 100%
   li
     display inline-block
+    margin-right 0.781em
   .link
     margin 1.01rem 0.32rem
     display inline-block
 
-.line
-  margin 2.22rem 0
-
-.wrapper > .header
-  background-color #fbf9fd
-  .nav
-    li
-      margin-right 0.781em
-
 .wrapper > .footer
   .nav
+    margin-top 1.28rem
     li:first-child
       margin-right 1.281em
     li:last-child
       margin-left 1.281em
 
+.line
+  margin 2.22rem 0
+
+
 // grid
 .grid.title
   padding 2.1rem 0
-  background-color #ffffff
+  background-color #fbfaf8
 
 .grid.screenshot
   margin 5.49rem 0
 
 .grid.feature
   padding 2.44rem 0 1.85rem 0
-  background-color lighten(#f3f3f3, 9%)
+  background-color #f0ede6
   .heading
     margin 1.71rem auto 2.86rem auto
     max-width 37.29rem
   section
     display block
     margin-top 1.2rem
+
+.grid.feature,
+.grid.link
   p.text
+    padding-left 0.66rem
+    padding-right 0.66rem
     max-width 21.42rem
 
 .grid.customer
@@ -88,7 +108,7 @@
 
 .grid.link
   padding 4.62rem 0 2.22rem 0
-  background-color lighten(#f3f3f3, 9%)
+  background-color #f0ede6
   .link-container
     margin 2.43rem 0 2.52rem 0
     padding-bottom 3.2rem
@@ -105,15 +125,6 @@
   background-color #ffffff
   min-height 630px
   vertical-align middle
-
-.announcement
-  line-height 3.20rem
-  width 100%
-  margin 0
-  padding 0.42rem 0 0.299rem 0
-  p
-    margin 0
-    padding 0 0.33rem
 
 .note
   margin 1.92rem auto 1.68rem auto

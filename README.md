@@ -29,13 +29,14 @@ https://gitlab.com/lupine-software/tirol)
 
 * Python `3.5.4` (or `>= 2.7.13`)
 * Node.js `7.10.1` (npm `5.4.2`, for build assets)
-* Raleway Thin (for logo, use `bin/font-fetch.sh`)
 * GNU gettext `>= 0.19.8.1` (translation)
 * [Innsbruck](https://gitlab.com/lupine-software/innsbruck) as git subtree
 
 
 ## Integrations
 
+* Google Fonts
+* Typekit
 * GitLab
 * Tinyletter
 * Twitter
