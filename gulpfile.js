@@ -26,7 +26,7 @@ gulp.task('env', function(done) {
     .pipe(env({file: dotenv_file, type: '.ini'}));
   } else {
     return done();
-  };
+  }
 })
 
 // -- [build tasks]
