@@ -6,7 +6,7 @@
         <li><a href="${var['twitter_url']}" target="_blank">${_('nav.footer.tweet')}</a></li>
         <li><a href="${var['gitlab_url']}">${_('nav.footer.source_code')}</a></li>
       </ul>
-      <ul class="nav">
+      <ul class="legal nav">
         <li><a href="https://doc.scrolliris.com/terms.html" target="_blank">${_('nav.footer.terms')}</a></li>
         <li><a href="https://doc.scrolliris.com/cookie.html" target="_blank">${_('nav.footer.cookie')}</a></li>
         <li><a href="https://doc.scrolliris.com/privacy.html" target="_blank">${_('nav.footer.privacy')}</a></li>

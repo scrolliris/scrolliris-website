@@ -51,6 +51,10 @@ header
     padding-left 0
     li
       list-style none
+      line-height 1.15em
+  ul.legal
+    li
+      line-height 2.2em
 
 
 // heading
@@ -118,6 +122,9 @@ h3.heading
     font-weight bold
 
 .grid.customer
+  .customer
+    > .description
+      padding 0 0.86rem
   .box
     min-height 25.6rem
   .footer
@@ -273,7 +280,8 @@ svg.icon.pink
   .mobile-hidden
     display none
 
-@media only screen and (max-width: 620px)
+// medium
+@media only screen and (max-width: 640px)
   .announcement
     padding 0.72rem 0.28rem 0.54rem 0.28rem
     p
@@ -281,3 +289,22 @@ svg.icon.pink
       font-weight 300
       line-height 1.96rem
       padding 0.2rem 0.02rem
+
+// small
+@media only screen and (max-width: 480px)
+  .title h2.heading
+    font-size 1.71em
+
+  .feature h2.heading
+    font-size 1.31em
+    text-align left
+    padding-left 1.08rem
+
+  .header,
+  .pricing .description
+    padding-left 0.56rem
+    padding-right 0.56rem
+
+  p.description,
+  p.text
+    text-align left

@@ -1,5 +1,5 @@
 <div class="customer">
-  <p>${_('customer.description')}<br>
+  <p class="description">${_('customer.description')}<br>
   <div class="row">
     <div class="offset-2 column-4 column-v-8 column-n-16" align=center>
       <div class="attached box">

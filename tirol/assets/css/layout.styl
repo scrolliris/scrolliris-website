@@ -76,7 +76,7 @@ header
   background-color #fbfaf8
 
 .grid.screenshot
-  margin 5.49rem 0
+  margin 4.49rem 0
 
 .grid.feature
   padding 2.44rem 0 1.85rem 0
@@ -90,7 +90,8 @@ header
 
 .grid.feature,
 .grid.link
-  p.text
+  p.text,
+  p.email
     padding-left 0.66rem
     padding-right 0.66rem
     max-width 21.42rem
@@ -123,7 +124,9 @@ header
 
 .grid.timeline
   background-color #ffffff
-  min-height 630px
+  min-height 640px
+  padding-top 1.86rem
+  padding-bottom 6.2rem
   vertical-align middle
 
 .grid.pricing
@@ -167,3 +170,12 @@ svg.tiny.icon
 .about
   svg.icon
     margin 0 0.22rem
+
+// small
+@media only screen and (max-width: 480px)
+  .grid.screenshot
+    margin 1.49rem 0
+  .grid.link
+    padding-top 2.62rem
+    section
+      margin-bottom 1.33rem

@@ -5,14 +5,19 @@
 <div class="content" align="center">
   <div class="grid title" align="center">
     <div class="row">
-      <div class="column-8 offset-4 column-l-14 offset-l-1 column-n-16">
+      <div class="offset-4 column-8 offset-l-1 column-l-14 column-n-16">
         <h2 class="heading">${_('application.title')}</h2>
         <p class="description">${_('application.description')}</p>
         <div class="get-started">
           <p><a class="primary try button" href="https://try.scrolliris.com/">${_('get_started.title')}</a></p>
           ${_('misc.or')} <a class="signup link" href="https://scrolliris.com/signup">${_('action.signup')}</a>
-          <p>${_('get_started.description')}</p>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column-16">
+        <p class="description">${_('get_started.description')}</p>
+        <a href="/">https://scrolliris.com</a>
       </div>
     </div>
   </div>
@@ -121,7 +126,7 @@
 
     <a class="secondary signup button" href="https://scrolliris.com/signup">${_('action.signup')}</a>
     <h6>${_('link.question.title')}</h6>
-    <p class="text">${_('link.question.mail', mapping={'mail': 'support@scrolliris.com'})|n,trim,clean(tags=['a', 'code'], attributes={'a': ['href'], 'code':[]})}</p>
+    <p class="email">${_('link.question.mail', mapping={'mail': 'support@scrolliris.com'})|n,trim,clean(tags=['a', 'code'], attributes={'a': ['href'], 'code':[]})}</p>
   </div>
 
   <div class="grid about">
