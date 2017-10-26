@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Innsbruck 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-10-14 18:58+0900\n"
+"POT-Creation-Date: 2017-10-26 15:28+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: tirol/templates/index.mako:142
+#: tirol/templates/index.mako:140
 msgid "about.text"
 msgstr ""
 
-#: tirol/templates/index.mako:22 tirol/templates/index.mako:133
+#: tirol/templates/index.mako:22 tirol/templates/index.mako:131
 msgid "action.signup"
 msgstr ""
 
-#: tirol/templates/_layout.mako:36
+#: tirol/templates/_header.mako:2
 msgid "announcement.beta"
 msgstr ""
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "feature.title"
 msgstr ""
 
-#: tirol/templates/_footer.mako:10
+#: tirol/templates/_footer.mako:15
 msgid "footer.copyright"
 msgstr ""
 
@@ -105,11 +105,11 @@ msgstr ""
 msgid "get_started.title"
 msgstr ""
 
-#: tirol/templates/index.mako:135
+#: tirol/templates/index.mako:133
 msgid "link.question.mail"
 msgstr ""
 
-#: tirol/templates/index.mako:134
+#: tirol/templates/index.mako:132
 msgid "link.question.title"
 msgstr ""
 
@@ -133,27 +133,39 @@ msgstr ""
 msgid "nav.footer.about"
 msgstr ""
 
+#: tirol/templates/_footer.mako:11
+msgid "nav.footer.cookie"
+msgstr ""
+
+#: tirol/templates/_footer.mako:12
+msgid "nav.footer.privacy"
+msgstr ""
+
 #: tirol/templates/_footer.mako:7
 msgid "nav.footer.source_code"
 msgstr ""
 
-#: tirol/templates/_footer.mako:6
-msgid "nav.footer.twitter"
+#: tirol/templates/_footer.mako:10
+msgid "nav.footer.terms"
 msgstr ""
 
-#: tirol/templates/index.mako:10 tirol/templates/timeline.mako:11
+#: tirol/templates/_footer.mako:6
+msgid "nav.footer.tweet"
+msgstr ""
+
+#: tirol/templates/index.mako:9 tirol/templates/timeline.mako:11
 msgid "nav.header.login"
 msgstr ""
 
-#: tirol/templates/index.mako:9 tirol/templates/timeline.mako:10
+#: tirol/templates/index.mako:8 tirol/templates/timeline.mako:10
 msgid "nav.header.newsletter"
 msgstr ""
 
-#: tirol/templates/index.mako:7 tirol/templates/timeline.mako:8
+#: tirol/templates/index.mako:6 tirol/templates/timeline.mako:8
 msgid "nav.header.overview"
 msgstr ""
 
-#: tirol/templates/index.mako:8 tirol/templates/timeline.mako:9
+#: tirol/templates/index.mako:7 tirol/templates/timeline.mako:9
 msgid "nav.header.timeline"
 msgstr ""
 
