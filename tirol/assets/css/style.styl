@@ -166,6 +166,72 @@ h3.heading
     &:hover
       text-decoration underline
 
+.grid.pricing
+  .tab.menu
+    .item
+      padding-top 0.92rem
+      padding-bottom 0.92rem
+      &.disabled
+        color #d2d2d2
+        cursor not-allowed
+        &:hover
+          background none
+      &.active
+        border-bottom 1px solid #fbfaf8
+  h3.header
+    margin-top 2.06rem
+    text-align left
+  .pricing.box
+    min-height 8.12rem
+    .price > span
+      margin 1.41rem 0.12rem 0.83rem auto
+      display inline-block
+      font-size 1.83em
+      font-weight normal
+      &.disabled
+        text-decoration line-through salmon
+  .pricing.footer
+    p
+      font-size 0.92rem
+      color darken(#838383, 12%)
+  p.note
+    text-align left
+    margin 1.11rem 0
+    max-width 100%
+  span.development
+    margin 0 0.18rem
+    display inline-block
+    color salmon
+  table.pricing-table
+    min-width 720px
+    margin 2.12rem 0
+    .small.text
+      color darkgray
+      font-size 0.82em
+      margin 0
+    th:not([align="left"]),
+    td[align="center"]
+      text-align center
+    tr.sub-heading,
+    tr.sub-heading td
+      border-bottom 1px dotted #d3d3d3
+      padding-left 0.678rem
+    td.sign
+      font-size 1.22em
+      font-family monospace
+    tr.disabled td,
+    td.disabled
+      color #d2d2d2
+      text-decoration line-through
+    td
+      font-size 0.92em
+      p
+        margin 0 0 -0.45rem 0
+      h6
+        font-size 0.77em
+        font-weight bold
+        margin 0.61rem 0 -0.54rem 0
+
 
 // image
 .grid.screenshot
@@ -178,6 +244,9 @@ h3.heading
 
 // svg
 svg.icon
+  display inline-block
+  margin 0
+  padding 0.2rem 0 0 0
   fill #4e575f
 
 svg.icon.pink

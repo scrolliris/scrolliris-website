@@ -91,6 +91,12 @@ def index(_req):
     return dict()
 
 
+@view_config(route_name='pricing', renderer=tpl('pricing.mako'),
+             request_method='GET')
+def pricing(_req):
+    return dict()
+
+
 @view_config(route_name='timeline',
              renderer=tpl('timeline.mako'), request_method='GET')
 def timeline(_req):

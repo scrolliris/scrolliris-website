@@ -22,4 +22,5 @@ def includeme(config):
         name='assets', path=STATIC_DIR, cache_max_age=cache_max_age)
 
     config.add_route('index', '/')  # overview
+    config.add_route('pricing', '/pricing')
     config.add_route('timeline', '/timeline')
