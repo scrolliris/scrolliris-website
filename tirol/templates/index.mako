@@ -17,7 +17,7 @@
     <div class="row">
       <div class="column-16">
         <p class="description">${_('get_started.description')}</p>
-        <a href="/">https://scrolliris.com</a>
+        <a href="https://scrolliris.com/">https://scrolliris.com</a>
       </div>
     </div>
   </div>
