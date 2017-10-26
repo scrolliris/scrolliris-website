@@ -26,8 +26,11 @@
 
         ## translation is looked up via `__` + domain from timeline.pot
         <section id="timeline">
-          ${timeline_block(icon='flag', number='004', is_hidden=False)}
-          ${timeline_block(icon='heart', number='003', is_hidden=False)}
+          ${timeline_block(icon='question-mark', number='007', is_hidden=False)}
+          ${timeline_block(icon='browser', number='006', is_hidden=False)}
+          ${timeline_block(icon='people', number='005', is_hidden=False)}
+          ${timeline_block(icon='flag', number='004')}
+          ${timeline_block(icon='heart', number='003')}
           ${timeline_block(icon='eye', number='002')}
           ${timeline_block(icon='power-standby', number='001')}
         </section>
