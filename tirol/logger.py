@@ -11,7 +11,6 @@ logger.addHandler(sh)
 # pylint: enable=invalid-name
 
 
-
 # -- util
 
 def enable_translogger(app):

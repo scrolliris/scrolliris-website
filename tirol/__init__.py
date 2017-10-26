@@ -12,7 +12,7 @@ from pyramid.view import notfound_view_config
 import better_exceptions
 
 from tirol.env import Env
-import tirol.logger
+import tirol.logger  # noqa
 
 better_exceptions.MAX_LENGTH = None
 
@@ -24,7 +24,7 @@ def ignore_broken_pipes(self):
     # pylint: disable=protected-access
     if sys.version_info[0] > 2:
         # pylint: disable=undefined-variable
-        if sys.exc_info()[0] != BrokenPipeError:
+        if sys.exc_info()[0] != BrokenPipeError:  # noqa
             BaseHandler.__handle_error_original_(self)
 
 
