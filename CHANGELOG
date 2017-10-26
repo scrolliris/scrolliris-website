@@ -1,3 +1,9 @@
+27 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+	* Update timeline
+	* Update mobile layout (fix margin)
+	* Add temporary pricing table and view
+	* Refactor route and view (separate into multiple files)
+
 14 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Add customer section
 	* Add signup button and login link

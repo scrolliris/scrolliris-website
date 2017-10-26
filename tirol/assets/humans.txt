@@ -10,7 +10,7 @@ Mail: misaki.asaka@lupine-software.com
 From: Kazo, Japan
 
 /* SITE */
-Last update: 2017/10/14
+Last update: 2017/10/27
 Language: English
 Doctype: HTML5
 URL: https://about.scrolliris.com/
