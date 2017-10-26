@@ -1,5 +1,3 @@
-"""Utility module.
-"""
 import json
 from os import path
 
@@ -14,8 +12,7 @@ from .env import Env
 
 @subscriber(BeforeRender)
 def add_template_utilities(evt):  # type: (dict) -> None
-    """Adds utility functions for templates.
-    """
+    """Adds utility functions for templates."""
     ctx, req = evt['context'], evt['request']
     util = getattr(req, 'util', None)
 
@@ -30,9 +27,8 @@ def add_template_utilities(evt):  # type: (dict) -> None
 
 
 class TemplateUtility(object):
-    """
-    The utility for templates.
-    """
+    # pylint: disable=no-self-use
+
     def __init__(self, ctx, req, **kwargs):
         self.context, self.req = ctx, req
 
@@ -56,8 +52,7 @@ class TemplateUtility(object):
 
     @reify
     def var(self):  # pylint: disable=no-self-use
-        """ Return a dict has variables
-        """
+        """Returns a dict has variables."""
         env = Env()
         return {  # external services
             'gitlab_url': env.get('GITLAB_URL', '/'),
@@ -70,24 +65,22 @@ class TemplateUtility(object):
     def is_matched(self, matchdict):
         return self.req.matchdict == matchdict
 
-    def static_url(self, path):
-        from . import STATIC_DIR
-        return self.req.static_url(STATIC_DIR + '/' + path)
+    def static_url(self, filepath):
+        from tirol.route import STATIC_DIR
+        return self.req.static_url(STATIC_DIR + '/' + filepath)
 
-    def static_path(self, path):
-        from . import STATIC_DIR
-        return self.req.static_path(STATIC_DIR + '/' + path)
+    def static_path(self, filepath):
+        from tirol.route import STATIC_DIR
+        return self.req.static_path(STATIC_DIR + '/' + filepath)
 
-    def built_asset_url(self, path):
-        path = self.manifest_json.get(path, path)
-        return self.static_url(path)
+    def built_asset_url(self, filepath):
+        filepath = self.manifest_json.get(filepath, filepath)
+        return self.static_url(filepath)
 
     def allow_svg(self, size):  # type: (str) -> 'function'
-        """Return actual allow_svg as function allowing given size
-        """
+        """Returns actual allow_svg as function allowing given size."""
         def _allow_svg(tag, name, value):  # type: (str, str, str) -> bool
-            """Returns True if tag is svg and it has allowed attrtibutes
-            """
+            """Returns True if tag is svg and it has allowed attrtibutes."""
             if tag == 'svg' and name in ('width', 'height', 'class'):
                 return True
             else:
@@ -97,10 +90,10 @@ class TemplateUtility(object):
         return _allow_svg
 
 
-# tag filters
+# -- filter
 
 def clean(**kwargs):  # type: (**dict) -> 'function'
-    """Returns sanitized value except allowed tags and attributes
+    """Returns sanitized value except allowed tags and attributes.
 
     >>> ${'<a href="/"><em>link</em></a>'|n,clean(
             tags=['a'], attributes=['href'])}

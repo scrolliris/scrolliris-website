@@ -1,29 +1,19 @@
-"""Utility unit tests
-"""
 import pytest
+
+from tirol.util import TemplateUtility
 
 
 @pytest.fixture(autouse=True)
 def setup(config):  # pylint: disable=unused-argument
-    """Setup hook
-    """
     pass
 
 
 def test_req_util(dummy_request):
-    """Test req.util attribute
-    """
-    from tirol.util import TemplateUtility
-
     util = TemplateUtility({}, dummy_request)
     assert dummy_request.util == util
 
 
 def test_util_context(dummy_request):
-    """Test util.context attribute
-    """
-    from tirol.util import TemplateUtility
-
     ctx = {'dummy_context': True}
 
     util = TemplateUtility(ctx, dummy_request)
@@ -31,9 +21,6 @@ def test_util_context(dummy_request):
 
 
 def test_manifest_json_content_if_missing(dummy_request, tmpdir, monkeypatch):
-    """Test util.manifest_json property if it does not exist
-    """
-    from tirol.util import TemplateUtility
     from os import path
 
     actual_path_dirname = path.dirname
@@ -51,9 +38,6 @@ def test_manifest_json_content_if_missing(dummy_request, tmpdir, monkeypatch):
 
 
 def test_manifest_json_content(dummy_request, tmpdir, monkeypatch, mocker):
-    """Test util.manifest_json property
-    """
-    from tirol.util import TemplateUtility
     from os import path
 
     actual_path_dirname = path.dirname
@@ -88,9 +72,6 @@ def test_manifest_json_content(dummy_request, tmpdir, monkeypatch, mocker):
 
 
 def test_var_loading_env_var(dummy_request, monkeypatch, mocker):
-    """Test util.var property
-    """
-    from tirol.util import TemplateUtility
     from tirol.env import Env
 
     expected = 'https://gitlab.com/lupine-software/tirol'
@@ -106,10 +87,6 @@ def test_var_loading_env_var(dummy_request, monkeypatch, mocker):
 
 
 def test_var_keys(dummy_request):
-    """Test util.var property
-    """
-    from tirol.util import TemplateUtility
-
     util = TemplateUtility({}, dummy_request)
     expected = ['gitlab_url', 'tinyletter_url', 'twitter_url', 'typekit_id',
                 'userlike_script']
@@ -117,10 +94,6 @@ def test_var_keys(dummy_request):
 
 
 def test_is_matched(dummy_request):
-    """Test util.is_matched method
-    """
-    from tirol.util import TemplateUtility
-
     expected = {'foo': 'bar'}
     dummy_request.matchdict = {}
     util = TemplateUtility({}, dummy_request)
@@ -133,10 +106,7 @@ def test_is_matched(dummy_request):
 
 
 def test_is_static_url(config, dummy_request):
-    """Test util.static_url method
-    """
-    from tirol.util import TemplateUtility
-    from tirol import STATIC_DIR
+    from tirol.route import STATIC_DIR
 
     config.add_static_view(
         name='assets', path=STATIC_DIR, cache_max_age=0)
@@ -147,10 +117,7 @@ def test_is_static_url(config, dummy_request):
 
 
 def test_is_static_path(config, dummy_request):
-    """Test util.static_path method
-    """
-    from tirol.util import TemplateUtility
-    from tirol import STATIC_DIR
+    from tirol.route import STATIC_DIR
 
     config.add_static_view(
         name='assets', path=STATIC_DIR, cache_max_age=0)
@@ -161,11 +128,8 @@ def test_is_static_path(config, dummy_request):
 
 
 def test_built_asset_url(config, dummy_request, tmpdir, monkeypatch):
-    """Test util.built_asset_url method
-    """
     from os import path
-    from tirol.util import TemplateUtility
-    from tirol import STATIC_DIR
+    from tirol.route import STATIC_DIR
 
     config.add_static_view(
         name='assets', path=STATIC_DIR, cache_max_age=0)

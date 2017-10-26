@@ -1,5 +1,5 @@
-import logging
-from os import path
+import sys
+from wsgiref.handlers import BaseHandler
 
 from pyramid.config import Configurator
 from pyramid.events import subscriber, BeforeRender, NewRequest
@@ -11,30 +11,31 @@ from pyramid.threadlocal import get_current_registry
 from pyramid.view import notfound_view_config
 import better_exceptions
 
-from wsgiref.handlers import BaseHandler
-import sys
-
-from .env import Env
+from tirol.env import Env
+import tirol.logger
 
 better_exceptions.MAX_LENGTH = None
-STATIC_DIR = path.join(path.dirname(path.abspath(__file__)), '../static')
 
 
-# -- functions
+# -- util
 
 # broken pipe error
 def ignore_broken_pipes(self):
-    if sys.exc_info()[0] != BrokenPipeError:
-        BaseHandler.__handle_error_original_(self)
+    # pylint: disable=protected-access
+    if sys.version_info[0] > 2:
+        # pylint: disable=undefined-variable
+        if sys.exc_info()[0] != BrokenPipeError:
+            BaseHandler.__handle_error_original_(self)
 
 
+# pylint: disable=protected-access
 BaseHandler.__handle_error_original_ = BaseHandler.handle_error
 BaseHandler.handle_error = ignore_broken_pipes
+# pylint: enable=protected-access
 
 
 def get_settings():
-    """ Returns settings from current ini.
-    """
+    """Returns settings from current ini."""
     return get_current_registry().settings
 
 
@@ -65,22 +66,11 @@ def resolve_env_vars(settings):
     return s
 
 
-def tpl(path):
-    return './templates/{0:s}'.format(path)
+def tpl(filepath):
+    return './templates/{0:s}'.format(filepath)
 
 
-# -- logger
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
-sh = logging.StreamHandler()
-sh.setLevel(logging.INFO)
-sh.setFormatter(logging.Formatter('%(message)s'))
-logger.addHandler(sh)
-
-
-# -- views
+# -- view
 
 @notfound_view_config(renderer=tpl('404.mako'),
                       append_slash=exc.HTTPMovedPermanently)
@@ -97,33 +87,17 @@ def internal_server_error(req):
 
 @view_config(route_name='index', renderer=tpl('index.mako'),
              request_method='GET')
-def index(req):
-    """ Overview.
-    """
+def index(_req):
     return dict()
 
 
 @view_config(route_name='timeline',
              renderer=tpl('timeline.mako'), request_method='GET')
-def timeline(req):
-    """ Timeline.
-    """
+def timeline(_req):
     return dict()
 
-# FIXME
-# @view_config(route_name='term',
-#              renderer=tpl('term.mako'), request_method='GET')
-# def term(req):
-#     return dict()
-#
-#
-# @view_config(route_name='policy',
-#              renderer=tpl('policy.mako'), request_method='GET')
-# def policy(req):
-#     return dict()
 
-
-# -- subscribers
+# -- subscriber
 
 @subscriber(NewRequest)
 def add_cache_control(evt):
@@ -137,7 +111,7 @@ def add_cache_control(evt):
 
 @subscriber(NewRequest)
 def add_localizer(evt):
-    """Add translator function as `req.translate`
+    """Adds translator function as `req.translate`.
 
     Access this function from `_` or `__` (see renderer global variables)
     """
@@ -161,35 +135,14 @@ def add_renderer_globals(evt):
             evt['__'] = _
 
 
-# -- main
+# -- entry point
 
 def main(_, **settings):
-    """ The main function.
-    """
-    from .request import CustomRequest
+    from tirol.request import CustomRequest
 
     config = Configurator(settings=resolve_env_vars(settings))
 
-    env = Env()
-    cache_max_age = 3600 if env.is_production else 0
-
-    # routes
-    # static files at /*
-    filenames = [f for f in ('robots.txt', 'humans.txt', 'favicon.ico')
-                 if path.isfile((STATIC_DIR + '/{}').format(f))]
-    if filenames:
-        config.add_asset_views(
-            STATIC_DIR, filenames=filenames, http_cache=cache_max_age)
-
-    # static files at /assets/*
-    config.add_static_view(
-        name='assets', path=STATIC_DIR, cache_max_age=cache_max_age)
-
-    config.add_route('index', '/')  # overview
-    config.add_route('timeline', '/timeline')
-    # FIXME
-    # config.add_route('policy', '/policy')
-    # config.add_route('term', '/term')
+    config.include('.route')
 
     config.add_translation_dirs('tirol:../locale')
 
@@ -197,7 +150,7 @@ def main(_, **settings):
 
     config.scan()
     app = config.make_wsgi_app()
-    # enable file logger [wsgi/access_log]
-    # from paste.translogger import TransLogger
-    # app = TransLogger(app, setup_console_handler=False)
+
+    # from tirol.logger import enable_translogger
+    # app = enable_translogger(app)
     return app
