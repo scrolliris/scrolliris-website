@@ -48,114 +48,116 @@
     <div class="row">
       <div class="offset-3 column-10 offset-v-1 column-v-14 column-n-16">
         <p class="note"><span class="development">*</span> Many features below (incl. payment) are still under development ;)</p>
-        <table class="table pricing-table">
-          <thead>
-            <tr>
-              <th align="left">Feature</th>
-              <th>Essential</th>
-              <th>Professional</th>
-              <th>Epical</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="sub-heading">
-              <td colspan="4"><h6 class="header">HOSTED</h6></td>
-            </tr>
-            <tr>
-              <td class="disabled"><p>Publications<span class="development">*</span></p><span class="small text">on scrolliris.com</span></td>
-              <td class="disabled" align="center">unlimited</td>
-              <td class="disabled" align="center">unlimited</td>
-              <td align="center">unlimited</td>
-            </tr>
-            <tr class="disabled">
-              <td><p>Built-in Readability Analysis Feedback<span class="development">*</span></p></td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-            </tr>
-            <tr class="disabled">
-              <td><p>Text Linting & Writing Support Feature<span class="development">*</span></p></td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-            </tr>
-            <tr class="disabled">
-              <td><p>Team Collaboration Feature<span class="development">*</span></p></td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-            </tr>
-            <tr class="disabled">
-              <td><p>Git Access over HTTPS<span class="development">*</span></p></td>
-              <td class="sign" align="center"></td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-            </tr>
-            <tr class="disabled">
-              <td><p>Custom Domain<span class="development">*</span></p></td>
-              <td class="sign" align="center"></td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-            </tr>
-            <tr class="disabled">
-              <td><p>Revenue from Reader<span class="development">*</span></p></td>
-              <td class="sign" align="center"></td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-            </tr>
-            <tr class="sub-heading">
-              <td colspan="4"><h6 class="header">INTEGRATED</h6></td>
-            </tr>
-            <tr>
-              <td><p>Applications</p><span class="small text">document on the system you owned</span></td>
-              <td align="center">&nbsp;</td>
-              <td align="center"><p>unlimited</p><span class="small text">1 domain</span></td>
-              <td align="center"><p>unlimited</p><span class="small text">3 domains</span></td>
-            </tr>
-            <tr>
-              <td>Readability Analysis Integration</td>
-              <td class="sign" align="center"></td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-            </tr>
-            <tr class="disabled">
-              <td><p>Email Report<span class="development">*</span></p></td>
-              <td class="sign" align="center"></td>
-              <td class="sign" align="center">&#10003;</td>
-              <td class="sign" align="center">&#10003;</td>
-            </tr>
-            <tr class="sub-heading">
-              <td colspan="4"><h6 class="header">DATA</h6></td>
-            </tr>
-            <tr>
-              <td><p>Live Data Retention</p><span class="small text">on dashboard</span></td>
-              <td align="center">2 weeks</td>
-              <td align="center">1 month</td>
-              <td align="center">3 months</td>
-            </tr>
-            <tr class="disabled">
-              <td><p>Open Data Archive<span class="development">*</span></p></td>
-              <td class="sign" align="center">∞</td>
-              <td class="sign" align="center">∞</td>
-              <td class="sign" align="center">∞</td>
-            </tr>
-            <tr>
-              <td><p>Private Tracking Data</p><span class="small text">we don't make data private</span></td>
-              <td class="sign" align="center">&#10060;</td>
-              <td class="sign" align="center">&#10060;</td>
-              <td class="sign" align="center">&#10060;</td>
-            </tr>
-            <tr class="sub-heading">
-              <td colspan="4"><h6 class="header">SUPPORT</h6></td>
-            </tr>
-            <tr>
-              <td><p>Help<span class="development">*</span></p></td>
-              <td align="center"><p>online doc</p><span class="small text"><a href="/">help.scrolliris.com</a></span></td>
-              <td class="disabled" align="center"><p>live chat</p><span class="small text">with Developer</span></td>
-              <td class="disabled" align="center"><p>live chat</p><span class="small text">with Developer</span></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table class="table pricing-table">
+            <thead>
+              <tr>
+                <th align="left">Feature</th>
+                <th>Essential</th>
+                <th>Professional</th>
+                <th>Epical</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sub-heading">
+                <td colspan="4"><h6 class="header">HOSTED</h6></td>
+              </tr>
+              <tr>
+                <td class="disabled"><p>Publications<span class="development">*</span></p><span class="small text">on scrolliris.com</span></td>
+                <td class="disabled" align="center">unlimited</td>
+                <td class="disabled" align="center">unlimited</td>
+                <td align="center">unlimited</td>
+              </tr>
+              <tr class="disabled">
+                <td><p>Built-in Readability Analysis Feedback<span class="development">*</span></p></td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+              </tr>
+              <tr class="disabled">
+                <td><p>Text Linting & Writing Support Feature<span class="development">*</span></p></td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+              </tr>
+              <tr class="disabled">
+                <td><p>Team Collaboration Feature<span class="development">*</span></p></td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+              </tr>
+              <tr class="disabled">
+                <td><p>Git Access over HTTPS<span class="development">*</span></p></td>
+                <td class="sign" align="center"></td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+              </tr>
+              <tr class="disabled">
+                <td><p>Custom Domain<span class="development">*</span></p></td>
+                <td class="sign" align="center"></td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+              </tr>
+              <tr class="disabled">
+                <td><p>Revenue from Reader<span class="development">*</span></p></td>
+                <td class="sign" align="center"></td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+              </tr>
+              <tr class="sub-heading">
+                <td colspan="4"><h6 class="header">INTEGRATED</h6></td>
+              </tr>
+              <tr>
+                <td><p>Applications</p><span class="small text">document on the system you owned</span></td>
+                <td align="center">&nbsp;</td>
+                <td align="center"><p>unlimited</p><span class="small text">1 domain</span></td>
+                <td align="center"><p>unlimited</p><span class="small text">3 domains</span></td>
+              </tr>
+              <tr>
+                <td>Readability Analysis Integration</td>
+                <td class="sign" align="center"></td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+              </tr>
+              <tr class="disabled">
+                <td><p>Email Report<span class="development">*</span></p></td>
+                <td class="sign" align="center"></td>
+                <td class="sign" align="center">&#10003;</td>
+                <td class="sign" align="center">&#10003;</td>
+              </tr>
+              <tr class="sub-heading">
+                <td colspan="4"><h6 class="header">DATA</h6></td>
+              </tr>
+              <tr>
+                <td><p>Live Data Retention</p><span class="small text">on dashboard</span></td>
+                <td align="center">2 weeks</td>
+                <td align="center">1 month</td>
+                <td align="center">3 months</td>
+              </tr>
+              <tr class="disabled">
+                <td><p>Open Data Archive<span class="development">*</span></p></td>
+                <td class="sign" align="center">∞</td>
+                <td class="sign" align="center">∞</td>
+                <td class="sign" align="center">∞</td>
+              </tr>
+              <tr>
+                <td><p>Private Tracking Data</p><span class="small text">we don't make data private</span></td>
+                <td class="sign" align="center">&#10060;</td>
+                <td class="sign" align="center">&#10060;</td>
+                <td class="sign" align="center">&#10060;</td>
+              </tr>
+              <tr class="sub-heading">
+                <td colspan="4"><h6 class="header">SUPPORT</h6></td>
+              </tr>
+              <tr>
+                <td><p>Help<span class="development">*</span></p></td>
+                <td align="center"><p>online doc</p><span class="small text"><a href="/">help.scrolliris.com</a></span></td>
+                <td class="disabled" align="center"><p>live chat</p><span class="small text">with Developer</span></td>
+                <td class="disabled" align="center"><p>live chat</p><span class="small text">with Developer</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
