@@ -54,3 +54,20 @@ msgstr ""
 msgid "timeline.entry.004.title"
 msgstr ""
 
+msgid "timeline.entry.005.date"
+msgstr ""
+
+msgid "timeline.entry.005.description"
+msgstr ""
+
+msgid "timeline.entry.005.title"
+msgstr ""
+
+msgid "timeline.entry.006.date"
+msgstr ""
+
+msgid "timeline.entry.006.description"
+msgstr ""
+
+msgid "timeline.entry.006.title"
+msgstr ""
