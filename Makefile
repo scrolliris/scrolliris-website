@@ -1,9 +1,14 @@
 ifeq (, $(ENV))
+	ENV := development
 	env := development
 else ifeq (test, $(ENV))
 	env := testing
 else
 	env := $(ENV)
+endif
+
+ifeq (, $(NODE_ENV))
+	NODE_ENV := development
 endif
 
 # -- installation
@@ -66,8 +71,7 @@ check:
 .PHONY: check
 
 lint:
-	pylint tirol
-	pylint test
+	pylint test tirol
 .PHONY: lint
 
 vet: | check lint
@@ -78,7 +82,7 @@ ifeq (, $(shell which gulp 2>/dev/null))
 	$(info gulp command not found. run `npm install -g gulp-cli`)
 	$(info )
 else
-	gulp
+	NODE_ENV=$(NODE_ENV) gulp
 endif
 .PHONY: build
 
@@ -92,7 +96,7 @@ ifeq (, $(shell which gulp 2>/dev/null))
 	$(info gulp command not found. run `npm install -g gulp-cli`)
 	$(info )
 else
-	gulp clean
+	NODE_ENV=$(NODE_ENV) gulp clean
 endif
 .PHONY: clean
 
