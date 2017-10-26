@@ -15,8 +15,6 @@ build:
     - node --version
     - node_modules/.bin/npm --version
     - npm install --ignore-scripts
-    - mkdir -p static/font/webfonts
-    - touch static/font/webfonts/raleway_thin-webfont.{woff,ttf}
   script:
     - node_modules/.bin/gulp
   cache:
