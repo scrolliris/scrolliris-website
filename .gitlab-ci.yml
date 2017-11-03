@@ -1,36 +1,13 @@
 stages:
-  - build
   - check27
   - check
   - lint27
   - lint
   - doctest
   - compile
+  - build
   - test27
   - test
-
-build:
-  stage: build
-  image: node:8.9.0
-  variables:
-    NODE_ENV: production
-  before_script:
-    - node --version
-    - npm --version
-    - npm install --global gulp-cli
-    - npm install --ignore-scripts
-  script:
-    - make build
-  cache:
-    untracked: true
-    paths:
-      - node_modules
-  artifacts:
-    untracked: true
-    paths:
-      - static
-  except:
-    - tags
 
 check27:
   stage: check27
@@ -146,7 +123,6 @@ compile:
     - python --version
     - pip --version
     - gettext --version
-    - make clean
     - make setup
   script:
     - make catalog
@@ -159,6 +135,29 @@ compile:
     untracked: true
     paths:
       - locale
+  except:
+    - tags
+
+build:
+  stage: build
+  image: node:8.9.0
+  variables:
+    NODE_ENV: production
+  before_script:
+    - node --version
+    - npm --version
+    - npm install --global gulp-cli
+    - npm install --ignore-scripts
+  script:
+    - make build
+  cache:
+    untracked: true
+    paths:
+      - node_modules
+  artifacts:
+    untracked: true
+    paths:
+      - static
   except:
     - tags
 
