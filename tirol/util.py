@@ -10,6 +10,8 @@ from pyramid.events import BeforeRender
 
 from tirol.env import Env
 
+UNSLASH_PATTERN = re.compile(r'^\/|\/$')
+
 
 @subscriber(BeforeRender)
 def add_template_utilities(evt):  # type: (dict) -> None
@@ -36,6 +38,8 @@ class TemplateUtility(object):
     def __init__(self, ctx, req, **kwargs):
         self.context, self.req = ctx, req
 
+        self.env = Env()
+
         if getattr(req, 'util', None) is None:
             req.util = self
         self.__dict__.update(kwargs)
@@ -57,13 +61,12 @@ class TemplateUtility(object):
     @reify
     def var(self):  # type: () -> dict
         """Returns a dict has variables."""
-        env = Env()
         return {  # external services
-            'gitlab_url': env.get('GITLAB_URL', '/'),
-            'tinyletter_url': env.get('TINYLETTER_URL', '/'),
-            'twitter_url': env.get('TWITTER_URL', '/'),
-            'typekit_id': env.get('TYPEKIT_ID', ''),
-            'userlike_script': env.get('USERLIKE_SCRIPT', '/'),
+            'gitlab_url': self.env.get('GITLAB_URL', '/'),
+            'tinyletter_url': self.env.get('TINYLETTER_URL', '/'),
+            'twitter_url': self.env.get('TWITTER_URL', '/'),
+            'typekit_id': self.env.get('TYPEKIT_ID', ''),
+            'userlike_script': self.env.get('USERLIKE_SCRIPT', '/'),
         }
 
     def is_matched(self, matchdict):  # type: (dict) -> bool
@@ -71,15 +74,26 @@ class TemplateUtility(object):
 
     def static_url(self, filepath):  # type: (str) -> str
         from tirol.route import STATIC_DIR
+
+        def get_bucket_info(name):
+            part = self.req.settings.get('storage.bucket_{0:s}'.format(name))
+            if not part:
+                # returns invalid path
+                return ''
+            return re.sub(UNSLASH_PATTERN, '', part)
+
+        if self.env.is_production:
+            h, n, p = [get_bucket_info(x) for x in ('host', 'name', 'path')]
+            return 'https://{0:s}/{1:s}/{2:s}/{3:s}'.format(h, n, p, filepath)
         return self.req.static_url(STATIC_DIR + '/' + filepath)
 
     def static_path(self, filepath):  # type: (str) -> str
         from tirol.route import STATIC_DIR
         return self.req.static_path(STATIC_DIR + '/' + filepath)
 
-    def built_asset_url(self, filepath):  # type: (str) -> str
-        filepath = self.manifest_json.get(filepath, filepath)
-        return self.static_url(filepath)
+    def hashed_asset_url(self, filepath):  # type: (str) -> str
+        hashed_filepath = self.manifest_json.get(filepath, filepath)
+        return self.static_url(hashed_filepath)
 
     def allow_svg(self, size):  # type: (str) -> 'function'
         """Returns actual allow_svg as function allowing given size."""

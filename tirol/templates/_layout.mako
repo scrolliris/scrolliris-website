@@ -28,7 +28,7 @@
     <link rel="robots" type="text/plain" href="/robots.txt">
     <style>body{background-color:#ffffff;}</style>
     <link href="//fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300" rel="stylesheet">
-    <link rel="stylesheet" href="${req.util.built_asset_url('master.css')}">
+    <link rel="stylesheet" href="${req.util.hashed_asset_url('master.css')}">
     <%block name='extra_style'/>
   </head>
   <body>
@@ -56,7 +56,7 @@
 
     <%include file='_font.mako'/>
     <%include file='_chat.mako'/>
-    <script src="${req.util.built_asset_url('master.js')}"></script>
+    <script type="text/javascript" src="${req.util.hashed_asset_url('master.js')}"></script>
     <%block name='extra_script'/>
   </body>
 </html>

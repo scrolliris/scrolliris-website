@@ -127,7 +127,7 @@ def test_is_static_path(config, dummy_request):
            util.static_path('img/logo.png')
 
 
-def test_built_asset_url(config, dummy_request, tmpdir, monkeypatch):
+def test_hashed_asset_url(config, dummy_request, tmpdir, monkeypatch):
     from os import path
     from tirol.route import STATIC_DIR
 
@@ -149,6 +149,48 @@ def test_built_asset_url(config, dummy_request, tmpdir, monkeypatch):
 
     monkeypatch.setattr(path, 'dirname', dummy_dirname)
 
+    dummy_request.settings = {}
+
     util = TemplateUtility({}, dummy_request)
     assert 'http://example.com/assets/master.0.css' == \
-           util.built_asset_url('master.css')
+           util.hashed_asset_url('master.css')
+
+
+def test_hashed_asset_url_on_production_mode(
+        config, dummy_request, tmpdir, monkeypatch):
+    from os import path
+    from collections import namedtuple
+    from tirol.route import STATIC_DIR
+
+    config.add_static_view(
+        name='assets', path=STATIC_DIR, cache_max_age=0)
+
+    actual_path_dirname = path.dirname
+    dummy_dir = tmpdir.mkdir('dummy')
+    # create test manifest.json in dummy directory
+    manifest_json = dummy_dir.mkdir('static').join('manifest.json')
+    manifest_json.write('''\
+{
+  "master.css": "master.0.css"
+}\
+''')
+
+    def dummy_dirname(_filepath):  # pylint: disable=missing-docstring
+        return actual_path_dirname(str(manifest_json))
+
+    monkeypatch.setattr(path, 'dirname', dummy_dirname)
+
+    dummy_request.settings = {
+        'storage.bucket_host': 'cdn.example.com',
+        'storage.bucket_name': 'test-bucket',
+        'storage.bucket_path': '/v1/static',
+    }
+
+    util = TemplateUtility({}, dummy_request)
+
+    # pylint: disable=invalid-name
+    DummyEnv = namedtuple('Env', 'is_production')
+    util.env = DummyEnv(True)
+
+    assert 'https://cdn.example.com/test-bucket/v1/static/master.0.css' == \
+           util.hashed_asset_url('master.css')

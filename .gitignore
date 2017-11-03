@@ -12,6 +12,7 @@ __pycache__
 .coverage
 
 app.yaml
+cors-file.json
 /*_config.py
 /wsgi.py
 
