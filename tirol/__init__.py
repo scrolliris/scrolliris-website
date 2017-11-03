@@ -51,7 +51,7 @@ def get_translator_function(localizer):
 def resolve_env_vars(settings):
     env = Env()
     s = settings.copy()
-    for k, v in env.settings_mappings.items():
+    for k, v in Env.settings_mappings().items():
         # ignores missing key or it has a already value in config
         if k not in s or s[k]:
             continue

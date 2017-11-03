@@ -31,6 +31,8 @@ if sys.version_info[0] < 3:  # python 2.7
 development_requires = [
     'colorlog',
     'flake8',
+    'flake8-docstrings',
+    'pycodestyle',
     'pylint',
     'waitress',
 ]

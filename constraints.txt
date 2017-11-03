@@ -16,9 +16,11 @@ typing==3.6.2
 CherryPy==8.1.2
 
 # development
-flake8==3.2.1
+flake8==3.5.0
 flake8_docstrings==1.1.0
-pylint==1.7.1
+pycodestyle==2.3.1
+pylint==1.7.4
+
 waitress==1.0.0
 
 # development,testing

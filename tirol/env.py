@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 
 from pyramid.decorator import reify
@@ -5,7 +6,7 @@ from pyramid.decorator import reify
 
 # OS's environ handler (wrapper)
 # This class has utilities to treat environment variables.
-class Env():
+class Env(object):
     VALUES = ('development', 'test', 'production')
 
     def __init__(self):
@@ -30,11 +31,18 @@ class Env():
                 if test_v is not None:
                     os.environ[v] = test_v
 
-    def get(self, key, default=None):
+    @staticmethod
+    def settings_mappings():
+        return {
+            # Note: these values are updated if exist but not empty
+            'wsgi.url_scheme': 'WSGI_URL_SCHEME',
+        }
+
+    def get(self, key, default=None):  # pylint: disable=no-self-use
         return os.environ.get(key, default)
 
-    def set(self, key, value):
-        return os.environ.set(key, value)
+    def set(self, key, value):  # pylint: disable=no-self-use
+        os.environ[key] = value
 
     @reify
     def host(self):
@@ -57,10 +65,3 @@ class Env():
     @reify
     def is_production(self):
         return self._value == 'production'
-
-    @reify
-    def settings_mappings(self):
-        return {
-            # Note: these values are updated if exist but not empty
-            'wsgi.url_scheme': 'WSGI_URL_SCHEME',
-        }

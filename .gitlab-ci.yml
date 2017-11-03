@@ -2,6 +2,9 @@ stages:
   - build-assets
   - check-style27
   - check-style
+  - lint27
+  - lint
+  - compile
   - run-test27
   - run-test
 
@@ -11,9 +14,8 @@ build:
   variables:
     NODE_ENV: production
   before_script:
-    - npm install npm@5.4.2
     - node --version
-    - node_modules/.bin/npm --version
+    - npm --version
     - npm install --ignore-scripts
   script:
     - node_modules/.bin/gulp
@@ -26,17 +28,17 @@ build:
 
 check27:
   stage: check-style27
-  image: python:2.7
+  image: python:2.7.13
   variables:
     ENV: development
     PIP_CACHE_DIR: pip-cache
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
-    - pip install --upgrade pip setuptools
-  script:
     - make clean
     - make setup
+  script:
     - make check
   cache:
     untracked: true
@@ -47,17 +49,17 @@ check27:
 
 check:
   stage: check-style
-  image: python:3.5
+  image: python:3.5.4
   variables:
     ENV: development
     PIP_CACHE_DIR: pip-cache
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
-    - pip install --upgrade pip setuptools
-  script:
     - make clean
     - make setup
+  script:
     - make check
   cache:
     untracked: true
@@ -66,49 +68,87 @@ check:
   except:
     - tags
 
-# make:
-#   stage: make-catalog
-#   image: python:3.5
-#   variables:
-#     ENV: test
-#     PIP_CACHE_DIR: pip-cache
-#   before_script:
-#     - apt-get -qq update
-#     - apt-get -qq install -y --no-install-recommends gcc zlib1g zlib1g-dev
-#     - apt-get -qq install -y --no-install-recommends gettext
-#     - python --version
-#     - pip --version
-#     - gettext --version
-#     - pip install --upgrade pip setuptools
-#   script:
-#     - make clean
-#     - make setup
-#     - make catalog-compile
-#   cache:
-#     untracked: true
-#     paths:
-#       - pip-cache
-#   except:
-#     - tags
+lint27:
+  stage: lint27
+  image: python:2.7.13
+  variables:
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - python --version
+    - pip --version
+    - ENV=development make setup
+    - ENV=test make setup
+  script:
+    - make lint
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
+
+lint:
+  stage: lint
+  image: python:3.5.4
+  variables:
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - python --version
+    - pip --version
+    - ENV=development make setup
+    - ENV=test make setup
+  script:
+    - make lint
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
+
+compile:
+  stage: compile
+  image: python:3.5.4
+  variables:
+    ENV: test
+    APT_CACHE_DIR: apt-cache
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - mkdir -pv $APT_CACHE_DIR && apt-get -qq update
+    - apt-get -qq -o dir::cache::archives="$APT_CACHE_DIR" install -y
+      gcc zlib1g zlib1g-dev gettext
+    - pip install --upgrade pip setuptools
+    - python --version
+    - pip --version
+    - gettext --version
+    - make clean
+    - make setup
+  script:
+    - make catalog
+  cache:
+    untracked: true
+    paths:
+      - apt-cache
+      - pip-cache
+  artifacts:
+    untracked: true
+    paths:
+      - locale
+  except:
+    - tags
 
 test27:
   stage: run-test27
-  image: python:2.7
+  image: python:2.7.13
   variables:
     ENV: test
     PIP_CACHE_DIR: pip-cache
   before_script:
-    - apt-get -qq update
-    - apt-get -qq install -y --no-install-recommends gcc zlib1g zlib1g-dev
-    - apt-get -qq install -y --no-install-recommends gettext
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
-    - gettext --version
-    - pip install --upgrade pip setuptools
-  script:
-    - make clean
     - make setup
-    - make catalog-compile
+  script:
     - make coverage
   cache:
     untracked: true
@@ -119,22 +159,16 @@ test27:
 
 test:
   stage: run-test
-  image: python:3.5
+  image: python:3.5.4
   variables:
     ENV: test
     PIP_CACHE_DIR: pip-cache
   before_script:
-    - apt-get -qq update
-    - apt-get -qq install -y --no-install-recommends gcc zlib1g zlib1g-dev
-    - apt-get -qq install -y --no-install-recommends gettext
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
-    - gettext --version
-    - pip install --upgrade pip setuptools
-  script:
-    - make clean
     - make setup
-    - make catalog-compile
+  script:
     - make coverage
   cache:
     untracked: true

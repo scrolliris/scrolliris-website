@@ -7,7 +7,7 @@ from pyramid.decorator import reify
 from pyramid.events import subscriber
 from pyramid.events import BeforeRender
 
-from .env import Env
+from tirol.env import Env
 
 
 @subscriber(BeforeRender)
@@ -93,11 +93,19 @@ class TemplateUtility(object):
 # -- filter
 
 def clean(**kwargs):  # type: (**dict) -> 'function'
-    """Returns sanitized value except allowed tags and attributes.
+    r"""Returns sanitized value except allowed tags and attributes.
 
-    >>> ${'<a href="/"><em>link</em></a>'|n,clean(
-            tags=['a'], attributes=['href'])}
-    "<a href=\"/\">link</a>"
+    It looks like `${'<a href="/"><em>link</em></a>'|n,clean(
+    tags=['a'], attributes=['href'])}`.
+
+    >>> from tirol.util import clean
+
+    >>> type(clean(tags=['a'], attributes=['href']))
+    <type 'function'>
+
+    >>> c = clean(tags=['a'], attributes=['href'])
+    >>> str(c('<a href="/"><em>link</em></a>'))
+    '<a href="/">&lt;em&gt;link&lt;/em&gt;</a>'
     """
     def __clean(text):  # type: (str) -> Markup
         return Markup(_clean(text, **kwargs))

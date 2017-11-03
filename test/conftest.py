@@ -1,3 +1,4 @@
+# pylint: disable=redefined-outer-name,unused-argument
 import os
 
 import pytest
@@ -84,10 +85,8 @@ def config(request, settings):
 
     config = testing.setUp(settings=settings)
 
-    # FIXME:
-    #    these includings from .ini file are not evaluated
-    #    in unittest.
-    # config.include('pyramid_mako')
+    config.include('pyramid_assetviews')
+    config.include('pyramid_mako')
 
     config.add_translation_dirs('tirol:../locale')
 
