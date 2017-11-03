@@ -50,9 +50,7 @@
       filename = 'master.svg'
       svg_file = req.util.manifest_json.get(filename, 'img/' + filename)
     %>
-    ## rescues broken <path> tags (see util.py)
-    ## ${svg_content(svg_file)|n,trim,clean(tags=['symbol', 'defs', 'path'], attributes={'symbol': ['id'], 'path': ['d', 'id', 'transform']})}
-    ${svg_icon(svg_file)|n,trim}
+    ${svg_content_sanitized(svg_file, tags=['symbol', 'defs', 'path'], attributes={'symbol': ['id'], 'path': ['id', 'd', 'transform']})|n,trim}
     </svg>
     </%block>
 

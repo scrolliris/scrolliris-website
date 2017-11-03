@@ -27,7 +27,7 @@ def add_template_utilities(evt):  # type: (dict) -> None
     evt['clean'] = clean
 
     evt['svg_content'] = svg_content
-    evt['svg_icon'] = svg_icon
+    evt['svg_content_sanitized'] = svg_content_sanitized
 
 
 class TemplateUtility(object):
@@ -108,20 +108,28 @@ def svg_content(svg_file):  # type: (str) -> str
     return content
 
 
-def svg_icon(svg_file):  # type: (str) -> str
-    """Rescues broken svg tags built by html5lib via bleach.clean.
+def svg_content_sanitized(svg_file, **kwargs):  # type: (str, dict) -> str
+    r"""Rescues broken svg tags built by html5lib via bleach.clean.
 
-    Apply clean, but rescures broken tags which built by html5lib.
-    Many unnecessary `</path>` are added and slash in `<path />` are ommited :(
+    Apply `clean()`, but this rescures broken svg tags which built by html5lib.
+    `clean()` returns broken tags. Many unnecessary `</path>` are added and
+    slash in `<path />` are ommited :(
+
+    >>> from markupsafe import Markup
+    >>> from tirol.util import svg_content_sanitized
+
+    This returns string like object such as `Markup(u'')`. It will be used in
+    template as string.
+
+    >>> str(svg_content_sanitized('bundle.svg', tags=['symbol', 'defs', 'path'
+    ... ], attributes={'path': ['id', 'd', 'transform']}))
+    ''
     """
     content = svg_content(svg_file)
-    clean_fn = clean(tags=['symbol', 'defs', 'path'], attributes={
-        'symbol': ['id'],
-        'path': ['id', 'd', 'transform']
-    })
+    clean_fn = clean(**kwargs)
     result = clean_fn(content)
     result = re.sub(r'\</path\>', '', result)
-    result = re.sub(r'(\<path[A-z\s="-\.0-9]*)"\>', '\\1"/>', result)
+    result = re.sub(r'(\<path[A-z\s=\"-\.0-9]*")(\s*\>)', "\\1/\\2", result)
     return result
 
 
@@ -133,10 +141,13 @@ def clean(**kwargs):  # type: (**dict) -> 'function'
     It looks like `${'<a href="/"><em>link</em></a>'|n,clean(
     tags=['a'], attributes=['href'])}`.
 
+    >>> import types
     >>> from tirol.util import clean
 
-    >>> type(clean(tags=['a'], attributes=['href']))
-    <type 'function'>
+    >>> isinstance(clean(tags=['a'], attributes=['href']), types.FunctionType)
+    True
+    >>> clean(tags=['a'], attributes=['href']).__name__
+    '__clean'
 
     >>> c = clean(tags=['a'], attributes=['href'])
     >>> str(c('<a href="/"><em>link</em></a>'))
