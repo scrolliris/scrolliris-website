@@ -4,6 +4,7 @@ stages:
   - check-style
   - lint27
   - lint
+  - doctest
   - compile
   - run-test27
   - run-test
@@ -100,6 +101,25 @@ lint:
     - ENV=test make setup
   script:
     - make lint
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
+
+doctest:
+  stage: doctest
+  image: python:2.7.13
+  variables:
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - python --version
+    - pip --version
+    - ENV=development make setup
+    - ENV=test make setup
+  script:
+    - make doctest
   cache:
     untracked: true
     paths:

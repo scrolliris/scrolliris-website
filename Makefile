@@ -11,6 +11,8 @@ ifeq (, $(NODE_ENV))
 	NODE_ENV := development
 endif
 
+app = tirol
+
 # -- installation
 
 setup:
@@ -37,12 +39,13 @@ test:
 	ENV=test py.test -c 'config/testing.ini' -s -q
 .PHONY: test
 
-test-coverage:
-	ENV=test py.test -c 'config/testing.ini' -s -q --cov=tirol --cov-report \
-	  term-missing:skip-covered
-.PHONY: test-coverage
+doctest:
+	ENV=test ./bin/run_doctest
+.PHONY: doctest
 
-coverage: | test-coverage
+coverage:
+	ENV=test py.test -c 'config/testing.ini' -s -q --cov=${app} --cov-report \
+	  term-missing:skip-covered
 .PHONY: coverage
 
 # -- translation
@@ -71,7 +74,7 @@ check:
 .PHONY: check
 
 lint:
-	pylint test tirol
+	pylint test ${app}
 .PHONY: lint
 
 vet: | check lint
