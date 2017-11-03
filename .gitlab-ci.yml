@@ -1,16 +1,16 @@
 stages:
-  - build-assets
-  - check-style27
-  - check-style
+  - build
+  - check27
+  - check
   - lint27
   - lint
   - doctest
   - compile
-  - run-test27
-  - run-test
+  - test27
+  - test
 
 build:
-  stage: build-assets
+  stage: build
   image: node:7.10.1
   variables:
     NODE_ENV: production
@@ -29,7 +29,7 @@ build:
     - tags
 
 check27:
-  stage: check-style27
+  stage: check27
   image: python:2.7.13
   variables:
     ENV: development
@@ -50,7 +50,7 @@ check27:
     - tags
 
 check:
-  stage: check-style
+  stage: check
   image: python:3.5.4
   variables:
     ENV: development
@@ -159,7 +159,7 @@ compile:
     - tags
 
 test27:
-  stage: run-test27
+  stage: test27
   image: python:2.7.13
   variables:
     ENV: test
@@ -179,7 +179,7 @@ test27:
     - tags
 
 test:
-  stage: run-test
+  stage: test
   image: python:3.5.4
   variables:
     ENV: test
