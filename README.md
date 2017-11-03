@@ -28,7 +28,7 @@ https://gitlab.com/lupine-software/tirol)
 ## Requirements
 
 * Python `3.5.4` (or `>= 2.7.13`)
-* Node.js `>= 9.0.0` (npm `5.5.1`, for build assets)
+* Node.js `>= 8.9.0` (npm `5.5.1`, for build assets)
 * GNU gettext `>= 0.19.8.1` (translation)
 * [Innsbruck](https://gitlab.com/lupine-software/innsbruck) as git subtree
 
@@ -54,7 +54,7 @@ https://gitlab.com/lupine-software/tirol)
 
 : node.js (e.g. nodeenv)
 (venv) % pip install nodeenv
-(venv) % nodeenv --python-virtualenv --with-npm --node=9.0.0
+(venv) % nodeenv --python-virtualenv --with-npm --node=8.9.0
 : re-activate for node.js at this time
 (venv) % source venv/bin/activate
 (venv) % npm install --global npm@5.5.1
