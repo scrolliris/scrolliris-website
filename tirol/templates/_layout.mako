@@ -43,15 +43,18 @@
       </%block>
     </div>
 
-    <%def name="add_icons(svg_file)">
-    ## img/FILE.[hash].svg
-    <% svg_path = req.util.manifest_json.get(svg_file, 'img/' + svg_file) %>
-    <%include file='../../static/${svg_path}'/>
-    </%def>
-
+    ## TODO: cache
+    <%block>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
-    <% add_icons('master.svg') %>
+    <%
+      filename = 'master.svg'
+      svg_file = req.util.manifest_json.get(filename, 'img/' + filename)
+    %>
+    ## rescues broken <path> tags (see util.py)
+    ## ${svg_content(svg_file)|n,trim,clean(tags=['symbol', 'defs', 'path'], attributes={'symbol': ['id'], 'path': ['d', 'id', 'transform']})}
+    ${svg_icon(svg_file)|n,trim}
     </svg>
+    </%block>
 
     <%include file='_font.mako'/>
     <%include file='_chat.mako'/>

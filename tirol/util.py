@@ -1,5 +1,6 @@
 import json
 from os import path
+import re
 
 from bleach import clean as _clean
 from markupsafe import Markup
@@ -25,6 +26,9 @@ def add_template_utilities(evt):  # type: (dict) -> None
 
     evt['clean'] = clean
 
+    evt['svg_content'] = svg_content
+    evt['svg_icon'] = svg_icon
+
 
 class TemplateUtility(object):
     # pylint: disable=no-self-use
@@ -37,7 +41,7 @@ class TemplateUtility(object):
         self.__dict__.update(kwargs)
 
     @reify
-    def manifest_json(self):
+    def manifest_json(self):  # type: () -> dict
         manifest_file = path.join(self.project_root, 'static', 'manifest.json')
         data = {}
         if path.isfile(manifest_file):
@@ -47,11 +51,11 @@ class TemplateUtility(object):
         return data
 
     @reify
-    def project_root(self):
+    def project_root(self):  # type: () -> None
         return path.join(path.dirname(__file__), '..')
 
     @reify
-    def var(self):  # pylint: disable=no-self-use
+    def var(self):  # type: () -> dict
         """Returns a dict has variables."""
         env = Env()
         return {  # external services
@@ -62,18 +66,18 @@ class TemplateUtility(object):
             'userlike_script': env.get('USERLIKE_SCRIPT', '/'),
         }
 
-    def is_matched(self, matchdict):
+    def is_matched(self, matchdict):  # type: (dict) -> bool
         return self.req.matchdict == matchdict
 
-    def static_url(self, filepath):
+    def static_url(self, filepath):  # type: (str) -> str
         from tirol.route import STATIC_DIR
         return self.req.static_url(STATIC_DIR + '/' + filepath)
 
-    def static_path(self, filepath):
+    def static_path(self, filepath):  # type: (str) -> str
         from tirol.route import STATIC_DIR
         return self.req.static_path(STATIC_DIR + '/' + filepath)
 
-    def built_asset_url(self, filepath):
+    def built_asset_url(self, filepath):  # type: (str) -> str
         filepath = self.manifest_json.get(filepath, filepath)
         return self.static_url(filepath)
 
@@ -88,6 +92,37 @@ class TemplateUtility(object):
                     return value == size
             return False
         return _allow_svg
+
+
+def svg_content(svg_file):  # type: (str) -> str
+    # img/FILE.[hash].svg
+    svg_path = path.join(
+        path.dirname(__file__), '..', 'static', svg_file)
+
+    content = ''
+    try:
+        with open(svg_path, 'r') as f:
+            content = f.read()
+    except IOError:
+        return ''
+    return content
+
+
+def svg_icon(svg_file):  # type: (str) -> str
+    """Rescues broken svg tags built by html5lib via bleach.clean.
+
+    Apply clean, but rescures broken tags which built by html5lib.
+    Many unnecessary `</path>` are added and slash in `<path />` are ommited :(
+    """
+    content = svg_content(svg_file)
+    clean_fn = clean(tags=['symbol', 'defs', 'path'], attributes={
+        'symbol': ['id'],
+        'path': ['id', 'd', 'transform']
+    })
+    result = clean_fn(content)
+    result = re.sub(r'\</path\>', '', result)
+    result = re.sub(r'(\<path[A-z\s="-\.0-9]*)"\>', '\\1"/>', result)
+    return result
 
 
 # -- filter
@@ -109,5 +144,4 @@ def clean(**kwargs):  # type: (**dict) -> 'function'
     """
     def __clean(text):  # type: (str) -> Markup
         return Markup(_clean(text, **kwargs))
-
     return __clean
