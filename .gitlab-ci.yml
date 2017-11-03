@@ -25,6 +25,10 @@ build:
     untracked: true
     paths:
       - node_modules
+  artifacts:
+    untracked: true
+    paths:
+      - static
   except:
     - tags
 
