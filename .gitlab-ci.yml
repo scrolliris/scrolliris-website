@@ -11,11 +11,10 @@ stages:
 
 build:
   stage: build
-  image: node:7.10.1
+  image: node:9.0.0
   variables:
     NODE_ENV: production
   before_script:
-    - npm install --global npm@5.5.1
     - node --version
     - npm --version
     - npm install --ignore-scripts

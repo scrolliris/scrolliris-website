@@ -5,7 +5,7 @@
   "private": true,
   "engines": {
     "node": "7.10.1",
-    "npm": "5.5.1"
+    "npm": "5.4.2"
   },
   "scripts": {
     "test": "node --version",
