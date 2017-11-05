@@ -57,6 +57,7 @@ lint27:
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
     - ENV=development make setup
@@ -76,6 +77,7 @@ lint:
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
     - ENV=development make setup
@@ -95,6 +97,7 @@ doctest:
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
+    - pip install --upgrade pip setuptools
     - python --version
     - pip --version
     - ENV=development make setup
