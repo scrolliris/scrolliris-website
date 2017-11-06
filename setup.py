@@ -73,12 +73,6 @@ setup(
         'production': production_requires,
     },
     install_requires=requires,
-    message_extractors={'tirol': [
-        ('**.py', 'python', None),
-        ('templates/**.mako', 'mako', {'input_encoding': 'utf-8'}),
-        ('static/**', 'ignore', None),
-    ]},
-    cmdclass={},
     entry_points="""\
     [paste.app_factory]
     main = tirol:main
