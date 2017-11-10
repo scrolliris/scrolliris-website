@@ -1,3 +1,6 @@
+10 Nov 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+	* Add pyramid_secure_response (ssl redirect, HSTS header)
+
 27 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Update timeline
 	* Update mobile layout (fix margin)
