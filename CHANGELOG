@@ -1,52 +1,52 @@
-10 Nov 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Fri 10 Nov 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Add pyramid_secure_response (ssl redirect, HSTS header)
 
-27 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Fri 27 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Update timeline
 	* Update mobile layout (fix margin)
 	* Add temporary pricing table and view
 	* Refactor route and view (separate into multiple files)
 
-14 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Sat 14 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Add customer section
 	* Add signup button and login link
 	* Set background colors
 
-09 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Mon 09 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Add a note for license
 
-06 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Fri 06 Oct 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Remove Babbel (use GNU gettext, only)
 	* Update translation files
 
-20 Sep 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Fri 20 Sep 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Refactor project dirs (test and venv)
 	* Upgrade node environment
 
-17 Sep 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Sun 17 Sep 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Update npm (and node_modules)
 	* Update pyramid 1.9
 
-09 Sep 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Sat 09 Sep 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Add python 2.7 support
 
-27 Jul 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Thu 27 Jul 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Add a package for error investigation (better_exceptions)
 	* Update templates (improve initial ux, before style application)
 
-11 Jul 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Tue 11 Jul 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Update style and layout (optimize css)
 	* Add firm logo and temporary product logo
 	* Reduce image file size
 	* Fix feature description and announcement
 
-26 Jun 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Mon 26 Jun 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Add background image and transition animation
 
-24 Jun 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Sat 24 Jun 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Responsize layout (styr)
 	* Add chat service integration
 	* Setup deployment
 
-23 Jun 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+Fri 23 Jun 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Initial Commit
