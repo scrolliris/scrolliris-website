@@ -1,16 +1,14 @@
 stages:
-  - check27
   - check
-  - lint27
   - lint
   - doctest
   - compile
   - build
-  - test27
   - test
+  - coverage
 
 check27:
-  stage: check27
+  stage: check
   image: python:2.7.13
   variables:
     ENV: development
@@ -52,7 +50,7 @@ check:
     - tags
 
 lint27:
-  stage: lint27
+  stage: lint
   image: python:2.7.13
   variables:
     PIP_CACHE_DIR: pip-cache
@@ -91,9 +89,29 @@ lint:
   except:
     - tags
 
-doctest:
+doctest27:
   stage: doctest
   image: python:2.7.13
+  variables:
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - pip install --upgrade pip setuptools
+    - python --version
+    - pip --version
+    - ENV=development make setup
+    - ENV=test make setup
+  script:
+    - make doctest
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
+
+doctest:
+  stage: doctest
+  image: python:3.5.4
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
@@ -165,7 +183,7 @@ build:
     - tags
 
 test27:
-  stage: test27
+  stage: test
   image: python:2.7.13
   variables:
     ENV: test
@@ -176,7 +194,7 @@ test27:
     - pip --version
     - make setup
   script:
-    - make coverage
+    - make test
   cache:
     untracked: true
     paths:
@@ -196,10 +214,34 @@ test:
     - pip --version
     - make setup
   script:
+    - make test
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
+
+coverage:
+  stage: coverage
+  image: python:3.5.4
+  variables:
+    ENV: test
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - pip install --upgrade pip setuptools
+    - python --version
+    - pip --version
+    - make setup
+  script:
     - make coverage
   cache:
     untracked: true
     paths:
       - pip-cache
+  artifacts:
+    untracked: true
+    paths:
+      - .coverage
   except:
     - tags
