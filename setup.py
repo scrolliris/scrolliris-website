@@ -20,6 +20,7 @@ requires = [
     'pyramid',
     'pyramid_assetviews',
     'pyramid_mako',
+    'pyramid_secure_response',
 ]
 
 if sys.version_info[0] < 3:  # python 2.7
