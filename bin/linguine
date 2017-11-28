@@ -30,7 +30,7 @@ Examples:
 USG
 }
 
-# see https://gitlab.com/lupine-software/innsbruck
+# see https://gitlab.com/scrolliris/innsbruck
 PACKAGE_NAME="Innsbruck"
 PACKAGE_VERSION="0.1"
 MSGID_BUGS_ADDRESS="support@scrolliris.com"

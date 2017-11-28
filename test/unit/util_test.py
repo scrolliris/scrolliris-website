@@ -74,7 +74,7 @@ def test_manifest_json_content(dummy_request, tmpdir, monkeypatch, mocker):
 def test_var_loading_env_var(dummy_request, monkeypatch, mocker):
     from tirol.env import Env
 
-    expected = 'https://gitlab.com/lupine-software/tirol'
+    expected = 'https://gitlab.com/scrolliris/tirol'
     monkeypatch.setenv('GITLAB_URL', expected)
     mocker.spy(Env, '__init__')
 
