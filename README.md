@@ -16,12 +16,12 @@ Innsbruck; translatIoN project using gNu gettext, it's called innsBRUCK
 
 This is translation project for the Scrolliris [Website](
 https://about.scrolliris.com/) which called as [Tirol](
-https://gitlab.com/lupine-software/tirol) (code name).
+https://gitlab.com/scrolliris/tirol) (code name).
 
 
 ## Repository
 
-https://gitlab.com/lupine-software/innsbruck.git
+https://gitlab.com/scrolliris/innsbruck.git
 
 
 ## Requirements
@@ -107,7 +107,7 @@ Open your `terminal` application, follow these steps, normally.
 ```
 
 And then, create a merge request on this [repository](
-https://gitlab.com/lupine-software/innsbruck.git).
+https://gitlab.com/scrolliris/innsbruck.git).
 
 ### How to generate new `*.po` file
 
@@ -255,5 +255,5 @@ Free Documentation License".
 See [LICENSE](LICENSE).
 
 
-[pipeline]: https://gitlab.com/lupine-software/innsbruck/badges/master/pipeline.svg
-[commit]: https://gitlab.com/lupine-software/innsbruck/commits/master
+[pipeline]: https://gitlab.com/scrolliris/innsbruck/badges/master/pipeline.svg
+[commit]: https://gitlab.com/scrolliris/innsbruck/commits/master
