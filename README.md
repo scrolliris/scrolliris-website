@@ -21,8 +21,8 @@ The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 
 ## Repository
 
-[https://gitlab.com/lupine-software/tirol](
-https://gitlab.com/lupine-software/tirol)
+[https://gitlab.com/scrolliris/tirol](
+https://gitlab.com/scrolliris/tirol)
 
 
 ## Requirements
@@ -30,7 +30,7 @@ https://gitlab.com/lupine-software/tirol)
 * Python `3.5.4` (or `>= 2.7.13`)
 * Node.js `>= 8.9.0` (npm `5.5.1`, for build assets)
 * GNU gettext `>= 0.19.8.1` (translation)
-* [Innsbruck](https://gitlab.com/lupine-software/innsbruck) as git subtree
+* [Innsbruck](https://gitlab.com/scrolliris/innsbruck) as git subtree
 
 
 ## Integrations
@@ -67,13 +67,13 @@ https://gitlab.com/lupine-software/tirol)
 #### Innsbruck
 
 See translation project [Innsbruck](
-https://gitlab.com/lupine-software/innsbruck).
+https://gitlab.com/scrolliris/innsbruck).
 
 Don't commit directly the changes on above translation project into this repo.
 
 ```zsh
 : setup `locale`
-% git remote add innsbruck https://gitlab.com/lupine-software/innsbruck.git
+% git remote add innsbruck https://gitlab.com/scrolliris/innsbruck.git
 % git subtree add --prefix locale innsbruck master
 
 : synchronize with updates into specified branch
@@ -216,7 +216,7 @@ TODO
 ## Translation
 
 See `./bin/linguine --help` and translation project [repository](
-https://gitlab.com/lupine-software/innsbruck)
+https://gitlab.com/scrolliris/innsbruck)
 
 ### Generate new catalog
 
@@ -312,6 +312,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 See [LICENSE](LICENSE).
 
 
-[pipeline]: https://gitlab.com/lupine-software/tirol/badges/master/build.svg
-[coverage]: https://gitlab.com/lupine-software/tirol/badges/master/coverage.svg
-[commit]: https://gitlab.com/lupine-software/tirol/commits/master
+[pipeline]: https://gitlab.com/scrolliris/tirol/badges/master/build.svg
+[coverage]: https://gitlab.com/scrolliris/tirol/badges/master/coverage.svg
+[commit]: https://gitlab.com/scrolliris/tirol/commits/master
