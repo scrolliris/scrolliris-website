@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the Innsbruck package.
+# This file is distributed under the same license as the Uttigen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Innsbruck 0.1\n"
+"Project-Id-Version: Uttigen 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
 "POT-Creation-Date: 2017-10-06 00:25+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"

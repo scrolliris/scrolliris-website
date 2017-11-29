@@ -1,27 +1,29 @@
-# Innsbruck
+# Uttigen
 
-`/ínzbrùk/`
+`/uttigen/`
 
 [![pipeline status][pipeline]][commit]
 
 ```txt
-   _                      _                      _
-  | |                    | |                    | |
-  | | _  _    _  _    ,  | |   ,_           __  | |
-_ |/ / |/ |  / |/ |  / \_|/ \_/  |  |   |  /    |/_)
-\_/\/  |  |_/  |  |_/ \/  \_/    |_/ \_/|_/\___/| \_/
+ _
+(_|    |        o
+  |    | _|__|_     __,  _   _  _
+  |    |  |  |  |  /  | |/  / |/ |
+   \__/\_/|_/|_/|_/\_/|/|__/  |  |_/
+                     /|
+                     \|
 
-Innsbruck; translatIoN project using gNu gettext, it's called innsBRUCK
+Uttigen; gnU geTText translatIon packaGE, it's called uttigeN
 ```
 
 This is translation project for the Scrolliris [Website](
-https://about.scrolliris.com/) which called as [Tirol](
-https://gitlab.com/lupine-software/tirol) (code name).
+https://about.scrolliris.com/) which called as [Thun](
+https://gitlab.com/scrolliris/thun) (code name).
 
 
 ## Repository
 
-https://gitlab.com/lupine-software/innsbruck.git
+https://gitlab.com/scrolliris/uttigen.git
 
 
 ## Requirements
@@ -107,7 +109,7 @@ Open your `terminal` application, follow these steps, normally.
 ```
 
 And then, create a merge request on this [repository](
-https://gitlab.com/lupine-software/innsbruck.git).
+https://gitlab.com/scrolliris/uttigen.git).
 
 ### How to generate new `*.po` file
 
@@ -210,7 +212,7 @@ contact [@scrolliris](https://twitter.com/scrolliris) on Twitter.
 This project is distributed as multiple licenses by parts.
 
 ```
-Innsbruck
+Uttigen
 Copyright (c) 2017 Lupine Software LLC
 ```
 
@@ -255,5 +257,5 @@ Free Documentation License".
 See [LICENSE](LICENSE).
 
 
-[pipeline]: https://gitlab.com/lupine-software/innsbruck/badges/master/pipeline.svg
-[commit]: https://gitlab.com/lupine-software/innsbruck/commits/master
+[pipeline]: https://gitlab.com/scrolliris/uttigen/badges/master/pipeline.svg
+[commit]: https://gitlab.com/scrolliris/uttigen/commits/master
