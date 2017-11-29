@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uttigen 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-10-27 03:10+0900\n"
+"POT-Creation-Date: 2017-11-30 04:06+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,198 +17,198 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: tirol/templates/index.mako:131
+#: thun/templates/index.mako:136
 msgid "about.text"
 msgstr ""
 
-#: tirol/templates/index.mako:13 tirol/templates/index.mako:122
+#: thun/templates/index.mako:13 thun/templates/index.mako:127
 msgid "action.signup"
 msgstr ""
 
-#: tirol/templates/_header.mako:2
+#: thun/templates/_header.mako:2
 msgid "announcement.beta"
 msgstr ""
 
-#: tirol/templates/index.mako:10
+#: thun/templates/index.mako:10
 msgid "application.description"
 msgstr ""
 
-#: tirol/templates/_layout.mako:11 tirol/templates/timeline.mako:3
+#: thun/templates/_layout.mako:11 thun/templates/timeline.mako:3
 msgid "application.name"
 msgstr ""
 
-#: tirol/templates/_layout.mako:11
+#: thun/templates/_layout.mako:11
 msgid "application.short_description"
 msgstr ""
 
-#: tirol/templates/index.mako:9
+#: thun/templates/index.mako:9
 msgid "application.title"
 msgstr ""
 
-#: tirol/templates/_customer.mako:2
+#: thun/templates/_customer.mako:2
 msgid "customer.description"
 msgstr ""
 
-#: tirol/templates/_customer.mako:12
+#: thun/templates/_customer.mako:12
 msgid "customer.description.01"
 msgstr ""
 
-#: tirol/templates/_customer.mako:26
+#: thun/templates/_customer.mako:26
 msgid "customer.description.02"
 msgstr ""
 
-#: tirol/templates/_customer.mako:15 tirol/templates/_customer.mako:29
+#: thun/templates/_customer.mako:15 thun/templates/_customer.mako:29
 msgid "customer.location.switzerland"
 msgstr ""
 
-#: tirol/templates/index.mako:66
+#: thun/templates/index.mako:71
 msgid "customer.title"
 msgstr ""
 
-#: tirol/templates/index.mako:38
+#: thun/templates/index.mako:43
 msgid "feature.analysis.description"
 msgstr ""
 
-#: tirol/templates/index.mako:37
+#: thun/templates/index.mako:42
 msgid "feature.analysis.title"
 msgstr ""
 
-#: tirol/templates/index.mako:56
+#: thun/templates/index.mako:61
 msgid "feature.integration.description"
 msgstr ""
 
-#: tirol/templates/index.mako:55
+#: thun/templates/index.mako:60
 msgid "feature.integration.title"
 msgstr ""
 
-#: tirol/templates/index.mako:47
+#: thun/templates/index.mako:52
 msgid "feature.privacy.description"
 msgstr ""
 
-#: tirol/templates/index.mako:46
+#: thun/templates/index.mako:51
 msgid "feature.privacy.title"
 msgstr ""
 
-#: tirol/templates/index.mako:27
+#: thun/templates/index.mako:32
 msgid "feature.title"
 msgstr ""
 
-#: tirol/templates/_footer.mako:15
+#: thun/templates/_footer.mako:15
 msgid "footer.copyright"
 msgstr ""
 
-#: tirol/templates/index.mako:14
+#: thun/templates/index.mako:19
 msgid "get_started.description"
 msgstr ""
 
-#: tirol/templates/index.mako:12
+#: thun/templates/index.mako:12
 msgid "get_started.title"
 msgstr ""
 
-#: tirol/templates/index.mako:124
+#: thun/templates/index.mako:129
 msgid "link.question.mail"
 msgstr ""
 
-#: tirol/templates/index.mako:123
+#: thun/templates/index.mako:128
 msgid "link.question.title"
 msgstr ""
 
-#: tirol/templates/_layout.mako:10
+#: thun/templates/_layout.mako:10
 msgid "meta.author"
 msgstr ""
 
-#: tirol/templates/_layout.mako:8
+#: thun/templates/_layout.mako:8
 msgid "meta.description"
 msgstr ""
 
-#: tirol/templates/_layout.mako:9
+#: thun/templates/_layout.mako:9
 msgid "meta.keywords"
 msgstr ""
 
-#: tirol/templates/index.mako:13
+#: thun/templates/index.mako:13
 msgid "misc.or"
 msgstr ""
 
-#: tirol/templates/_footer.mako:5
+#: thun/templates/_footer.mako:5
 msgid "nav.footer.about"
 msgstr ""
 
-#: tirol/templates/_footer.mako:11
+#: thun/templates/_footer.mako:11
 msgid "nav.footer.cookie"
 msgstr ""
 
-#: tirol/templates/_footer.mako:12
+#: thun/templates/_footer.mako:12
 msgid "nav.footer.privacy"
 msgstr ""
 
-#: tirol/templates/_footer.mako:7
+#: thun/templates/_footer.mako:7
 msgid "nav.footer.source_code"
 msgstr ""
 
-#: tirol/templates/_footer.mako:10
+#: thun/templates/_footer.mako:10
 msgid "nav.footer.terms"
 msgstr ""
 
-#: tirol/templates/_footer.mako:6
+#: thun/templates/_footer.mako:6
 msgid "nav.footer.tweet"
 msgstr ""
 
-#: tirol/templates/_nav.mako:8
+#: thun/templates/_nav.mako:8
 msgid "nav.header.login"
 msgstr ""
 
-#: tirol/templates/_nav.mako:7
+#: thun/templates/_nav.mako:7
 msgid "nav.header.newsletter"
 msgstr ""
 
-#: tirol/templates/_nav.mako:4
+#: thun/templates/_nav.mako:4
 msgid "nav.header.overview"
 msgstr ""
 
-#: tirol/templates/_nav.mako:6
+#: thun/templates/_nav.mako:6
 msgid "nav.header.pricing"
 msgstr ""
 
-#: tirol/templates/_nav.mako:5
+#: thun/templates/_nav.mako:5
 msgid "nav.header.timeline"
 msgstr ""
 
-#: tirol/templates/index.mako:115
+#: thun/templates/index.mako:120
 msgid "nav.link.doc"
 msgstr ""
 
-#: tirol/templates/index.mako:95
+#: thun/templates/index.mako:100
 msgid "nav.link.help"
 msgstr ""
 
-#: tirol/templates/index.mako:105
+#: thun/templates/index.mako:110
 msgid "nav.link.log"
 msgstr ""
 
-#: tirol/templates/_newsletter.mako:2
+#: thun/templates/_newsletter.mako:2
 msgid "newsletter.description"
 msgstr ""
 
-#: tirol/templates/_newsletter.mako:3
+#: thun/templates/_newsletter.mako:3
 msgid "newsletter.label"
 msgstr ""
 
-#: tirol/templates/_newsletter.mako:7
+#: thun/templates/_newsletter.mako:7
 msgid "newsletter.subscribe.button"
 msgstr ""
 
-#: tirol/templates/index.mako:77
+#: thun/templates/index.mako:82
 msgid "newsletter.title"
 msgstr ""
 
-#: tirol/templates/timeline.mako:3
+#: thun/templates/timeline.mako:3
 msgid "timeline.title"
 msgstr ""
 
-#: tirol/templates/pricing.mako:14
+#: thun/templates/pricing.mako:14
 msgid "we.love.transparency.description"
 msgstr ""
 
-#: tirol/templates/pricing.mako:13
+#: thun/templates/pricing.mako:13
 msgid "we.love.transparency.title"
 msgstr ""
