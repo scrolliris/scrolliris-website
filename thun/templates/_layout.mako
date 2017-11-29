@@ -26,9 +26,11 @@
     <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="${req.util.static_path('img/touch-icon-57.png')}">
     <link rel="humans" type="text/plain" href="/humans.txt">
     <link rel="robots" type="text/plain" href="/robots.txt">
-    <style>body{background-color:#ffffff;}</style>
-    <link href="//fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300" rel="stylesheet">
+    <style>html{background-color:#454545;}</style>
+    <style>.not-ready{visibility: hidden;}</style>
     <link rel="stylesheet" href="${req.util.hashed_asset_url('master.css')}">
+    <script><%include file='thun:assets/_fouc.js'/></script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:300" rel="stylesheet">
     <%block name='extra_style'/>
   </head>
   <body>
@@ -54,7 +56,6 @@
     </svg>
     </%block>
 
-    <%include file='_font.mako'/>
     <%include file='_chat.mako'/>
     <script type="text/javascript" src="${req.util.hashed_asset_url('master.js')}"></script>
     <%block name='extra_script'/>

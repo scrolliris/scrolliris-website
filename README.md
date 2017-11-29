@@ -35,11 +35,9 @@ https://gitlab.com/scrolliris/thun
 ## Integrations
 
 * Google Fonts
-* Typekit
 * GitLab
 * Tinyletter
 * Twitter
-* Typekit
 * Userlike
 
 
