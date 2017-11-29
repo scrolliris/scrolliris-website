@@ -1,4 +1,5 @@
 Thu 30 Nov 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+	* Update assets loading (remove typekit)
 	* Rename project as `Thun`
 
 Wed 29 Nov 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
