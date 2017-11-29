@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: tirol/templates/timeline.mako
+#: thun/templates/timeline.mako
 msgid "timeline.entry.001.date"
 msgstr "16 Jun"
 
@@ -72,9 +72,10 @@ msgid "timeline.entry.005.date"
 msgstr "07 Sep"
 
 msgid "timeline.entry.005.description"
-msgstr "We've got visionary users as first customer in Switzerland! They are "
-"on top page! E.g. <a href=\"https://ch.oddb.org/\" target=\"_blank\">"
-"https://ch.oddb.org/</a>"
+msgstr ""
+"We've got visionary users as first customer in Switzerland! They are "
+"on top page! E.g. <a href=\"https://ch.oddb.org/\" target=\"_blank"
+"\">https://ch.oddb.org/</a>"
 
 msgid "timeline.entry.005.title"
 msgstr "First Customers"
@@ -83,21 +84,22 @@ msgid "timeline.entry.006.date"
 msgstr "02 Oct"
 
 msgid "timeline.entry.006.description"
-msgstr "We've created product <a href=\"https://log.scrolliris.com/\">"
-"Changelog</a> website. That's available in English and German. "
-"Get notified via (atom) feed!"
+msgstr ""
+"We've created product <a href=\"https://log.scrolliris.com/"
+"\">Changelog</a> website. That's available in English and German. Get "
+"notified via (atom) feed!"
 
 msgid "timeline.entry.006.title"
 msgstr "Our Changelog"
 
-msgid "timeline.entry.007.date"
-msgstr "13 Oct"
+#~ msgid "timeline.entry.007.date"
+#~ msgstr "13 Oct"
 
-msgid "timeline.entry.007.description"
-msgstr ""
-"Now, Help documentation  website <a href=\"https://help.scrolliris.com/\""
-" target=\"_blank\">Scrolliris Help</a> is released. We'll update it "
-"progressively."
+#~ msgid "timeline.entry.007.description"
+#~ msgstr ""
+#~ "Now, Help documentation  website <a href=\"https://help.scrolliris."
+#~ "com/\" target=\"_blank\">Scrolliris Help</a> is released. We'll "
+#~ "update it progressively."
 
-msgid "timeline.entry.007.title"
-msgstr "Help Document Site"
+#~ msgid "timeline.entry.007.title"
+#~ msgstr "Help Document Site"
