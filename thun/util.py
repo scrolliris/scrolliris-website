@@ -8,7 +8,7 @@ from pyramid.decorator import reify
 from pyramid.events import subscriber
 from pyramid.events import BeforeRender
 
-from tirol.env import Env
+from thun.env import Env
 
 UNSLASH_PATTERN = re.compile(r'^\/|\/$')
 
@@ -73,7 +73,7 @@ class TemplateUtility(object):
         return self.req.matchdict == matchdict
 
     def static_url(self, filepath):  # type: (str) -> str
-        from tirol.route import STATIC_DIR
+        from thun.route import STATIC_DIR
 
         def get_bucket_info(name):
             part = self.req.settings.get('storage.bucket_{0:s}'.format(name))
@@ -88,7 +88,7 @@ class TemplateUtility(object):
         return self.req.static_url(STATIC_DIR + '/' + filepath)
 
     def static_path(self, filepath):  # type: (str) -> str
-        from tirol.route import STATIC_DIR
+        from thun.route import STATIC_DIR
         return self.req.static_path(STATIC_DIR + '/' + filepath)
 
     def hashed_asset_url(self, filepath):  # type: (str) -> str
@@ -130,7 +130,7 @@ def svg_content_sanitized(svg_file, **kwargs):  # type: (str, dict) -> str
     slash in `<path />` are ommited :(
 
     >>> from markupsafe import Markup
-    >>> from tirol.util import svg_content_sanitized
+    >>> from thun.util import svg_content_sanitized
 
     This returns string like object such as `Markup(u'')`. It will be used in
     template as string.
@@ -156,7 +156,7 @@ def clean(**kwargs):  # type: (**dict) -> 'function'
     tags=['a'], attributes=['href'])}`.
 
     >>> import types
-    >>> from tirol.util import clean
+    >>> from thun.util import clean
 
     >>> isinstance(clean(tags=['a'], attributes=['href']), types.FunctionType)
     True

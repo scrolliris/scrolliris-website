@@ -1,19 +1,19 @@
-# Tirol
+# Thun
 
-`/təɾóul/`
+`/tu̠n/`
 
 [![pipeline status][pipeline]][commit] [![coverage report][coverage]][commit]
 
-![Scrolliris](tirol/assets/img/scrolliris-logo-300x300.png)
+![Scrolliris](thun/assets/img/scrolliris-logo-300x300.png)
 
 ```txt
- ______             _
-(_) |o             | |
-    |    ,_    __  | |
-  _ ||  /  |  /  \_|/
- (_/ |_/   |_/\__/ |__/
+ ______ _
+(_) |  | |
+    |  | |            _  _
+  _ |  |/ \   |   |  / |/ |
+ (_/   |   |_/ \_/|_/  |  |_/
 
-Tirol; The IntROduction website for scrollIris
+Thun; The Honest introdUctioN of scrolliris
 ```
 
 The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
@@ -21,8 +21,7 @@ The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 
 ## Repository
 
-[https://gitlab.com/scrolliris/tirol](
-https://gitlab.com/scrolliris/tirol)
+https://gitlab.com/scrolliris/thun
 
 
 ## Requirements
@@ -95,7 +94,7 @@ Use `waitress` as wsgi server.
 See `Makefile`.
 
 ```zsh
-% cd /path/to/tirol
+% cd /path/to/thun
 % source venv/bin/activate
 
 : set env
@@ -252,7 +251,7 @@ The translation catalog needs GNU gettext.
 This project is distributed as various licenses by parts.
 
 ```txt
-Tirol
+Thun
 Copyright (c) 2017 Lupine Software LLC
 ```
 
@@ -260,7 +259,7 @@ Copyright (c) 2017 Lupine Software LLC
 
 `GFDL-1.3`
 
-The files in the `tirol/doc` directory are distributed as
+The files in the `thun/doc` directory are distributed as
 GNU Free Documentation License. (version 1.3)
 
 ```txt
@@ -279,7 +278,7 @@ https://www.gnu.org/licenses/fdl-1.3.en.html).
 
 `CC-BY-NC-SA-4.0`
 
-The files in the `tirol/assets/img` directory are licensed under the
+The files in the `thun/assets/img` directory are licensed under the
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 Public License.
 
@@ -312,6 +311,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 See [LICENSE](LICENSE).
 
 
-[pipeline]: https://gitlab.com/scrolliris/tirol/badges/master/build.svg
-[coverage]: https://gitlab.com/scrolliris/tirol/badges/master/coverage.svg
-[commit]: https://gitlab.com/scrolliris/tirol/commits/master
+[pipeline]: https://gitlab.com/scrolliris/thun/badges/master/build.svg
+[coverage]: https://gitlab.com/scrolliris/thun/badges/master/coverage.svg
+[commit]: https://gitlab.com/scrolliris/thun/commits/master

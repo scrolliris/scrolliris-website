@@ -1,6 +1,6 @@
 import sys
 
-from tirol.env import Env
+from thun.env import Env
 
 
 def main(argv=None, quiet=False):

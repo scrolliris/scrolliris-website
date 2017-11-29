@@ -5,7 +5,7 @@ import sys
 from pyramid.decorator import reify
 from pyramid.request import Request
 
-from tirol.env import Env
+from thun.env import Env
 
 __all__ = ['CustomRequest']
 

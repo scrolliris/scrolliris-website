@@ -51,9 +51,9 @@ production_requires = [
 ]
 
 setup(
-    name='tirol',
+    name='thun',
     version='0.1',
-    description='The IntROduction website for ScroLliris.',
+    description='Thun; The Honest introdUctioN of scrolliris',
     long_description=DESCRIPTION + '\n\n' + CHANGELOG,
     classifiers=[
         "Programming Language :: Python",
@@ -76,9 +76,9 @@ setup(
     install_requires=requires,
     entry_points="""\
     [paste.app_factory]
-    main = tirol:main
+    main = thun:main
     [console_scripts]
-    tirol_pserve = tirol.scripts.pserve:main
-    tirol_pstart = tirol.scripts.pstart:main
+    thun_pserve = thun.scripts.pserve:main
+    thun_pstart = thun.scripts.pstart:main
     """,
 )

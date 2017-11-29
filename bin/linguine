@@ -86,7 +86,7 @@ while [ $# -gt 0 ]; do
 done
 
 run_extract_command() {
-  FILE_LIST="`find ./tirol -type f \( -name '*.py' -or -name '*.mako' \) \
+  FILE_LIST="`find ./thun -type f \( -name '*.py' -or -name '*.mako' \) \
     -print`"
   xgettext --default-domain=${DOMAIN} --sort-output --keyword=$KEYWORD \
     --output-dir=locale --output=${DOMAIN}.pot \

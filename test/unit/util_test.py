@@ -1,6 +1,6 @@
 import pytest
 
-from tirol.util import TemplateUtility
+from thun.util import TemplateUtility
 
 
 @pytest.fixture(autouse=True)
@@ -72,9 +72,9 @@ def test_manifest_json_content(dummy_request, tmpdir, monkeypatch, mocker):
 
 
 def test_var_loading_env_var(dummy_request, monkeypatch, mocker):
-    from tirol.env import Env
+    from thun.env import Env
 
-    expected = 'https://gitlab.com/scrolliris/tirol'
+    expected = 'https://gitlab.com/scrolliris/thun'
     monkeypatch.setenv('GITLAB_URL', expected)
     mocker.spy(Env, '__init__')
 
@@ -106,7 +106,7 @@ def test_is_matched(dummy_request):
 
 
 def test_is_static_url(config, dummy_request):
-    from tirol.route import STATIC_DIR
+    from thun.route import STATIC_DIR
 
     config.add_static_view(
         name='assets', path=STATIC_DIR, cache_max_age=0)
@@ -117,7 +117,7 @@ def test_is_static_url(config, dummy_request):
 
 
 def test_is_static_path(config, dummy_request):
-    from tirol.route import STATIC_DIR
+    from thun.route import STATIC_DIR
 
     config.add_static_view(
         name='assets', path=STATIC_DIR, cache_max_age=0)
@@ -129,7 +129,7 @@ def test_is_static_path(config, dummy_request):
 
 def test_hashed_asset_url(config, dummy_request, tmpdir, monkeypatch):
     from os import path
-    from tirol.route import STATIC_DIR
+    from thun.route import STATIC_DIR
 
     config.add_static_view(
         name='assets', path=STATIC_DIR, cache_max_age=0)
@@ -160,7 +160,7 @@ def test_hashed_asset_url_on_production_mode(
         config, dummy_request, tmpdir, monkeypatch):
     from os import path
     from collections import namedtuple
-    from tirol.route import STATIC_DIR
+    from thun.route import STATIC_DIR
 
     config.add_static_view(
         name='assets', path=STATIC_DIR, cache_max_age=0)

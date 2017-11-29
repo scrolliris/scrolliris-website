@@ -1,6 +1,6 @@
 from os import path
 
-from tirol.env import Env
+from thun.env import Env
 
 STATIC_DIR = path.join(path.dirname(path.abspath(__file__)), '../static')
 

@@ -17,7 +17,7 @@ import sys
 # a generator makes files which contain doctest(s)
 # TODO: collect files, automatically
 TARGET_FILES = (path.abspath(path.join(path.dirname(__file__), f)) for f in (
-    '../tirol/util.py',
+    '../thun/util.py',
 ))
 
 

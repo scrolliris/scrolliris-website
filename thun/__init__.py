@@ -11,8 +11,8 @@ from pyramid.threadlocal import get_current_registry
 from pyramid.view import notfound_view_config
 import better_exceptions
 
-from tirol.env import Env
-import tirol.logger  # noqa
+from thun.env import Env
+import thun.logger  # noqa
 
 better_exceptions.MAX_LENGTH = None
 
@@ -144,19 +144,19 @@ def add_renderer_globals(evt):
 # -- entry point
 
 def main(_, **settings):
-    from tirol.request import CustomRequest
+    from thun.request import CustomRequest
 
     config = Configurator(settings=resolve_env_vars(settings))
 
     config.include('.route')
 
-    config.add_translation_dirs('tirol:../locale')
+    config.add_translation_dirs('thun:../locale')
 
     config.set_request_factory(CustomRequest)
 
     config.scan()
     app = config.make_wsgi_app()
 
-    # from tirol.logger import enable_translogger
+    # from thun.logger import enable_translogger
     # app = enable_translogger(app)
     return app

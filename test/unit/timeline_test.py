@@ -7,7 +7,7 @@ def setup(config):  # pylint: disable=unused-argument
 
 
 def test_view_timeline(dummy_request):
-    from tirol import timeline
+    from thun import timeline
 
     res = timeline(dummy_request)
     assert dict == type(res)

@@ -31,7 +31,7 @@ var config = {
       test: /\.styl$/
     , loader: stylusBundler.extract(['css', 'stylus'])
     , include: [
-        path.resolve(__dirname, 'tirol/assets')
+        path.resolve(__dirname, 'thun/assets')
       ]
     }, {
       test: /\.svg$/
@@ -40,7 +40,7 @@ var config = {
         path.resolve(__dirname,
           'node_modules/open-iconic/sprite/open-iconic.min.svg')
       ]
-    , exclude: path.resolve(__dirname, 'tirol/assets')
+    , exclude: path.resolve(__dirname, 'thun/assets')
     }, {
       test: /\.(svg|png|woff|woff2|eot|ttf)$/
     , loader: 'url-loader?limit=100000'
@@ -49,7 +49,7 @@ var config = {
       test: /\.js$/
     , loader: 'babel-loader'
     , include: [
-        path.resolve(__dirname, 'tirol/assets')
+        path.resolve(__dirname, 'thun/assets')
       ]
     }]
   }

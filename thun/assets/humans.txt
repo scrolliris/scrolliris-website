@@ -14,5 +14,5 @@ Last update: 2017/10/27
 Language: English
 Doctype: HTML5
 URL: https://about.scrolliris.com/
-Repository: https://gitlab.com/scrolliris/tirol
+Repository: https://gitlab.com/scrolliris/thun
 License: GNU Affero General Public License (AGPL)

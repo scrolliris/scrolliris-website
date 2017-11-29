@@ -12,9 +12,9 @@ import pytest
 
 @pytest.fixture(scope='session')
 def dotenv():
-    from tirol.env import Env
+    from thun.env import Env
 
-    # same as tirol:main
+    # same as thun:main
     dotenv_file = os.path.join(os.getcwd(), '.env')
     Env.load_dotenv_vars(dotenv_file)
 
@@ -23,7 +23,7 @@ def dotenv():
 
 @pytest.fixture(scope='session')
 def env(dotenv):
-    from tirol.env import Env
+    from thun.env import Env
     return Env()
 
 
@@ -88,10 +88,10 @@ def config(request, settings):
     config.include('pyramid_assetviews')
     config.include('pyramid_mako')
 
-    config.add_translation_dirs('tirol:../locale')
+    config.add_translation_dirs('thun:../locale')
 
     from pyramid.events import BeforeRender, NewRequest
-    from tirol import add_localizer, add_renderer_globals
+    from thun import add_localizer, add_renderer_globals
 
     config.add_subscriber(add_localizer, NewRequest)
     config.add_subscriber(add_renderer_globals, BeforeRender)
@@ -107,7 +107,7 @@ def config(request, settings):
 @pytest.fixture(scope='function')
 def dummy_request(extra_environ):
     from pyramid import testing
-    from tirol import get_translator_function
+    from thun import get_translator_function
 
     locale_name = 'en'
     req = testing.DummyRequest(
@@ -125,7 +125,7 @@ def dummy_request(extra_environ):
 
 @pytest.fixture(scope='session')
 def _app(raw_settings):
-    from tirol import main
+    from thun import main
     global_config = {
         '__file__': raw_settings['__file__']
     }

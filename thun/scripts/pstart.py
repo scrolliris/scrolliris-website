@@ -19,7 +19,7 @@ def main(argv, _quiet=False):
         usage(argv)
 
     config_uri = argv[1] if 1 in argv else 'config/production.ini'
-    wsgi_app = get_app(config_uri, 'tirol')
+    wsgi_app = get_app(config_uri, 'thun')
     setup_logging(config_uri)
 
     return wsgi_app
@@ -28,7 +28,7 @@ def main(argv, _quiet=False):
 if __name__ == '__main__':
     # pylint: disable=relative-import
     from paste.script.cherrypy_server import cpwsgi_server
-    from tirol.env import Env
+    from thun.env import Env
 
     Env.load_dotenv_vars()
     env = Env()  # pylint: disable=invalid-name
