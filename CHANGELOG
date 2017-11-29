@@ -1,3 +1,9 @@
+Thu 30 Nov 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+	* Rename project as `Thun`
+
+Wed 29 Nov 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+	* Update repository url
+
 Fri 10 Nov 2017 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Add pyramid_secure_response (ssl redirect, HSTS header)
 
