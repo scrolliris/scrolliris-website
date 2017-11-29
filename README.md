@@ -29,7 +29,7 @@ https://gitlab.com/scrolliris/thun
 * Python `3.5.4` (or `>= 2.7.13`)
 * Node.js `>= 8.9.0` (npm `5.5.1`, for build assets)
 * GNU gettext `>= 0.19.8.1` (translation)
-* [Innsbruck](https://gitlab.com/scrolliris/innsbruck) as git subtree
+* [Uttigen](https://gitlab.com/scrolliris/uttigen) as git subtree
 
 
 ## Integrations
@@ -63,20 +63,20 @@ https://gitlab.com/scrolliris/thun
 
 ### Dependencies
 
-#### Innsbruck
+#### Uttigen
 
-See translation project [Innsbruck](
-https://gitlab.com/scrolliris/innsbruck).
+See translation project [Uttigen](
+https://gitlab.com/scrolliris/uttigen).
 
 Don't commit directly the changes on above translation project into this repo.
 
 ```zsh
 : setup `locale`
-% git remote add innsbruck https://gitlab.com/scrolliris/innsbruck.git
-% git subtree add --prefix locale innsbruck master
+% git remote add uttigen https://gitlab.com/scrolliris/uttigen.git
+% git subtree add --prefix locale uttigen master
 
 : synchronize with updates into specified branch
-% git pull -s subtree -Xsubtree=locale innsbruck master
+% git pull -s subtree -Xsubtree=locale uttigen master
 
 : subtree list
 % git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq
@@ -215,7 +215,7 @@ TODO
 ## Translation
 
 See `./bin/linguine --help` and translation project [repository](
-https://gitlab.com/scrolliris/innsbruck)
+https://gitlab.com/scrolliris/uttigen)
 
 ### Generate new catalog
 

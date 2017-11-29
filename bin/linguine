@@ -30,8 +30,8 @@ Examples:
 USG
 }
 
-# see https://gitlab.com/scrolliris/innsbruck
-PACKAGE_NAME="Innsbruck"
+# see https://gitlab.com/scrolliris/uttigen
+PACKAGE_NAME="Uttigen"
 PACKAGE_VERSION="0.1"
 MSGID_BUGS_ADDRESS="support@scrolliris.com"
 COPYRIGHT="Lupine Software LLC"
