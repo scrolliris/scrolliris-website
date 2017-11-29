@@ -71,3 +71,12 @@ msgstr ""
 
 msgid "timeline.entry.006.title"
 msgstr ""
+
+msgid "timeline.entry.007.date"
+msgstr ""
+
+msgid "timeline.entry.007.description"
+msgstr ""
+
+msgid "timeline.entry.007.title"
+msgstr ""
