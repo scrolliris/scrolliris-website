@@ -1,11 +1,11 @@
-# Innsbruck
+# Uttigen
 # Copyright (C) 2017 Lupine Software LLC
-# This file is distributed under the same license as the Innsbruck package.
+# This file is distributed under the same license as the Uttigen package.
 # Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Innsbruck 0.1\n"
+"Project-Id-Version: Uttigen 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
 "POT-Creation-Date: 2017-10-27 03:10+0900\n"
 "PO-Revision-Date: 2017-06-23 03:27+0900\n"
