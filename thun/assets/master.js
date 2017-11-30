@@ -1,12 +1,24 @@
 // vendor components
-require('styr.css')
-require('open-iconic.svg')
+require('styr.css');
+require('open-iconic.svg');
 
 // application styles
-require('./css/style.styl')
-require('./css/layout.styl')
-require('./css/typography.styl')
-require('./css/timeline.styl')
+require('./css/style.styl');
+require('./css/layout.styl');
+require('./css/typography.styl');
+require('./css/timeline.styl');
+
+
+var FontFaceObserver = require('fontfaceobserver.js');
+var font = new FontFaceObserver('Roboto Slab');
+font.load().then(function() {
+  document.body.classList.add('slab-loaded');
+})
+
+var font = new FontFaceObserver('Open Sans');
+font.load().then(function() {
+  document.body.classList.add('sans-loaded');
+})
 
 
 var timeline = document.getElementById('timeline');

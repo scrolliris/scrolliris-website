@@ -57,6 +57,7 @@ var config = {
     extensions: ['', '.css', '.js', '.svg']
   , alias: {
       'open-iconic\.svg$': 'open-iconic/sprite/open-iconic.min.svg'
+    , 'fontfaceobserver\.js$': 'fontfaceobserver/fontfaceobserver.js'
     , 'styr\.css$': 'styr/dst/styr.min.css'
     }
   }
