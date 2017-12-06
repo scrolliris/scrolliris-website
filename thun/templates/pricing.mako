@@ -1,7 +1,5 @@
 <%inherit file='./_layout.mako'/>
 
-<%include file='./_nav.mako'/>
-
 <div class="content">
   <div class="grid pricing">
     <div class="row">

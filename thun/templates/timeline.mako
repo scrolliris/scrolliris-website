@@ -2,8 +2,6 @@
 
 <%block name='title'>${_('timeline.title')} | ${_('application.name')}</%block>
 
-<%include file='./_nav.mako'/>
-
 <div class="content" align="center">
   <div class="grid timeline" align="center">
     <div class="row">

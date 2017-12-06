@@ -5,17 +5,8 @@
 header
   color #fbf9fd
   background-color #454545
-  max-height 4.1rem
-  padding 0.08em 0 0.31rem 0
-  .description
-    margin-top 1.48rem
-    max-width 28.5rem
-    line-height 1.1
-    span
-      display inline-block
-      margin 1.92rem 0 0 0
-  .get-started
-    margin 4.22rem 0 2.22rem 0
+  max-height 3.76rem
+  padding 0 0 0.38rem 0
 
 .wrapper > .footer
   padding-top 3.55rem
@@ -42,21 +33,31 @@ header
     padding 0 0.33rem
 
 .global-nav
+  float right
+  display inline-block
   margin 0
-  background-color #f0ede6
 
 .nav
   line-height 1.12em
-  margin-top 0.48rem
-  margin 0
-  text-align center
-  width 100%
+  padding-left 3.2rem
   li
     display inline-block
     margin-right 0.781em
   .link
-    margin 0.81rem 0.28rem
+    margin 0.71rem 0.28rem
     display inline-block
+
+.wrapper > header
+  .nav
+    margin-top 0
+    display inline-block
+    li
+      a,
+      a.active
+        color #f3f3f3
+  .nav-container
+    margin-right 0
+    padding-right 0
 
 .wrapper > .footer
   .nav
@@ -73,7 +74,7 @@ header
 // grid
 .grid.title
   padding 2.1rem 0
-  background-color #fbfaf8
+  background-color lighten(#f0ede6, 13%)
 
 .grid.screenshot
   padding 4.49rem 0
@@ -81,7 +82,7 @@ header
 
 .grid.feature
   padding 2.44rem 0 1.85rem 0
-  background-color #f0ede6
+  background-color lighten(#f0ede6, 13%)
   .heading
     margin 1.71rem auto 2.86rem auto
     max-width 37.29rem
@@ -174,11 +175,94 @@ svg.tiny.icon
   svg.icon
     margin 0 0.22rem
 
+// normal
+@media only screen and (max-width: 768px)
+  .wrapper header
+    > .row
+      display block !important
+      height 42rem
+      > div
+        margin 0
+        padding 0
+        width 100%
+
+    .global-nav
+      float right
+      .nav
+        margin 0
+        display none
+
+
 // small
 @media only screen and (max-width: 480px)
   .grid.screenshot
     margin 1.49rem 0
+
   .grid.link
     padding-top 2.62rem
     section
       margin-bottom 1.33rem
+
+
+// mobile-nav
+.mobile.nav
+  label.toggle
+    display none
+  input[id^=dropdown]
+    display none
+  ul.menu
+    display none
+    width 100%
+    margin 1.21rem 0 0 0
+    padding 0
+    li
+      text-align left
+      padding 0
+      width 100%
+      a
+        vertical-align middle
+        margin 0
+        padding 0.75rem 0.94rem 1.12rem 1.14rem
+        width 100%
+
+// normal
+@media only screen and (max-width: 768px)
+  .wrapper > header
+    border-bottom 3px solid #7b6e94
+    .mobile.nav
+      overflow visible
+      display block
+      margin -2.48rem 0 0 0
+      padding 0
+
+      label.toggle
+        display block
+        width 100%
+        margin 0.62rem 0 0 0
+        padding 0 1.16rem 0 0
+        border none
+        text-decoration none
+        outline none
+        &:focus,
+        &:hover
+          background none
+          outline none
+      input[id^=dropdown]
+        outline none
+        display none
+        &:focus,
+        &:hover
+          background none
+          outline none
+      input[id^=dropdown]:checked + ul.menu
+        display block
+        li
+          display block
+          background-color #666666
+          border-bottom 1px solid #444444
+          a
+            &.active,
+            &:hover
+              background-color #7b6e94
+              text-decoration none
+              color #f3f3f3

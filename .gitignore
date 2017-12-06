@@ -8,7 +8,9 @@ __pycache__
 .*-version
 
 .env
+!.env.sample
 .env.ci
+!.env.ci.sample
 .coverage
 
 app.yaml
