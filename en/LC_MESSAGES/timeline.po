@@ -97,9 +97,9 @@ msgstr "13 Oct"
 
 msgid "timeline.entry.007.description"
 msgstr ""
-"Now, Help documentation  website <a href=\"https://help.scrolliris."
-"com/\" target=\"_blank\">Scrolliris Help</a> is released. We'll "
-"update it progressively."
+"Now, Help documentation  website <a href=\"https://help.scrolliris.com/"
+"\" target=\"_blank\">Scrolliris Help</a> is released. We'll update it "
+"progressively."
 
 msgid "timeline.entry.007.title"
 msgstr "Help Document Site"
