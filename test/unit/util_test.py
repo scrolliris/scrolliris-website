@@ -181,9 +181,9 @@ def test_hashed_asset_url_on_production_mode(
     monkeypatch.setattr(path, 'dirname', dummy_dirname)
 
     dummy_request.settings = {
-        'storage.bucket_host': 'cdn.example.com',
-        'storage.bucket_name': 'test-bucket',
-        'storage.bucket_path': '/v1/static',
+        'bucket.host': 'cdn.example.com',
+        'bucket.name': 'org.example',
+        'bucket.path': '/v1/static',
     }
 
     util = TemplateUtility({}, dummy_request)
@@ -192,5 +192,5 @@ def test_hashed_asset_url_on_production_mode(
     DummyEnv = namedtuple('Env', 'is_production')
     util.env = DummyEnv(True)
 
-    assert 'https://cdn.example.com/test-bucket/v1/static/master.0.css' == \
+    assert 'https://cdn.example.com/org.example/v1/static/master.0.css' == \
            util.hashed_asset_url('master.css')

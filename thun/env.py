@@ -35,9 +35,9 @@ class Env(object):
     def settings_mappings():
         return {
             # Note: these values are updated if exist but not empty
-            'storage.bucket_host': 'STORAGE_BUCKET_HOST',
-            'storage.bucket_name': 'STORAGE_BUCKET_NAME',
-            'storage.bucket_path': 'STORAGE_BUCKET_PATH',
+            'bucket.host': 'BUCKET_HOST',
+            'bucket.name': 'BUCKET_NAME',
+            'bucket.path': 'BUCKET_PATH',
             'wsgi.url_scheme': 'WSGI_URL_SCHEME',
         }
 
