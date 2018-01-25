@@ -4,7 +4,7 @@
     <div class="offset-2 column-4 column-v-8 column-n-16" align=center>
       <div class="attached box">
         <div class="thumb">
-          <a href="https://ch.oddb.org/" target="_blank"><img src="https://img.scrolliris.io/user/logo/oddb.png" height="120" /></a>
+          <a href="https://ch.oddb.org/" target="_blank"><img src="https://img.scrolliris.com/user/logo/oddb.png" height="120" /></a>
         </div>
         <div class="header">
           <span>Open Drug Database</span>
@@ -18,7 +18,7 @@
     <div class="column-4 column-v-8 column-n-16" align=center>
       <div class="attached box">
         <div class="thumb">
-          <a href="http://www.ywesee.com/" target="_blank"><img src="https://img.scrolliris.io/user/logo/ywesee-gmbh.png" height="120" /></a>
+          <a href="http://www.ywesee.com/" target="_blank"><img src="https://img.scrolliris.com/user/logo/ywesee-gmbh.png" height="120" /></a>
         </div>
         <div class="header">
           <span>ywesee GmbH</span>
