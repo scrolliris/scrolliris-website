@@ -1,8 +1,11 @@
-# Uttigen
+# Scrolliris Website Translation
 
-`/uttigen/`
+Code Name: `Uttigen /uttigen/`
 
 [![pipeline status][pipeline]][commit]
+
+[pipeline]: https://gitlab.com/scrolliris/scrolliris-website-translation/badges/master/pipeline.svg
+[commit]: https://gitlab.com/scrolliris/scrolliris-website-translation/commits/master
 
 ```txt
  _
@@ -23,7 +26,7 @@ https://gitlab.com/scrolliris/thun) (code name).
 
 ## Repository
 
-https://gitlab.com/scrolliris/uttigen.git
+https://gitlab.com/scrolliris/scrolliris-website-translation.git
 
 
 ## Requirements
@@ -109,7 +112,7 @@ Open your `terminal` application, follow these steps, normally.
 ```
 
 And then, create a merge request on this [repository](
-https://gitlab.com/scrolliris/uttigen.git).
+https://gitlab.com/scrolliris/scrolliris-website-translation.git).
 
 ### How to generate new `*.po` file
 
@@ -212,7 +215,7 @@ contact [@scrolliris](https://twitter.com/scrolliris) on Twitter.
 This project is distributed as multiple licenses by parts.
 
 ```
-Uttigen
+Scrolliris Website Translation
 Copyright (c) 2017 Lupine Software LLC
 ```
 
@@ -255,7 +258,3 @@ Free Documentation License".
 ```
 
 See [LICENSE](LICENSE).
-
-
-[pipeline]: https://gitlab.com/scrolliris/uttigen/badges/master/pipeline.svg
-[commit]: https://gitlab.com/scrolliris/uttigen/commits/master
