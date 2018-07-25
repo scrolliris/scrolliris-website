@@ -1,8 +1,12 @@
-# Thun
+# Scrolliris Website
 
-`/tu̠n/`
+Code Name: `Thun /tu̠n/`
 
 [![pipeline status][pipeline]][commit] [![coverage report][coverage]][commit]
+
+[pipeline]: https://gitlab.com/scrolliris/scrolliris-website/badges/master/build.svg
+[coverage]: https://gitlab.com/scrolliris/scrolliris-website/badges/master/coverage.svg
+[commit]: https://gitlab.com/scrolliris/scrolliris-website/commits/master
 
 ![Scrolliris](thun/assets/img/scrolliris-logo-300x300.png)
 
@@ -21,7 +25,7 @@ The website of [https://about.scrolliris.com/](https://about.scrolliris.com/).
 
 ## Repository
 
-https://gitlab.com/scrolliris/thun
+https://gitlab.com/scrolliris/scrolliris-website
 
 
 ## Requirements
@@ -29,7 +33,7 @@ https://gitlab.com/scrolliris/thun
 * Python `3.5.4` (or `>= 2.7.13`)
 * Node.js `>= 8.9.0` (npm `5.5.1`, for build assets)
 * GNU gettext `>= 0.19.8.1` (translation)
-* [Uttigen](https://gitlab.com/scrolliris/uttigen) as git subtree
+* [Scrolliris Website Translation (Uttigen)](https://gitlab.com/scrolliris/scrolliris-website-translation) as git subtree
 
 
 ## Integrations
@@ -249,7 +253,7 @@ The translation catalog needs GNU gettext.
 This project is distributed as various licenses by parts.
 
 ```txt
-Thun
+Scrolliris Website
 Copyright (c) 2017 Lupine Software LLC
 ```
 
@@ -307,8 +311,3 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 ```
 
 See [LICENSE](LICENSE).
-
-
-[pipeline]: https://gitlab.com/scrolliris/thun/badges/master/build.svg
-[coverage]: https://gitlab.com/scrolliris/thun/badges/master/coverage.svg
-[commit]: https://gitlab.com/scrolliris/thun/commits/master
