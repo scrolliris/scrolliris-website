@@ -19,8 +19,20 @@
     </div>
   </div>
 
-  <div class="grid screenshot">
+  <div id="screenshot" class="grid screenshot">
+    % if 'type' in req.params and req.params['type'] == 'minimap':
+    <ul>
+      <li><a href="/?type=overlay#screenshot"><span class="label">Heatmap Overlay</span></a></li>
+      <li><span class="primary label">Minimap Widget</span></li>
+    </ul>
     <img class="console-screenshot" width="980" src="${util.static_url('img/screenshot.png')}" alt="screenshot">
+    % else:
+    <ul>
+      <li><span class="primary label">Heatmap Overlay</span></li>
+      <li><a href="/?type=minimap#screenshot"><span class="label">Minimap Widget</span></a></li>
+    </ul>
+    <img class="console-screenshot" width="980" src="${util.static_url('img/screenshot-1.png')}" alt="screenshot">
+    % endif
   </div>
 
   <div class="grid feature">
