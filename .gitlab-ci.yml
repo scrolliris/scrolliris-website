@@ -6,7 +6,7 @@ stages:
 
 code-27:
   stage: vet
-  image: python:2.7.13
+  image: python:2.7.14
   variables:
     ENV: development
     PIP_CACHE_DIR: pip-cache
@@ -27,7 +27,7 @@ code-27:
 
 code:
   stage: vet
-  image: python:3.5.4
+  image: python:3.6.6
   variables:
     ENV: development
     PIP_CACHE_DIR: pip-cache
@@ -48,7 +48,7 @@ code:
 
 lint-27:
   stage: vet
-  image: python:2.7.13
+  image: python:2.7.14
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
@@ -68,7 +68,7 @@ lint-27:
 
 lint:
   stage: vet
-  image: python:3.5.4
+  image: python:3.6.6
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
@@ -88,7 +88,7 @@ lint:
 
 i18n:
   stage: build
-  image: python:3.5.4
+  image: python:3.6.6
   variables:
     ENV: test
     APT_CACHE_DIR: apt-cache
@@ -118,7 +118,7 @@ i18n:
 
 pack:
   stage: build
-  image: node:8.9.0
+  image: node:8.11.4
   variables:
     NODE_ENV: production
   before_script:
@@ -141,7 +141,7 @@ pack:
 
 doctest27:
   stage: test
-  image: python:2.7.13
+  image: python:2.7.14
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
@@ -161,7 +161,7 @@ doctest27:
 
 doctest:
   stage: test
-  image: python:3.5.4
+  image: python:3.6.6
   variables:
     PIP_CACHE_DIR: pip-cache
   before_script:
@@ -181,7 +181,7 @@ doctest:
 
 test27:
   stage: test
-  image: python:2.7.13
+  image: python:2.7.14
   variables:
     ENV: test
     PIP_CACHE_DIR: pip-cache
@@ -201,7 +201,7 @@ test27:
 
 test:
   stage: test
-  image: python:3.5.4
+  image: python:3.6.6
   variables:
     ENV: test
     PIP_CACHE_DIR: pip-cache
@@ -221,7 +221,7 @@ test:
 
 coverage:
   stage: coverage
-  image: python:3.5.4
+  image: python:3.6.6
   variables:
     ENV: test
     PIP_CACHE_DIR: pip-cache
