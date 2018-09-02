@@ -21,7 +21,7 @@ cors-file.json
 
 runtime.txt
 
-/bin/deliver
+/bin/_*
 /bin/gitlab-ci-multi-runner
 
 /locale

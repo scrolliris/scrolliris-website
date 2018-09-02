@@ -117,6 +117,17 @@ else
 endif
 .PHONY: clean
 
+expose:  ## Print untracked (volatile) files
+	git ls-files --others | \
+	  grep -vE '(lib|tmp|test|static|db|locale|node_modules|\.?cache)/' | \
+	  grep -vE '(__pycache__|\.egg-info|venv)/' | \
+	  grep -vE '(\.coverage|\.*-version|bin\/gitlab*)'
+.PHONY: expose
+
+deploy:  ## Deploy app to production server
+	./bin/plate $(ACTION) $(VERSION)
+.PHONY: deploy
+
 help:  ## Display this message
 	@grep -E '^[0-9a-z\:\\]+: ' $(MAKEFILE_LIST) | grep -E '  ##' | \
 	  sed -e 's/\(\s|\(\s[0-9a-z\:\\]*\)*\)  /  /' | tr -d \\\\ | \
