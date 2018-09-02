@@ -12,8 +12,8 @@ Options:
   -h, --help   display this help and exit
 
 Arguments:
-  <action>   {compile|c},{extract|e},{generate|g},{update|u}
-  <domain>   {message,}
+  <action>   {compile|c},{extract|e},{generate|g},{update|u},{sync|s}
+  [domain]   {message,}
   [locale]   en
 
 Actions:
@@ -21,9 +21,11 @@ Actions:
   extract    extract msgid(s) into *.pot
   generate   create new *.po file with latest *.pot
   update     update *.po using *.pot (template)
+  sync       sync git repo
 
 Examples:
   % linguine e message
+  % linguine s
   % linguine g message en
   % linguine u message en
   % linguine c message en
@@ -33,6 +35,10 @@ USG
 # see https://gitlab.com/scrolliris/uttigen
 PACKAGE_NAME="Uttigen"
 PACKAGE_VERSION="0.1"
+REMOTE_NAME="website-translation"
+REMOTE_URL="https://gitlab.com/scrolliris/scrolliris-website-translation.git"
+REMOTE_BRANCH="master"
+SUBTREE_DIR="locale"
 MSGID_BUGS_ADDRESS="support@scrolliris.com"
 COPYRIGHT="Lupine Software LLC"
 
@@ -66,7 +72,7 @@ while [ $# -gt 0 ]; do
       print_usage `basename $0`
       exit 0
       ;;
-    "compile"|"c"|"extract"|"e"|"generate"|"g"|"update"|"u")
+    "compile"|"c"|"extract"|"e"|"generate"|"g"|"update"|"u"|"sync"|"s")
       ACTION="${1}"
       shift
       ;;
@@ -118,11 +124,36 @@ run_compile_command() {
     --check --strict
 }
 
+run_sync_command() {
+  git remote get-url $REMOTE_NAME
+
+  if [ "${?}" -ne "0" ]; then
+    git remote add $REMOTE_NAME $REMOTE_URL
+  fi
+
+  subtree=$( \
+    git log | \
+    grep git-subtree-dir | \
+    tr -d ' ' | \
+    cut -d ":" -f2 | \
+    sort | \
+    uniq |
+    grep $SUBTREE_DIR
+  )
+
+  if [ "${subtree}" = "" ]; then
+    git subtree add --prefix $SUBTREE_DIR $REMOTE_NAME $REMOTE_BRANCH
+  fi
+
+  git pull -s subtree -Xsubtree=$SUBTREE_DIR $REMOTE_NAME $REMOTE_BRANCH
+}
+
 case $ACTION in
   "c") ACTION="compile"  ;;
   "e") ACTION="extract"  ;;
   "g") ACTION="generate" ;;
   "u") ACTION="update"   ;;
+  "s") ACTION="sync"     ;;
 esac
 
 
@@ -132,13 +163,14 @@ if [ "$ACTION" = "" ]; then
   exit 2
 fi
 
-if [ "$DOMAIN" = "" ]; then
+if [ "$ACTION" != "sync" ] && [ "$DOMAIN" = "" ]; then
   echo "<domain> is missing"
   print_usage `basename $0`
   exit 2
 fi
 
-if [ "$ACTION" != "extract" ] && [ "$LOCALE" = "" ]; then
+if [ "$ACTION" != "extract" ] && [ "$ACTION" != "sync" ] && \
+   [ "$LOCALE" = "" ]; then
   echo "<locale> is missing"
   print_usage `basename $0`
   exit 2
@@ -149,5 +181,6 @@ case $ACTION in
   "extract")  run_extract_command  ;;
   "generate") run_generate_command ;;
   "update")   run_update_command   ;;
+  "sync")     run_sync_command     ;;
   *)          echo 'unknown action'; exit 1 ;;
 esac

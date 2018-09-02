@@ -72,6 +72,10 @@ i18n\:update:  ## Update catalog (pot)
 	./bin/linguine update message en
 .PHONY: i18n\:update
 
+i18n\:sync:
+	./bin/linguine sync
+.PHONY: i18n\:sync
+
 
 # -- vet
 
