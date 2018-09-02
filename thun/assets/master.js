@@ -6,37 +6,17 @@ require('open-iconic.svg');
 require('./css/style.styl');
 require('./css/layout.styl');
 require('./css/typography.styl');
-require('./css/timeline.styl');
 
 
 var FontFaceObserver = require('fontfaceobserver.js');
-var font = new FontFaceObserver('Roboto Slab');
+var font;
+
+font = new FontFaceObserver('Roboto Slab');
 font.load().then(function() {
   document.body.classList.add('slab-loaded');
-})
+});
 
-var font = new FontFaceObserver('Open Sans');
+font = new FontFaceObserver('Open Sans');
 font.load().then(function() {
   document.body.classList.add('sans-loaded');
-})
-
-
-var timeline = document.getElementById('timeline');
-if (timeline) {
-  var doc = document.documentElement;
-  var blocks = timeline.querySelectorAll('.timeline-block');
-  window.addEventListener('scroll', function() {
-    for (var i = 0; i < blocks.length; i++) {
-      var block = blocks[i]
-        , content = block.querySelector('.timeline-content')
-        ;
-      var windowOffsetTop = (window.pageYOffset || doc.scrollTop) -
-                            (doc.clientTop || 0);
-      if ((block.offsetTop <= windowOffsetTop*1.1) &&
-          content.classList.contains('is-hidden')) {
-        content.classList.remove('is-hidden');
-        content.classList.add('bounce-in');
-      }
-    }
-  });
-}
+});

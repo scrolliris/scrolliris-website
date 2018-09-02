@@ -62,7 +62,6 @@ i18n: | i18n\:compile  ## An alias of `i18n:compile`
 
 i18n\:compile:  ## Make translation files (catalog)
 	./bin/linguine compile message en
-	./bin/linguine compile timeline en
 .PHONY: i18n\:compile
 
 i18n\:extract:  ## Extract translation targets from code
@@ -71,7 +70,6 @@ i18n\:extract:  ## Extract translation targets from code
 
 i18n\:update:  ## Update catalog (pot)
 	./bin/linguine update message en
-	./bin/linguine update timeline en
 .PHONY: i18n\:update
 
 

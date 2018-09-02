@@ -97,12 +97,6 @@ def pricing(_req):
     return dict()
 
 
-@view_config(route_name='timeline',
-             renderer=tpl('timeline.mako'), request_method='GET')
-def timeline(_req):
-    return dict()
-
-
 # -- subscriber
 
 @subscriber(NewRequest)

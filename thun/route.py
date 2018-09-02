@@ -23,4 +23,3 @@ def includeme(config):
 
     config.add_route('index', '/')  # overview
     config.add_route('pricing', '/pricing')
-    config.add_route('timeline', '/timeline')
