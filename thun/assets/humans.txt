@@ -2,15 +2,13 @@
 Name: Yasuhiro Asaka
 Role: Programmer
 Mail: yasuhiro.asaka@lupine-software.com
-From: Yokohama, Japan
 
 Name: Misaki Asaka
 Role: Designer
 Mail: misaki.asaka@lupine-software.com
-From: Kazo, Japan
 
 /* SITE */
-Last update: 2017/10/27
+Last update: 2018/09/03
 Language: English
 Doctype: HTML5
 URL: https://about.scrolliris.com/
