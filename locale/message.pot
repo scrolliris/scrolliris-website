@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uttigen 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-12-07 08:46+0900\n"
+"POT-Creation-Date: 2018-09-03 05:08+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: thun/templates/index.mako:133
+#: thun/templates/index.mako:145
 msgid "about.text"
 msgstr ""
 
-#: thun/templates/index.mako:11 thun/templates/index.mako:124
+#: thun/templates/index.mako:11 thun/templates/index.mako:136
 msgid "action.signup"
-msgstr ""
-
-#: thun/templates/_header.mako:2
-msgid "announcement.beta"
 msgstr ""
 
 #: thun/templates/index.mako:8
 msgid "application.description"
 msgstr ""
 
-#: thun/templates/_layout.mako:11 thun/templates/timeline.mako:3
+#: thun/templates/_layout.mako:11
 msgid "application.name"
 msgstr ""
 
@@ -61,35 +57,35 @@ msgstr ""
 msgid "customer.location.switzerland"
 msgstr ""
 
-#: thun/templates/index.mako:68
+#: thun/templates/index.mako:80
 msgid "customer.title"
 msgstr ""
 
-#: thun/templates/index.mako:40
+#: thun/templates/index.mako:52
 msgid "feature.analysis.description"
 msgstr ""
 
-#: thun/templates/index.mako:39
+#: thun/templates/index.mako:51
 msgid "feature.analysis.title"
 msgstr ""
 
-#: thun/templates/index.mako:58
+#: thun/templates/index.mako:70
 msgid "feature.integration.description"
 msgstr ""
 
-#: thun/templates/index.mako:57
+#: thun/templates/index.mako:69
 msgid "feature.integration.title"
 msgstr ""
 
-#: thun/templates/index.mako:49
+#: thun/templates/index.mako:61
 msgid "feature.privacy.description"
 msgstr ""
 
-#: thun/templates/index.mako:48
+#: thun/templates/index.mako:60
 msgid "feature.privacy.title"
 msgstr ""
 
-#: thun/templates/index.mako:29
+#: thun/templates/index.mako:41
 msgid "feature.title"
 msgstr ""
 
@@ -105,11 +101,11 @@ msgstr ""
 msgid "get_started.title"
 msgstr ""
 
-#: thun/templates/index.mako:126
+#: thun/templates/index.mako:138
 msgid "link.question.mail"
 msgstr ""
 
-#: thun/templates/index.mako:125
+#: thun/templates/index.mako:137
 msgid "link.question.title"
 msgstr ""
 
@@ -153,35 +149,31 @@ msgstr ""
 msgid "nav.footer.tweets"
 msgstr ""
 
-#: thun/templates/_nav.mako:7
+#: thun/templates/_nav.mako:6
 msgid "nav.header.login_or_signup"
 msgstr ""
 
-#: thun/templates/_nav.mako:4 thun/templates/_nav.mako:15
+#: thun/templates/_nav.mako:4 thun/templates/_nav.mako:14
 msgid "nav.header.overview"
 msgstr ""
 
-#: thun/templates/_nav.mako:6 thun/templates/_nav.mako:17
+#: thun/templates/_nav.mako:5 thun/templates/_nav.mako:15
 msgid "nav.header.pricing"
 msgstr ""
 
-#: thun/templates/_nav.mako:18
+#: thun/templates/_nav.mako:16
 msgid "nav.header.signup"
 msgstr ""
 
-#: thun/templates/_nav.mako:5 thun/templates/_nav.mako:16
-msgid "nav.header.timeline"
-msgstr ""
-
-#: thun/templates/index.mako:117
+#: thun/templates/index.mako:129
 msgid "nav.link.doc"
 msgstr ""
 
-#: thun/templates/index.mako:97
+#: thun/templates/index.mako:109
 msgid "nav.link.help"
 msgstr ""
 
-#: thun/templates/index.mako:107
+#: thun/templates/index.mako:119
 msgid "nav.link.log"
 msgstr ""
 
@@ -197,12 +189,8 @@ msgstr ""
 msgid "newsletter.subscribe.button"
 msgstr ""
 
-#: thun/templates/index.mako:79
+#: thun/templates/index.mako:91
 msgid "newsletter.title"
-msgstr ""
-
-#: thun/templates/timeline.mako:3
-msgid "timeline.title"
 msgstr ""
 
 #: thun/templates/pricing.mako:12

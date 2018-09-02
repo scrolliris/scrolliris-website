@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uttigen 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2017-12-07 08:46+0900\n"
+"POT-Creation-Date: 2018-09-03 05:08+0900\n"
 "PO-Revision-Date: 2017-06-23 03:27+0900\n"
 "Last-Translator: Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>\n"
 "Language-Team: en <support@scrolliris.com>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: thun/templates/index.mako:133
+#: thun/templates/index.mako:145
 msgid "about.text"
 msgstr ""
 "Made with <svg viewBox=\"0 0 8 8\" width=\"16\" height=\"16\" class="
@@ -24,16 +24,9 @@ msgstr ""
 "\"icon-heart\"></use></svg> by <a href=\"$href\">Lupine Software LLC</"
 "a>"
 
-#: thun/templates/index.mako:11 thun/templates/index.mako:124
+#: thun/templates/index.mako:11 thun/templates/index.mako:136
 msgid "action.signup"
 msgstr "Sign up"
-
-#: thun/templates/_header.mako:2
-msgid "announcement.beta"
-msgstr ""
-"BETA version release is <span class=\"highlight\">live</span>!! Let's "
-"<a class=\"signup\" href=\"https://scrolliris.com/signup\">sign up</"
-"a> ;-)"
 
 #: thun/templates/index.mako:8
 msgid "application.description"
@@ -42,7 +35,7 @@ msgstr ""
 "perfectly designed for text. Get readability feedback via completely "
 "open source browser widget that's ready to integrate."
 
-#: thun/templates/_layout.mako:11 thun/templates/timeline.mako:3
+#: thun/templates/_layout.mako:11
 msgid "application.name"
 msgstr "About Scrolliris"
 
@@ -78,22 +71,22 @@ msgstr ""
 msgid "customer.location.switzerland"
 msgstr "Switzerland"
 
-#: thun/templates/index.mako:68
+#: thun/templates/index.mako:80
 msgid "customer.title"
 msgstr "Our Customers"
 
-#: thun/templates/index.mako:40
+#: thun/templates/index.mako:52
 msgid "feature.analysis.description"
 msgstr ""
 "Whether you're writing texts, Scrolliris provide you simplified text "
 "readability analysis. Just include a script, that's done! You can "
 "check shortly readability heatmap and graph."
 
-#: thun/templates/index.mako:39
+#: thun/templates/index.mako:51
 msgid "feature.analysis.title"
 msgstr "Text Readability Analysis"
 
-#: thun/templates/index.mako:58
+#: thun/templates/index.mako:70
 msgid "feature.integration.description"
 msgstr ""
 "You can embed easily our script and widget your own publication. "
@@ -101,28 +94,28 @@ msgstr ""
 "both free software. You can even build it by yourself for your own "
 "document or system as you like."
 
-#: thun/templates/index.mako:57
+#: thun/templates/index.mako:69
 msgid "feature.integration.title"
 msgstr "Easy Integration"
 
-#: thun/templates/index.mako:49
+#: thun/templates/index.mako:61
 msgid "feature.privacy.description"
 msgstr ""
 "Scrolliris don't track who the reader is, and what they are interested "
 "reading. Otherwise, it treats only texts. Reader's privacy is always "
 "protected. Your reader would be understanding of your philosophy."
 
-#: thun/templates/index.mako:48
+#: thun/templates/index.mako:60
 msgid "feature.privacy.title"
 msgstr "Protect Reader's Privacy"
 
-#: thun/templates/index.mako:29
+#: thun/templates/index.mako:41
 msgid "feature.title"
 msgstr "We encourage reading and writing longer texts on the web"
 
 #: thun/templates/_footer.mako:15
 msgid "footer.copyright"
-msgstr "2017 Lupine Software LLC"
+msgstr "2017-2018 Lupine Software LLC"
 
 #: thun/templates/index.mako:17
 msgid "get_started.description"
@@ -134,11 +127,11 @@ msgstr ""
 msgid "get_started.title"
 msgstr "Try Demo"
 
-#: thun/templates/index.mako:126
+#: thun/templates/index.mako:138
 msgid "link.question.mail"
 msgstr "Contact us <a href=\"mailto:$mail\"><code>$mail</code></a>"
 
-#: thun/templates/index.mako:125
+#: thun/templates/index.mako:137
 msgid "link.question.title"
 msgstr "Question?"
 
@@ -184,35 +177,31 @@ msgstr "Term of Service"
 msgid "nav.footer.tweets"
 msgstr "Tweets"
 
-#: thun/templates/_nav.mako:7
+#: thun/templates/_nav.mako:6
 msgid "nav.header.login_or_signup"
 msgstr "Login/Sign up"
 
-#: thun/templates/_nav.mako:4 thun/templates/_nav.mako:15
+#: thun/templates/_nav.mako:4 thun/templates/_nav.mako:14
 msgid "nav.header.overview"
 msgstr "Overview"
 
-#: thun/templates/_nav.mako:6 thun/templates/_nav.mako:17
+#: thun/templates/_nav.mako:5 thun/templates/_nav.mako:15
 msgid "nav.header.pricing"
 msgstr "Pricing"
 
-#: thun/templates/_nav.mako:18
+#: thun/templates/_nav.mako:16
 msgid "nav.header.signup"
 msgstr "Sign up"
 
-#: thun/templates/_nav.mako:5 thun/templates/_nav.mako:16
-msgid "nav.header.timeline"
-msgstr "Timeline"
-
-#: thun/templates/index.mako:117
+#: thun/templates/index.mako:129
 msgid "nav.link.doc"
 msgstr "Documentation"
 
-#: thun/templates/index.mako:97
+#: thun/templates/index.mako:109
 msgid "nav.link.help"
 msgstr "Support"
 
-#: thun/templates/index.mako:107
+#: thun/templates/index.mako:119
 msgid "nav.link.log"
 msgstr "Changelog"
 
@@ -228,13 +217,9 @@ msgstr "Enter your email address below."
 msgid "newsletter.subscribe.button"
 msgstr "Get Notified"
 
-#: thun/templates/index.mako:79
+#: thun/templates/index.mako:91
 msgid "newsletter.title"
 msgstr "Notify me about Scrolliris Updates"
-
-#: thun/templates/timeline.mako:3
-msgid "timeline.title"
-msgstr "Timeline"
 
 #: thun/templates/pricing.mako:12
 msgid "we.love.transparency.description"
