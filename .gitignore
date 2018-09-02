@@ -22,7 +22,7 @@ cors-file.json
 runtime.txt
 
 /bin/_*
-/bin/gitlab-ci-multi-runner
+/bin/gitlab-runner
 
 /locale
 /static/*

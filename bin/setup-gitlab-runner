@@ -2,7 +2,7 @@
 set -eu
 
 bin_dir=$(dirname $(readlink -f "${0}"))
-name="gitlab-ci-multi-runner"
+name="gitlab-runner"
 platform="linux-amd64"
 version="latest"
 
@@ -15,7 +15,7 @@ echo "Version: ${version}"
 echo ""
 echo "-----> Installing into: ${bin_dir}"
 
-location_base="https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com"
+location_base="https://gitlab-runner-downloads.s3.amazonaws.com"
 location="${location_base}/${version}/binaries/${name}-${platform}"
 
 curl -sL $location -o $bin_dir/$name
