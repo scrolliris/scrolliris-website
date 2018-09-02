@@ -1,7 +1,3 @@
-<div class="announcement" align="center">
-  <p>${_('announcement.beta')|n,trim,clean(tags=['a', 'span'], attributes=['class', 'href'])}</p>
-</div>
-
 <header class="grid" align="left">
   <div class="row">
     <div class="offset-3 column-10 offset-v-1 column-v-14" align="left">

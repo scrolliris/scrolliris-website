@@ -5,8 +5,11 @@
 header
   color #fbf9fd
   background-color #454545
-  max-height 3.76rem
+  max-height 3.46rem
   padding 0 0 0.38rem 0
+  > .row
+    > div
+      padding-top 0.2em
 
 .wrapper > .footer
   padding-top 3.55rem
@@ -24,14 +27,6 @@ header
 
 
 // component
-.announcement
-  width 100%
-  margin 0
-  padding 0.44rem 0 0.48rem 0
-  p
-    margin 0
-    padding 0 0.33rem
-
 .global-nav
   float right
   display inline-block
@@ -221,11 +216,10 @@ svg.tiny.icon
 // normal
 @media only screen and (max-width: 768px)
   .wrapper > header
-    border-bottom 3px solid #7b6e94
     .mobile.nav
       overflow visible
       display block
-      margin -2.48rem 0 0 0
+      margin -2.68rem 0 0 0
       padding 0
 
       label.toggle
@@ -254,7 +248,9 @@ svg.tiny.icon
           background-color #666666
           border-bottom 1px solid #444444
           a
-            &.active,
+            &.active
+              background-color #888888
+              color white
             &:hover
               background-color #7b6e94
               text-decoration none
