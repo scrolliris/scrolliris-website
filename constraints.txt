@@ -22,10 +22,10 @@ flake8_docstrings==1.1.0
 pycodestyle==2.3.1
 pylint==1.8.1
 
-waitress==1.0.0
+waitress==1.1.0
 
 # development,testing
-colorlog==2.7.0
+colorlog==3.1.4
 
 # testing
 pytest==3.7.4
