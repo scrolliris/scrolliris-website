@@ -30,8 +30,8 @@ https://gitlab.com/scrolliris/scrolliris-website
 
 ## Requirements
 
-* Python `3.5.4` (or `>= 2.7.13`)
-* Node.js `>= 8.9.0` (npm `5.5.1`, for build assets)
+* Python `3.6.6` (or `>= 2.7.14`)
+* Node.js `>= 8.11.4` (npm `6.4.1`, for build assets)
 * GNU gettext `>= 0.19.8.1` (translation)
 * [Scrolliris Website Translation (Uttigen)](https://gitlab.com/scrolliris/scrolliris-website-translation) as git subtree
 
@@ -49,18 +49,18 @@ https://gitlab.com/scrolliris/scrolliris-website
 
 ```zsh
 : setup python environment (e.g. virtualenv)
-% python3.5 -m venv venv
+% python3.6 -m venv venv
 % source venv/bin/activate
 (venv) % pip install --upgrade pip setuptools
 
 : node.js (e.g. nodeenv)
 (venv) % pip install nodeenv
-(venv) % nodeenv --python-virtualenv --with-npm --node=8.9.0
+(venv) % nodeenv --python-virtualenv --with-npm --node=8.11.4
 : re-activate for node.js at this time
 (venv) % source venv/bin/activate
-(venv) % npm install --global npm@5.5.1
+(venv) % npm install --global npm@6.4.1
 (venv) % npm --version
-5.5.1
+6.4.1
 ```
 
 ### Dependencies
@@ -254,7 +254,7 @@ This project is distributed as various licenses by parts.
 
 ```txt
 Scrolliris Website
-Copyright (c) 2017 Lupine Software LLC
+Copyright (c) 2017-2018 Lupine Software LLC
 ```
 
 ### Documentation
