@@ -17,7 +17,7 @@ ADD . app/
 WORKDIR app/
 
 RUN pip install -r requirements.txt
-RUN make catalog-compile
+RUN make i18n:compile
 
 ENV HOST 0.0.0.0
 ENV PORT 8080

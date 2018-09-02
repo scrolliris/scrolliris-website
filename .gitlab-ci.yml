@@ -1,14 +1,11 @@
 stages:
-  - check
-  - lint
-  - doctest
-  - compile
+  - vet
   - build
   - test
   - coverage
 
-check27:
-  stage: check
+code-27:
+  stage: vet
   image: python:2.7.13
   variables:
     ENV: development
@@ -20,7 +17,7 @@ check27:
     - make clean
     - make setup
   script:
-    - make check
+    - make vet:code
   cache:
     untracked: true
     paths:
@@ -28,8 +25,8 @@ check27:
   except:
     - tags
 
-check:
-  stage: check
+code:
+  stage: vet
   image: python:3.5.4
   variables:
     ENV: development
@@ -41,7 +38,7 @@ check:
     - make clean
     - make setup
   script:
-    - make check
+    - make vet:code
   cache:
     untracked: true
     paths:
@@ -49,8 +46,8 @@ check:
   except:
     - tags
 
-lint27:
-  stage: lint
+lint-27:
+  stage: vet
   image: python:2.7.13
   variables:
     PIP_CACHE_DIR: pip-cache
@@ -61,7 +58,7 @@ lint27:
     - ENV=development make setup
     - ENV=test make setup
   script:
-    - make lint
+    - make vet:lint
   cache:
     untracked: true
     paths:
@@ -70,7 +67,7 @@ lint27:
     - tags
 
 lint:
-  stage: lint
+  stage: vet
   image: python:3.5.4
   variables:
     PIP_CACHE_DIR: pip-cache
@@ -81,7 +78,7 @@ lint:
     - ENV=development make setup
     - ENV=test make setup
   script:
-    - make lint
+    - make vet:lint
   cache:
     untracked: true
     paths:
@@ -89,48 +86,8 @@ lint:
   except:
     - tags
 
-doctest27:
-  stage: doctest
-  image: python:2.7.13
-  variables:
-    PIP_CACHE_DIR: pip-cache
-  before_script:
-    - pip install --upgrade pip setuptools
-    - python --version
-    - pip --version
-    - ENV=development make setup
-    - ENV=test make setup
-  script:
-    - make doctest
-  cache:
-    untracked: true
-    paths:
-      - pip-cache
-  except:
-    - tags
-
-doctest:
-  stage: doctest
-  image: python:3.5.4
-  variables:
-    PIP_CACHE_DIR: pip-cache
-  before_script:
-    - pip install --upgrade pip setuptools
-    - python --version
-    - pip --version
-    - ENV=development make setup
-    - ENV=test make setup
-  script:
-    - make doctest
-  cache:
-    untracked: true
-    paths:
-      - pip-cache
-  except:
-    - tags
-
-compile:
-  stage: compile
+i18n:
+  stage: build
   image: python:3.5.4
   variables:
     ENV: test
@@ -146,7 +103,7 @@ compile:
     - gettext --version
     - make setup
   script:
-    - make catalog
+    - make i18n:compile
   cache:
     untracked: true
     paths:
@@ -159,7 +116,7 @@ compile:
   except:
     - tags
 
-build:
+pack:
   stage: build
   image: node:8.9.0
   variables:
@@ -170,7 +127,7 @@ build:
     - npm install --global gulp-cli
     - npm install --ignore-scripts
   script:
-    - make build
+    - make pack
   cache:
     untracked: true
     paths:
@@ -179,6 +136,46 @@ build:
     untracked: true
     paths:
       - static
+  except:
+    - tags
+
+doctest27:
+  stage: test
+  image: python:2.7.13
+  variables:
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - pip install --upgrade pip setuptools
+    - python --version
+    - pip --version
+    - ENV=development make setup
+    - ENV=test make setup
+  script:
+    - make test:doc
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
+  except:
+    - tags
+
+doctest:
+  stage: test
+  image: python:3.5.4
+  variables:
+    PIP_CACHE_DIR: pip-cache
+  before_script:
+    - pip install --upgrade pip setuptools
+    - python --version
+    - pip --version
+    - ENV=development make setup
+    - ENV=test make setup
+  script:
+    - make test:doc
+  cache:
+    untracked: true
+    paths:
+      - pip-cache
   except:
     - tags
 
@@ -234,7 +231,7 @@ coverage:
     - pip --version
     - make setup
   script:
-    - make coverage
+    - make test:coverage
   cache:
     untracked: true
     paths:

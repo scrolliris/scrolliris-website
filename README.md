@@ -124,8 +124,8 @@ See `Makefile`.
 : add hook
 (venv) % flake8 --install-hook git
 
-: run make check target
-(venv) % make check
+: run `vet:code` and `vet:lint`
+(venv) % make vet
 ```
 
 
@@ -225,7 +225,7 @@ Generate `xxx.pot` file.
 
 ```zsh
 : edit Makefile (see also `bin/linguine` script)
-(venv) % make catalog-extract
+(venv) % make i18n:extract
 ```
 
 ### Update and Compile translation catalog
@@ -234,10 +234,10 @@ See `Makefile`.
 The translation catalog needs GNU gettext.
 
 ```zsh
-(venv) % make catalog-update
+(venv) % make i18n:update
 
-: alias `make catalog` is also available
-(venv) % make catalog-compile
+: alias `make i18n` is also available
+(venv) % make i18n:compile
 ```
 
 ### Work-flow
