@@ -72,7 +72,7 @@ i18n\:update:  ## Update catalog (pot)
 	./bin/linguine update message en
 .PHONY: i18n\:update
 
-i18n\:sync:
+i18n\:sync:  ## Fetch translation updates from upstrm (scrolliris/scrolliris-website-translation)
 	./bin/linguine sync
 .PHONY: i18n\:sync
 
