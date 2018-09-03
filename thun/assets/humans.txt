@@ -8,9 +8,9 @@ Role: Designer
 Mail: misaki.asaka@lupine-software.com
 
 /* SITE */
-Last update: 2018/09/03
+Last update: 2018/09/04
 Language: English
 Doctype: HTML5
 URL: https://about.scrolliris.com/
-Repository: https://gitlab.com/scrolliris/thun
+Repository: https://gitlab.com/scrolliris/scrolliris-website
 License: GNU Affero General Public License (AGPL)
