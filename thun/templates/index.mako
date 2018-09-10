@@ -102,11 +102,11 @@
       <div class="link-container">
         <div class="offset-5 column-2 offset-v-2 column-v-4 column-m-16">
           <section>
-            <a href="https://help.scrolliris.com/">
+            <a href="https://support.scrolliris.com/">
               <svg class="icon question-mark" viewBox="0 0 8 8" width="48" height="48">
                 <use xlink:href="#open-iconic.min_question-mark" class="icon-question-mark"></use>
               </svg>
-              <span class="help">${_('nav.link.help')}</span>
+              <span class="support">${_('nav.link.support')}</span>
             </a>
           </section>
         </div>

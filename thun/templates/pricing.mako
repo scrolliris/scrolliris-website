@@ -148,8 +148,8 @@
                 <td colspan="4"><h6 class="header">SUPPORT</h6></td>
               </tr>
               <tr>
-                <td><p>Help<span class="development">*</span></p></td>
-                <td align="center"><p>online doc</p><span class="small text"><a href="/">help.scrolliris.com</a></span></td>
+                <td><p>Support<span class="development">*</span></p></td>
+                <td align="center"><p>online doc</p><span class="small text"><a href="/">support.scrolliris.com</a></span></td>
                 <td class="disabled" align="center"><p>live chat</p><span class="small text">with Developer</span></td>
                 <td class="disabled" align="center"><p>live chat</p><span class="small text">with Developer</span></td>
               </tr>
