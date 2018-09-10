@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uttigen 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2018-09-03 05:08+0900\n"
+"POT-Creation-Date: 2018-09-11 08:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -169,12 +169,12 @@ msgstr ""
 msgid "nav.link.doc"
 msgstr ""
 
-#: thun/templates/index.mako:109
-msgid "nav.link.support"
-msgstr ""
-
 #: thun/templates/index.mako:119
 msgid "nav.link.log"
+msgstr ""
+
+#: thun/templates/index.mako:109
+msgid "nav.link.support"
 msgstr ""
 
 #: thun/templates/_newsletter.mako:2
