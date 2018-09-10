@@ -170,7 +170,7 @@ msgid "nav.link.doc"
 msgstr ""
 
 #: thun/templates/index.mako:109
-msgid "nav.link.help"
+msgid "nav.link.support"
 msgstr ""
 
 #: thun/templates/index.mako:119
