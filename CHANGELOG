@@ -1,3 +1,6 @@
+Mon 05 Nov 2018 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
+	* Change signup link (to visit link)
+
 Mon 03 Sep 2018 Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>
 	* Update gitlab-ci-multi-runner to gitlab-runner
 	* Add a screenshot of heatmap overlay widget

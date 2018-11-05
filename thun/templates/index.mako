@@ -8,7 +8,7 @@
         <p class="description">${_('application.description')}</p>
         <div class="get-started">
           <p><a class="primary try button" href="https://try.scrolliris.com/">${_('get_started.title')}</a></p>
-          ${_('misc.or')} <a class="signup link" href="https://scrolliris.com/signup">${_('action.signup')}</a>
+          ${_('misc.or')} <a class="visit link" href="https://scrolliris.com/">${_('action.visit')} Scrolliris.com</a>
         </div>
       </div>
     </div>
