@@ -65,29 +65,25 @@ https://gitlab.com/scrolliris/scrolliris-website
 
 ### Dependencies
 
-#### Uttigen
+#### Website Translation (Uttigen)
 
-See translation project [Uttigen](
-https://gitlab.com/scrolliris/uttigen).
+See [Translation Project](
+https://gitlab.com/scrolliris/scrolliris-website-translation) (code name: Uttigen)
 
 Don't commit directly the changes on above translation project into this repo.
 
 ```zsh
-: setup `locale`
-% git remote add uttigen https://gitlab.com/scrolliris/uttigen.git
-% git subtree add --prefix locale uttigen master
-
-: synchronize with updates into specified branch
-% git pull -s subtree -Xsubtree=locale uttigen master
+: setup locale
+% git pull -s subtree -Xsubtree=locale website-translation master
 
 : subtree list
 % git log | grep git-subtree-dir | tr -d ' ' | cut -d ":" -f2 | sort | uniq
 ```
 
-#### Raleway Thin
-
-TODO
-
+```
+: synchronize with updates into specified branch
+% make i18n:sync
+```
 
 
 ## Development
