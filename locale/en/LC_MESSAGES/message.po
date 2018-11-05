@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Uttigen 0.1\n"
 "Report-Msgid-Bugs-To: support@scrolliris.com\n"
-"POT-Creation-Date: 2018-09-11 08:00+0900\n"
+"POT-Creation-Date: 2018-11-05 18:18+0900\n"
 "PO-Revision-Date: 2017-06-23 03:27+0900\n"
 "Last-Translator: Yasuhiro Asaka <yasuhiro.asaka@grauwoelfchen.net>\n"
 "Language-Team: en <support@scrolliris.com>\n"
@@ -24,9 +24,13 @@ msgstr ""
 "\"icon-heart\"></use></svg> by <a href=\"$href\">Lupine Software LLC</"
 "a>"
 
-#: thun/templates/index.mako:11 thun/templates/index.mako:136
+#: thun/templates/index.mako:136
 msgid "action.signup"
 msgstr "Sign up"
+
+#: thun/templates/index.mako:11
+msgid "action.visit"
+msgstr "Visit"
 
 #: thun/templates/index.mako:8
 msgid "application.description"
