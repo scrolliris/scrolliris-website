@@ -1,0 +1,4 @@
+disallowed-names = [
+  "foo", "bar", "buz", "qux", "quux",
+  "car", "cdr", "caar", "cadr", "cdar", "cddr",
+]

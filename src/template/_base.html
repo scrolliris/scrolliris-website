@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <meta name="author" content="{{ author }}">
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64 96x96 128x128 192x192" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="./img/favicon-128.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="./img/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="./img/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./img/touch-icon-180.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="./img/touch-icon-167.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="./img/touch-icon-152.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="./img/touch-icon-120.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="./img/touch-icon-76.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="./img/touch-icon-57.png">
+    <link rel="humans" type="text/plain" href="./humans.txt">
+    <link rel="robots" type="text/plain" href="./robots.txt">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto+Slab:300">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>html{background-color:#fbfaf8;}</style>
+    <style>.not-ready{visibility:hidden;}</style>
+    <script type="text/javascript" src="./_fouc.js"></script>
+  </head>
+  <body>
+    <div class="wrapper" align="center">
+      <header class="grid" align="left">
+        <div class="row">
+          <div class="offset-3 column-10 offset-v-1 column-v-14" align="left">
+            <a class="brand" href="/">
+              <h1 class="logo">
+                <img class="logo-mark" width="26" height="26" src="./img/scrolliris-logo-f0ede6-64x64.png" alt="Scrolliris's Logo"><span class=logo-type><span class="scroll">Scroll</span><span class="iris">iris</span></span>
+              </h1>
+            </a>
+
+            <div class="global-nav" align="right">
+              <ul class="nav">
+                <li><a class="overview${' active' if req.path == '/' else ''} link" href="/">${_('nav.header.overview')}</a></li>
+                <li><a class="login signup link" href="https://scrolliris.com/signup">${_('nav.header.login_or_signup')}</a></li>
+              </ul>
+            </div>
+
+            <div class="mobile nav" align="right">
+              <label for="dropdown" class="toggle">☰</label>
+              <input type="checkbox" id="dropdown">
+              <ul class="menu" align="left">
+                <li><a class="overview${' active' if req.path == '/' else ''} link" href="/">${_('nav.header.overview')}</a></li>
+                <li><a class="login signup link" href="https://scrolliris.com/signup">${_('nav.header.signup')}</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {% block content %}{% endblock content %}
+
+      <div class="grid footer">
+        <div class="row" align="center">
+          <div class="column-16">
+            <ul class="nav">
+              <li><a href="/humans.txt">${_('nav.footer.humanstxt')}</a></li>
+              <li><a href="${var['twitter_url']}" target="_blank">${_('nav.footer.tweets')}</a></li>
+              <li><a href="${var['gitlab_url']}" target="_blank">${_('nav.footer.repository')}</a></li>
+            </ul>
+            <ul class="legal nav">
+              <li><a href="https://doc.scrolliris.com/terms.html" target="_blank">${_('nav.footer.terms')}</a></li>
+              <li><a href="https://doc.scrolliris.com/cookie.html" target="_blank">${_('nav.footer.cookie')}</a></li>
+              <li><a href="https://doc.scrolliris.com/privacy.html" target="_blank">${_('nav.footer.privacy')}</a></li>
+            </ul>
+            <div class="note">
+              <p class="copyright">&copy; ${_('footer.copyright')}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+    <%
+      filename = 'master.svg'
+      svg_file = req.util.manifest_json.get(filename, 'img/' + filename)
+    %>
+    ${svg_content_sanitized(svg_file, tags=['symbol', 'defs', 'path'], attributes={'symbol': ['id'], 'path': ['id', 'd', 'transform']})|n,trim}
+    </svg>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

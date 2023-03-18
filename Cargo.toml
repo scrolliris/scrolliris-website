@@ -1,0 +1,13 @@
+[package]
+name = "website"
+version = "0.0.1"
+license = "AGPL-3.0"
+edition = "2021"
+
+[dependencies]
+lazy_static = "^1.4"
+tera = { version = "^1.18", default-features = false }
+
+[features]
+debug = []
+default = []

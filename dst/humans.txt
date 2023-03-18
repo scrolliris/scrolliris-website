@@ -1,0 +1,11 @@
+/* TEAM */
+Name: Yasuhiro Яша Asaka (Yasha)
+Mail: yasuhiro.asaka@lupine-software.com
+
+/* SITE */
+Last update: 2023/03/19
+Language: English
+Doctype: HTML5
+URL: https://scrolliris.com/
+Repository: https://gitlab.com/scrolliris/scrolliris-website
+License: GNU Affero General Public License (AGPL)
