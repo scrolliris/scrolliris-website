@@ -1,6 +1,6 @@
 # Scrolliris Website
 
-![Scrolliris](img/scrolliris-logo-300x300.png)
+![Scrolliris](dst/img/scrolliris-logo-300x300.png)
 
 The website of [https://scrolliris.com/](https://scrolliris.com/).
 

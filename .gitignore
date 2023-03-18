@@ -9,5 +9,5 @@ dst/*
 !/dst/.gitignore
 !/dst/favicon.ico
 !/dst/*.js
-!/dst/img/*
+!/dst/img/
 !/dst/*.txt
