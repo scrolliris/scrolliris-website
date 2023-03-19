@@ -32,6 +32,10 @@ vet\:all: check fmt lint # Run all vet targets
 vet: vet\:check # Alias for vet:check
 .PHONY: vet
 
+test:
+	@cargo test
+.PHONY: test
+
 # build
 build\:asset\:debug:
 	@npm run build-debug
