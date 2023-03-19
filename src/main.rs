@@ -3,17 +3,17 @@ use std::io;
 use std::path;
 use std::process;
 
-use tera::{Context, Tera};
-
 #[macro_use]
 extern crate lazy_static;
 
+use tera::{Context, Tera};
+
+use website::function;
+
 const DST_DIR: &str = "./dst";
 
-const TITLE: &str = "Scrolliris";
-
 lazy_static! {
-    pub static ref TEMPLATES: Tera = {
+    static ref TEMPLATES: Tera = {
         let mut data = match Tera::new("src/template/*.html") {
             Ok(t) => t,
             Err(e) => {
@@ -22,6 +22,7 @@ lazy_static! {
             }
         };
         data.autoescape_on(vec![".html"]);
+        data.register_function("t", function::make_t("en-GB"));
         data
     };
 }
@@ -48,10 +49,7 @@ fn main() -> Result<(), Error> {
     let dst = path::Path::new(&DST_DIR);
 
     let mut ctx = Context::new();
-    ctx.insert("title", TITLE);
-    ctx.insert("description", "");
-    ctx.insert("keywords", "");
-    ctx.insert("author", "");
+    ctx.insert("debug", &false);
 
     let res = TEMPLATES.render("index.html", &ctx)?;
     fs::write(dst.join("index.html"), res)?;

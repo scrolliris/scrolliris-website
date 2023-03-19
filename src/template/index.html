@@ -1,15 +1,14 @@
 {% extends "_base.html" %}
-{% block title %}{{ title }}{% endblock title %}
 {% block content %}
 <div class="content" align="center">
   <div class="grid title" align="center">
     <div class="row">
       <div class="offset-4 column-8 offset-l-1 column-l-14 column-n-16">
-        <h2 class="heading">{{ title }}</h2>
+        <h2 class="heading">Scrolliris</h2>
         <p class="description"></p>
         <div class="get-started">
-          <p><a class="primary try button" href="https://try.scrolliris.com/">${_('get_started.title')}</a></p>
-          ${_('misc.or')} <a class="visit link" href="https://scrolliris.com/">${_('action.visit')} Scrolliris.com</a>
+          <p><a class="primary try button" href="https://try.scrolliris.com/">{{ t(key="get-started-title") }}</a></p>
+          ${_('misc.or')} <a class="visit link" href="https://scrolliris.com/">{{ t(key="action-visit") }} Scrolliris.com</a>
         </div>
       </div>
     </div>
