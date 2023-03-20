@@ -56,7 +56,7 @@ pub fn make_t(lang_name: &'static str) -> impl Function {
 
             let mut extra = FluentArgs::new();
             for (k, v) in args.iter() {
-                if k.starts_with("_") {
+                if k.starts_with('_') {
                     continue;
                 }
                 extra.set(k, v.to_string());
